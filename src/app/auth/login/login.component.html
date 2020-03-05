@@ -1,0 +1,14 @@
+<div class="container-login">
+  <div class="wrap-login">
+    <div style="padding-bottom: 55px;"><img src="../../../assets/images/Ingage_logo_no_BG.png" style="width: 100%;" /></div>
+
+    <div class="container-login-form-btn">
+      <button class="login-form-btn" (click)="login()" *ngIf="!this.loginService.isLoggedIn">
+        Login
+      </button>
+      <button class="login-form-btn" (click)="logout()" *ngIf="this.loginService.isLoggedIn">
+          Logout
+        </button>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,15 @@
   .page-inner { padding-top: 31px; }
 }
 
+  /* @media (max-width: 992px) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    } */
+
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

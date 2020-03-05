@@ -1,0 +1,74 @@
+:host {
+  width: 100%;
+}
+
+.mobile-banner-section {
+  display: none;
+}
+
+.mobile-home-page-nav-section {
+  display: none;
+}
+
+.container-header {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  /* .container {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 300px;
+        overflow-x: auto;
+        width: auto;
+    } */
+  /* .container {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: unset;
+    align-items: unset;
+    flex-direction: unset;
+  } */
+  .container-header {
+    display: block;
+  }
+  .mobile-banner-section {
+    display: block;
+  }
+  .mobile-home-page-nav-section {
+    display: block;
+  }
+  .header .title {
+    display: none;
+  }
+  .header .user-tools-wrap {
+    display: none;
+  }
+}
+
+.mobile-banner-section {
+  height: 60px;
+}
+
+.mobile-banner-section .org-logo {
+  background-size: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.page-inner {
+  padding: 0 15px 15px 15px;
+  /* display: flex;
+      flex-wrap: wrap;
+      flex: 1;
+      align-items: flex-start; */
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

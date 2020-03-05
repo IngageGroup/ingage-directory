@@ -1,0 +1,21 @@
+<section class="mobile-banner-section">
+    <div class='org-logo' style="background-image: url('assets/images/Ingage_logo_no_BG.png');"></div>
+</section>
+<section class="category-section">
+    <div class='container-header'>Recently Joined</div>
+
+    <div class='container'>
+
+        <div *ngFor="let employee of employees" class='tile image-loaded'>
+
+            <a [routerLink]="['/employee', employee.employeeid]">
+                <img width="256" height="384" src='{{ employee.tileimageurl }}' />
+            </a>
+            <div class="profile-summary">
+                <h5>{{ employee.firstname }} {{ employee.lastname}}</h5>
+                <h6>{{ employee.title}}</h6>
+            </div>
+
+        </div>
+    </div>
+</section>

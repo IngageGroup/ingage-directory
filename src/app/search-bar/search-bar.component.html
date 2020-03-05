@@ -1,0 +1,3 @@
+<div class="search-bar" *ngIf="showSearchBar">
+    <input type="text" #box (keyup)="onKey(box.value)" id="search-bar" placeholder="Search" value="" style="border-color: rgb(16, 16, 16);">
+</div>

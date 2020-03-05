@@ -1,0 +1,31 @@
+.nav-expand-link {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.nav-expand-link::after {
+    font-family: 'Material Icons';
+    content: 'chevron_right';
+    -webkit-box-flex: 0;
+    flex: 0 1 auto;
+}
+
+.nav-back-link {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: flex-start;
+}
+
+.nav-back-link::before {
+    font-family: 'Material Icons';
+    content: 'chevron_left';
+    -webkit-box-flex: 0;
+    flex: 0 1 auto;
+}
+
+.mobile-nav-home-link::before {
+    font-family: 'Material Icons';
+    content: 'home';
+    padding-right: 10px;
+}
