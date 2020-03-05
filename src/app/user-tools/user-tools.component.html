@@ -1,0 +1,16 @@
+<div class="user-tools-wrap dropdownOpen">
+    <div id="component-CreateDirectoryModal"></div>
+    <div class="user-tools" (click)="toggleTools()">
+        <div class="settings"></div>
+    </div>
+    <div class="dropdown-wrap">
+        <div class="dropdown" [ngClass]="{'dropdown-open': showTools}">
+            <div class="caret"></div>
+            <div class="content">
+                <div style="background-image: url('/assets/images/logout.svg');">
+                    <a class="nav-item nav-link" (click)="logout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

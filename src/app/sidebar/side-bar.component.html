@@ -1,0 +1,74 @@
+<div class="sidebar-left">
+    <div class="sidebar-content">
+        <div class="">
+            <div class="projection-selector">
+                <a [routerLink]="['/']" class="org-logo" style="height: 38.25px;">
+                    <div style="background-image: url('assets/images/Ingage_logo_no_BG.png');"></div>
+                </a>
+            </div><span></span>
+        </div>
+        <!-- ideas
+      Exec Team
+      Mgt Team
+      Home Team
+      By Practice Area 
+      -Design
+      -Build: Dev
+      -Build: Quality
+      -Deliver 
+      By Client
+      -Client 1
+      -Client 2
+    -->
+        <ul>
+            <li class="item-active">
+                <a [routerLink]="['/employees/all']" routerLinkActive="active-link">All People</a>
+            </li>
+            <li class="item-active">
+                <a [routerLink]="['/employees/hometeam']" routerLinkActive="active-link">Home Team</a>
+            </li>
+            <li class="item-active">
+                <a [routerLink]="['/employees/leadership']" routerLinkActive="active-link">Leadership Team</a>
+            </li>
+            <li class="item-active">
+                <a [routerLink]="['/employees/management']" routerLinkActive="active-link">Management Team</a>
+            </li>
+            <li class="item-active">
+                <a [routerLink]="" (click)="toggelPracticeMenu()">By Practice Area</a>
+                <ul class="sub-menu" [ngClass]="isOpenPractice ? 'sub-menu-open' : ''">
+                    <li>
+                        <div>
+                            <a [routerLink]="['/employees/pa/Design']" routerLinkActive="active-link">Design</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a [routerLink]="['/employees/pa/dev']" routerLinkActive="active-link">Build/Dev</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a [routerLink]="['/employees/pa/qa']" routerLinkActive="active-link">Build/QA</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a [routerLink]="['/employees/pa/Deliver']" routerLinkActive="active-link">Deliver</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="item-active">
+                <a [routerLink]="" (click)="toggleClientMenu()">By Client</a>
+                <ul class="sub-menu" [ngClass]="isOpenClient ? 'sub-menu-open' : ''">
+                    <li *ngFor="let client of clients" class="">
+                        <div>
+                            <a [routerLink]="['/employees/client', client.name]"
+                                routerLinkActive="active-link">{{ client.name }} ({{ client.consultantCount }})</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

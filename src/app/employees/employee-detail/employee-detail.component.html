@@ -1,0 +1,62 @@
+<div class="profile-detail-content">
+    <div class="profile-left">
+        <div>
+            <div class="profile-details">
+                <div class="profile-line profile-line-style-h2">
+                    <div class="profile-value profile-value-style-h2">
+                        <div class="profile-name">{{ employee.firstname }} {{ employee.lastname}}</div>
+                        <div class="profile-title">{{ employee.title }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-details">
+                <div class="profile-line profile-line-style-p">
+                    <div class="profile-label">Practice</div>
+                    <div class="profile-value profile-value-style-p">
+                        <div>{{ employee.practicearea }}</div>
+                    </div>
+                </div>
+                <div class="profile-line profile-line-style-p">
+                    <div class="profile-label">Client</div>
+                    <div class="profile-value profile-value-style-p">
+                        <div>{{ employee.client }}</div>
+                    </div>
+                </div>
+                <div class="profile-line profile-line-style-p">
+                    <div class="profile-label">Coach</div>
+                    <div class="profile-value profile-value-style-p">
+                        <div>{{ employee.coach }}</div>
+                    </div>
+                </div>
+                <div class="profile-line profile-line-style-p">
+                    <div class="profile-label">Mobile</div><a href="tel:{{ employee.mobilephone }}"
+                        class="profile-value profile-value-style-p">{{ employee.mobilephone }}</a>
+                </div>
+                <div class="profile-line profile-line-style-p">
+                    <div class="profile-label">Email</div><a href="mailto:{{ employee.email }}"
+                        class="profile-value profile-value-style-p">{{ employee.email }}</a>
+                </div>
+            </div>
+            <div class="profile-details">
+                <div class="profile-line profile-line-style-p">
+                    <div class="profile-label">Birthday</div>
+                    <div class="profile-value profile-value-style-p">
+                        <div>{{ employee.birthday | monthDayOnly }}</div>
+                    </div>
+                </div>
+                <div class="profile-line profile-line-style-p">
+                    <div class="profile-label">Ingagaversary</div>
+                    <div class="profile-value profile-value-style-p">
+                        <div>{{employee.anniversary | customDate }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-right">
+        <div class="card-profile-image image-loaded">
+            <div class="loader"></div>
+            <img class="profile-image" width="960" height="1020" src="{{ employee.tileimageurl }}" alt="">
+        </div>
+    </div>
+</div>

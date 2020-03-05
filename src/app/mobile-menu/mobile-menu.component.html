@@ -1,0 +1,50 @@
+<div class="mobile-header">
+    <div>
+        <mat-icon (click)="toggleMobileMenu()">menu</mat-icon>
+    </div>
+    <div class="slide-out-menu-wrap">
+        <div class="slide-out-menu" *ngIf="showMobileMenu" [@slideInOut]>
+            <div class="content">
+                <div class="mobile-header-content">
+                    <a class="mobile-nav-home-link" [routerLink]="['/']">Home</a>
+                    <mat-icon (click)="toggleMobileMenu()" style="float: right;">cancel</mat-icon>
+                </div>
+
+                <div>
+                    <section class="mobile-home-page-nav-section" *ngIf="showTopMenu" [@fadeInOut]>
+                        <div><a [routerLink]="['/employees']">All People</a></div>
+                        <div><a [routerLink]="['/employees/hometeam']">Home Team</a></div>
+                        <div><a [routerLink]="['/employees/leadership']">Leadership Team</a></div>
+                        <div><a [routerLink]="['/employees/management']">Management Team</a></div>
+                        <div>
+                            <a [routerLink]="" class="nav-expand-link" (click)="toggleOnPracticeMenu()">
+                                By Practice Area
+                            </a>
+                        </div>
+                        <div><a [routerLink]="" class="nav-expand-link" (click)="toggleOnClientMenu()">By Client</a>
+                        </div>
+                    </section>
+                    <section class="mobile-home-page-nav-section" *ngIf="showPracticeMenu" [@fadeInOut]>Practice Areas
+                        <div><a [routerLink]="" class="nav-back-link" (click)="resetMobileMenu()">Back</a></div>
+                        <div><a [routerLink]="['/employees/pa/Design']">Design</a></div>
+                        <div><a [routerLink]="['/employees/pa/dev']">Build/Dev</a></div>
+                        <div><a [routerLink]="['/employees/pa/qa']">Build/QA</a></div>
+                        <div><a [routerLink]="['/employees/pa/Deliver']">Deliver</a></div>
+                    </section>
+                    <section class="mobile-home-page-nav-section" *ngIf="showClientMenu" [@fadeInOut]>Clients
+                        <div><a [routerLink]="" class="nav-expand-link" (click)="resetMobileMenu()">Back</a></div>
+                        <div *ngFor="let client of clients">
+                            <a [routerLink]="['/employees/client', client.name]">{{ client.name }}
+                                ({{ client.consultantCount }})</a>
+                        </div>
+                    </section>
+                    <section class="mobile-home-page-nav-section">
+                        <div class="mobile-home-page-logout">
+                            <a class="nav-item nav-link" (click)="logout()">Logout</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
