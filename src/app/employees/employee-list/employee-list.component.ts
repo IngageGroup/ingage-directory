@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, AfterContentChecked } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Employee } from '../employee';
 import { SideBarService } from '../../sidebar/side-bar.service';
@@ -12,12 +12,13 @@ import { DataService } from '../data.service';
     templateUrl: './employee-list.component.html',
     styleUrls: ['./employee-list.component.css']
 })
-export class EmployeeListComponent implements OnInit {
+export class EmployeeListComponent implements OnInit, AfterContentChecked {
     private category: string;
     private employees: Employee[];
     private clientName: string;
     private practiceArea: string;
     public filtered: Employee[];
+    public headerTitle: string;
     searchText = '';
 
     constructor(
@@ -48,6 +49,10 @@ export class EmployeeListComponent implements OnInit {
 
     ngOnInit() {
         this.searchBarService.searchText.subscribe(message => this.searchText = message);
+    }
+
+    ngAfterContentChecked() {
+        this.appTitleService.appHeaderTitle.subscribe(message => this.headerTitle = message);
     }
 
     private filterThis() {

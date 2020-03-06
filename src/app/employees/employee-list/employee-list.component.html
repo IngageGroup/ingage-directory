@@ -1,4 +1,5 @@
 <section class="category-section">
+    <div class='container-header'>{{ headerTitle }}</div>
     <div class='container'>
         <div *ngFor="let employee of filtered | searchEmployees:'firstname,lastname,title':searchText"
             class='tile image-loaded'>

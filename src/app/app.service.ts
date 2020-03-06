@@ -11,8 +11,4 @@ export class AppTitleService {
     setAppTitle(title: string) {
         this.appTitleSource.next(title);
     }
-
-    // getAppTitle() {
-    //     return this.appTitleSource.asObservable();
-    // }
 }

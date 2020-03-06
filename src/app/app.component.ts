@@ -1,7 +1,3 @@
-// import 'rxjs/add/operator/filter';
-// import 'rxjs/add/operator/map';
-// import 'rxjs/add/operator/mergeMap';
-
 import { Component, OnInit, AfterViewInit, AfterContentChecked } from '@angular/core';
 import { LoginService } from './auth/login.service';
 import { Router, NavigationEnd, ActivatedRoute, NavigationStart, ChildrenOutletContexts } from '@angular/router';
@@ -17,10 +13,9 @@ import { SearchBarService } from './search-bar/search-bar.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, AfterContentChecked {
-  // private loggedIn: boolean;
   public pageTitle: string;
-  // private someString: string;
   private showSearchBar = true;
+  // public showPageTitle = true;
   private searchText = 'foo';
 
   constructor(
@@ -41,6 +36,7 @@ export class AppComponent implements OnInit, AfterContentChecked {
       .events.pipe(
         filter(event => event instanceof NavigationEnd),
         map(() => {
+          // this.showPageTitle = true;
           let child = this.activatedRoute.firstChild;
           while (child.firstChild) {
             child = child.firstChild;
@@ -53,6 +49,8 @@ export class AppComponent implements OnInit, AfterContentChecked {
                 this.searchBarService.setShowSearchBar(true);
               }
             } else {
+              // on the home page
+              // this.showPageTitle = false;
               this.searchBarService.setShowSearchBar(false);
             }
           }
@@ -77,7 +75,8 @@ export class AppComponent implements OnInit, AfterContentChecked {
       ).subscribe((title: string) => {
         if (title !== 'none') {
           this.appTitleService.setAppTitle(title);
-          this.titleService.setTitle(title);
+          const pageTitle = `Ingage Directory - ${title}`;
+          this.titleService.setTitle(pageTitle);
         }
       });
   }
