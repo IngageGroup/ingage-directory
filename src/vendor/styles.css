@@ -164,6 +164,14 @@ ul {
   flex-basis: 33.3%;
 }
 
+.desktop-app-title {
+  display: block;
+}
+
+.container-header {
+  display: none;
+}
+
 .header .mob-nav {
   display: none;
 }
@@ -723,6 +731,12 @@ a:hover {
     font-size: 1.5em;
     align-self: flex-end;
     padding-left: 25px;
+  }
+  .desktop-app-title {
+    display: none;
+  }
+  .container-header {
+    display: block;
   }
   .header .mob-nav {
     display: block;

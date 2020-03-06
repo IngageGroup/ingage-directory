@@ -49,10 +49,9 @@ export function provideConfig() {
     FilterPipeModule,
     ReactiveFormsModule,
     HttpClientModule,
-    // InMemoryWebApiModule.forRoot(BackendService),
     SocialLoginModule,
     RouterModule.forRoot([
-      { path: '', component: EmployeeHomeComponent, canActivate: [AuthGuard], data: { title: 'Recently Joined' } },
+      { path: '', component: EmployeeHomeComponent, canActivate: [AuthGuard], data: { title: '' } },
       {
         path: 'employees',
         canActivate: [AuthGuard],

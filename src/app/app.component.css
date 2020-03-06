@@ -3,7 +3,9 @@
 }
 
 @media (max-width: 992px) {
-  .page-inner { padding-top: 31px; }
+  .page-inner {
+    padding-top: 31px;
+  }
 }
 
 /*
