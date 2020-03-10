@@ -39,3 +39,6 @@ https://scotch.io/tutorials/deploying-an-angular-cli-app-to-production-with-fire
 - [x] add a count of consultants at each client to left menu
 - [x] add coach to profile (from Andrea)
 - [ ] look at https://www.npmjs.com/package/@angular/fire for implementing anayltics
+- [ ] use firebase authentication
+- [ ] tighten up authentication, are there better practices?
+- [ ] if viewing yourself, show your Munoz coupon code
