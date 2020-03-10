@@ -4,6 +4,14 @@
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: 'AIzaSyCPjEFA_Lw3epNCfe0uPfd5Cb3DbTSs7RA',
+    authDomain: 'ingage-directory.firebaseapp.com',
+    // databaseURL: 'https://<DATABASE_NAME>.firebaseio.com',
+    projectId: 'ingage-directory',
+    // storageBucket: '<BUCKET>.appspot.com',
+    // messagingSenderId: '<SENDER_ID>'
+  }
 };
 
 /*

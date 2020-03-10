@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { AppTitleService } from 'src/app/app.service';
 import { Title } from '@angular/platform-browser';
 import { DataService } from '../data.service';
+import { Employee } from '../employee';
 
 @Component({
   encapsulation: ViewEncapsulation.Emulated,
@@ -12,7 +13,8 @@ import { DataService } from '../data.service';
 })
 export class EmployeeDetailComponent implements OnInit, AfterViewInit {
   employeeId = '';
-  employee;
+  employee: Employee;
+  public managerLabel: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +26,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     const empId = this.route.snapshot.params.id;
     this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +empId)[0];
+    this.managerLabel = (this.employee.title === 'Apprentice') ? 'Mentor' : 'Coach';
   }
 
   ngAfterViewInit() {

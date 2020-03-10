@@ -28,6 +28,9 @@ import { AppTitleService } from './app.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SearchBarService } from './search-bar/search-bar.service';
 import { DataService } from './employees/data.service';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
+import { environment } from 'src/environments/environment';
 
 const config = new AuthServiceConfig([
   {
@@ -43,6 +46,8 @@ export function provideConfig() {
 @NgModule({
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAnalyticsModule,
     FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
@@ -84,6 +89,7 @@ export function provideConfig() {
     AppTitleService,
     SearchBarService,
     DataService,
+    ScreenTrackingService,
   ],
   declarations: [
     AppComponent,
