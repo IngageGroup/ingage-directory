@@ -5,12 +5,20 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyCPjEFA_Lw3epNCfe0uPfd5Cb3DbTSs7RA',
-    authDomain: 'ingage-directory.firebaseapp.com',
+    // apiKey: 'AIzaSyCPjEFA_Lw3epNCfe0uPfd5Cb3DbTSs7RA',
+    // authDomain: 'ingage-directory.firebaseapp.com',
     // databaseURL: 'https://<DATABASE_NAME>.firebaseio.com',
-    projectId: 'ingage-directory',
+    // projectId: 'ingage-directory',
     // storageBucket: '<BUCKET>.appspot.com',
     // messagingSenderId: '<SENDER_ID>'
+    apiKey: 'AIzaSyCPjEFA_Lw3epNCfe0uPfd5Cb3DbTSs7RA',
+    authDomain: 'ingage-directory.firebaseapp.com',
+    databaseURL: 'https://ingage-directory.firebaseio.com',
+    projectId: 'ingage-directory',
+    storageBucket: 'ingage-directory.appspot.com',
+    messagingSenderId: '460716669800',
+    appId: '1:460716669800:web:59ff4951f8fc0cd60f34dd',
+    measurementId: 'G-47CHGXZ97L'
   }
 };
 
