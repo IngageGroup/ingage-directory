@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Employee } from 'src/app/employees/employee';
 import { Client } from 'src/app/employees/client';
-import Employees from 'src/assets/employee.json';
+// import Employees from 'src/assets/employee.json';
+import Employees from 'src/assets/employee.test.json';
 
 @Injectable({
   providedIn: 'root'
