@@ -15,6 +15,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
   employeeId = '';
   employee: Employee;
   public managerLabel: string;
+  public showChampion = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,6 +28,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     const empId = this.route.snapshot.params.id;
     this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +empId)[0];
     this.managerLabel = (this.employee.title === 'Apprentice') ? 'Mentor' : 'Coach';
+    this.showChampion = (this.employee.title !== 'Apprentice');
   }
 
   ngAfterViewInit() {
