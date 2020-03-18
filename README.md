@@ -42,3 +42,5 @@ https://scotch.io/tutorials/deploying-an-angular-cli-app-to-production-with-fire
 - [ ] use firebase authentication
 - [ ] tighten up authentication, are there better practices?
 - [ ] if viewing yourself, show your Munoz coupon code
+- [ ] document configuration, how to build locally, how to push to firebase, etc.
+- [ ] show "champion a cause" per Elena on detail page.  we may even want a list of people and cause???
