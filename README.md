@@ -1,10 +1,28 @@
-# TestNg
+# Ingage Directory
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+
+## Data/Environments
+
+This project uses a static json file for it's data source.  There are three environment configurations
+
+### default configuration
+
+The default configuation uses the `employee.mock.json` file for employee data.  This is fictional data, and the related images are stored in the 'assets/test-profiles` folder for local testing.  All of the files needed to run the default configuation are part of this repo.
+
+### test configuration
+The test configuation uses the `employee.test.json` file for employee data.  This is a subset of the production data, isn't normally updated.  The `employee.test.json` file is not part of this repo, see Tony Maddox for a copy.
+
+### production configuration
+The production configuation uses the `employee.prod.json` file for employee data.  This file is generated regularly from a Google Sheet that is maintained by Tony Maddox.  The `employee.prod.json` file is not part of this repo.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Firebase
+
+This app is hosted on Firebase.  Use `npm run deploy` to build & deploy to Firebase.  See Tony Maddox for access to the firebase project. 
 
 ## Code scaffolding
 
