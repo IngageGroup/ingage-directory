@@ -56,7 +56,7 @@ export function provideConfig() {
     HttpClientModule,
     SocialLoginModule,
     RouterModule.forRoot([
-      { path: '', component: EmployeeHomeComponent, canActivate: [AuthGuard], data: { title: '' } },
+      { path: '', component: EmployeeHomeComponent, canActivate: [AuthGuard], data: { title: 'Recently Joined' } },
       {
         path: 'employees',
         canActivate: [AuthGuard],
