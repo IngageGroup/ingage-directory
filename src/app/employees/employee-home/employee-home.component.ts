@@ -1,7 +1,5 @@
 import { Component, ViewEncapsulation, OnInit, HostBinding } from '@angular/core';
 import { LoginService } from '../../auth/login.service';
-import { AuthService } from 'angularx-social-login';
-import { Router } from '@angular/router';
 import { DataService } from 'src/app/employees/data.service';
 
 import {

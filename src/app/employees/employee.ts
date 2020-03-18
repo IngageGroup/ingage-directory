@@ -13,4 +13,5 @@ export interface Employee {
     practicearea: string;
     tileimageurl?: string;
     title?: string;
+    champion?: string;
 }
