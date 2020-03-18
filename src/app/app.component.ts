@@ -36,7 +36,6 @@ export class AppComponent implements OnInit, AfterContentChecked {
       .events.pipe(
         filter(event => event instanceof NavigationEnd),
         map(() => {
-          // this.showPageTitle = true;
           let child = this.activatedRoute.firstChild;
           while (child.firstChild) {
             child = child.firstChild;
