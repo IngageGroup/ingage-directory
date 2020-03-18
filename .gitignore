@@ -49,4 +49,5 @@ Thumbs.db
 .firebase/
 
 # employee json file, our 'database'
-src/assets/employee.json
+src/assets/data-files/employee.prod.json
+src/assets/data-files/employee.test.json
