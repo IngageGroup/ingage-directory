@@ -110,4 +110,9 @@ button:hover {
         width: 75%;
         min-height: unset;
     }
-  }
+}
+
+.loading {
+    color: white;
+    padding-top: 50px;
+}

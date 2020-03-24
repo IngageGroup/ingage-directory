@@ -1,9 +1,9 @@
-<div id="dashboard">
-    <app-side-bar *ngIf="this.loginService.isLoggedIn"></app-side-bar>
+<div id="dashboard" *ngIf="this.loginService.isLoggedIn">
+    <app-side-bar></app-side-bar>
 
     <div class="container">
         <div class="page-wrap">
-            <div class="header" *ngIf="this.loginService.isLoggedIn">
+            <div class="header">
                 <app-mobile-menu class="mob-nav"></app-mobile-menu>
                 <div class="title desktop-app-title">{{ pageTitle }}</div>
                 <app-search-bar></app-search-bar>
@@ -17,5 +17,17 @@
             </div>
         </div>
 
+    </div>
+</div>
+
+<div id="dashboard" *ngIf="!this.loginService.isLoggedIn">
+    <div class="container">
+        <div class="page-wrap">
+            <div class="page-inner">
+                <div class="page-content">
+                    <router-outlet (activate)="onActivate($event)"></router-outlet>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

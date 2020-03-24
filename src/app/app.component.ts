@@ -31,7 +31,6 @@ export class AppComponent implements OnInit, AfterContentChecked {
     const appDefaultTitle = 'Ingagers';
     this.searchBarService.showSearchBar.subscribe(toggle => this.showSearchBar = toggle);
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
-
     this.router
       .events.pipe(
         filter(event => event instanceof NavigationEnd),
