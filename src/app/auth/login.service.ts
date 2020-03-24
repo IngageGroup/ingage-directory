@@ -19,6 +19,7 @@ export class LoginService {
   ) {
 
     this.firebaseAuth.authState.subscribe(user => {
+      console.log('authState.subscribe');
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
@@ -30,6 +31,7 @@ export class LoginService {
     });
 
     this.firebaseAuth.auth.getRedirectResult().then(result => {
+      console.log('getRedirectResult');
       localStorage.setItem('authenticating', null);
       this.router.navigateByUrl('/');
     });
