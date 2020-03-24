@@ -1,63 +1,62 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { AuthService, SocialUser } from 'angularx-social-login';
-import { GoogleLoginProvider } from 'angularx-social-login';
-import { GoogleUser } from './googleUser';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/auth';
+import firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  googleUser = new GoogleUser();
-  private user: SocialUser;
+  userData: any;
+  public isLoading = false;
 
   constructor(
+
+    public firebaseAuth: AngularFireAuth,
+    private router: Router,
     private http: HttpClient,
-    private authService: AuthService,
-    public router: Router,
   ) {
-    // Setting logged in user in localstorage else null
-    this.authService.authState.subscribe(user => {
+
+    this.firebaseAuth.authState.subscribe(user => {
       if (user) {
-          this.user = user;
-          localStorage.setItem('user', JSON.stringify(this.user));
-          JSON.parse(localStorage.getItem('user'));
+        this.userData = user;
+        localStorage.setItem('user', JSON.stringify(this.userData));
+        JSON.parse(localStorage.getItem('user'));
       } else {
         localStorage.setItem('user', null);
         JSON.parse(localStorage.getItem('user'));
       }
     });
-  }
 
-  get isLoggedIn(): boolean {
-      const user = JSON.parse(localStorage.getItem('user'));
-      return (user !== null) ? true : false;
-  }
-
-  // store the URL so we can redirect after logging in
-  redirectUrl: string;
-
-  signInWithGoogle(): void {
-    // this.authService.signIn(GoogleLoginProvider.PROVIDER_ID)
-    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(socialusers => {
-
-      // this.googleUser.email = socialusers.email;
-      // this.googleUser.id = socialusers.id;
-      // this.googleUser.idToken = socialusers.idToken;
-      // this.googleUser.image = socialusers.photoUrl;
-      // this.googleUser.name = socialusers.name;
-      // this.googleUser.provider = socialusers.provider;
-      // this.googleUser.token = socialusers.authToken;
-
-      const redirect = this.redirectUrl ? this.router.parseUrl(this.redirectUrl) : '/';
-      this.router.navigateByUrl(redirect);
+    this.firebaseAuth.auth.getRedirectResult().then(result => {
+      localStorage.setItem('authenticating', null);
+      this.router.navigateByUrl('/');
     });
   }
 
+  signInWithGoogle(): void {
+    this.isLoading = true;
+    localStorage.setItem('authenticating', JSON.stringify(true));
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({
+      hd: 'ingagepartners.com',
+      access_type: 'online',
+      prompt: 'select_account',
+    });
+    this.firebaseAuth.auth.signInWithRedirect(provider);
+  }
+
+  get isLoggedIn(): boolean {
+    const user = JSON.parse(localStorage.getItem('user'));
+    return (user !== null && user.emailVerified !== false) ? true : false;
+  }
+
   async signOut() {
-    await this.authService.signOut();
-    localStorage.removeItem('user');
-    this.router.navigate(['/login']);
+    await this.firebaseAuth.auth.signOut()
+      .then((res) => {
+        localStorage.removeItem('user');
+        this.router.navigate(['/login']);
+      });
   }
 }
