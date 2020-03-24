@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,12 +10,9 @@ import { EmployeeListComponent } from './employees/employee-list/employee-list.c
 import { EmployeeDetailComponent } from './employees/employee-detail/employee-detail.component';
 import { EmployeeHomeComponent } from './employees/employee-home/employee-home.component';
 import { MatIconModule } from '@angular/material/icon';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { BackendService } from './backend.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SocialLoginModule } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
-// import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './auth/login/login.component';
 import { UserToolsComponent } from './user-tools/user-tools.component';
 import { CustomDatePipe } from './helpers/custom.datepipe';
@@ -28,25 +26,22 @@ import { AppTitleService } from './app.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SearchBarService } from './search-bar/search-bar.service';
 import { DataService } from './employees/data.service';
-import { NgxSpinnerModule } from "ngx-spinner";
+import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 import { environment } from 'src/environments/environment';
-// import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import {
   AngularFireAuthGuard,
   AngularFireAuthGuardModule,
-  hasCustomClaim,
   redirectUnauthorizedTo,
   redirectLoggedInTo
 } from '@angular/fire/auth-guard';
-// import { AuthGuard } from './auth/auth.guard';
 
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider('176769310679-t71a2k2il0ji1lm35srbrdieu6fnuoh5.apps.googleusercontent.com')
+    provider: new GoogleLoginProvider(environment.googleClientId)
   }
 ]);
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
@@ -59,6 +54,7 @@ export function provideConfig() {
 @NgModule({
   imports: [
     BrowserModule,
+    CommonModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
     AngularFireAuthModule,
@@ -86,6 +82,7 @@ export function provideConfig() {
           { path: 'all', component: EmployeeListComponent },
           {
             path: 'leadership',
+            canActivate: [AngularFireAuthGuard],
             component: EmployeeListComponent,
             data: {
               title: 'Leadership Team'
@@ -116,6 +113,7 @@ export function provideConfig() {
     SearchBarService,
     DataService,
     ScreenTrackingService,
+    NgxSpinnerService,
   ],
   declarations: [
     AppComponent,
@@ -132,5 +130,6 @@ export function provideConfig() {
     SearchBarComponent,
   ],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
