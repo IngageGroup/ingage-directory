@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ingage-directory"
+    "default": "ingage-directory",
+    "development": "ingage-directory-dev"
   }
 }
