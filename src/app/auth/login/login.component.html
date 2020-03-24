@@ -2,6 +2,10 @@
   <div class="wrap-login">
     <div style="padding-bottom: 55px;"><img src="assets/images/Ingage_logo_no_BG.png" style="width: 100%;" /></div>
 
+    <ngx-spinner type="ball-clip-rotate-multiple" size="medium">
+      <p class="loading">{{ loadingMessage }}</p>
+    </ngx-spinner>
+
     <div class="container-login-form-btn">
       <button class="login-form-btn" (click)="login()" *ngIf="!this.loginService.isLoggedIn">
         Login
@@ -10,5 +14,6 @@
         Logout
       </button>
     </div>
+
   </div>
 </div>
