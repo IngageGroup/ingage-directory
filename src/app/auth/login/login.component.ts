@@ -14,16 +14,18 @@ export class LoginComponent implements OnInit {
   constructor(
     public router: Router,
     public loginService: LoginService,
-    private spinner: NgxSpinnerService) {
+    private spinner: NgxSpinnerService
+  ) {
   }
 
   public loadingMessage: string;
 
   ngOnInit() {
     const isAuthenticating = JSON.parse(localStorage.getItem('authenticating'));
-    if (isAuthenticating) {
+    if (isAuthenticating === true) {
       this.loadingMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
       this.spinner.show();
+      console.log('show spinner');
     } else {
       this.spinner.hide();
       if (this.loginService.isLoggedIn) {

@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
+  googleClientId: '176769310679-t71a2k2il0ji1lm35srbrdieu6fnuoh5.apps.googleusercontent.com',
   firebase: {
     apiKey: 'AIzaSyCPjEFA_Lw3epNCfe0uPfd5Cb3DbTSs7RA',
     authDomain: 'ingage-directory.firebaseapp.com',
