@@ -14,7 +14,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { SocialLoginModule } from 'angularx-social-login';
 import { AuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
-import { AuthGuard } from './auth/auth.guard';
+// import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './auth/login/login.component';
 import { UserToolsComponent } from './user-tools/user-tools.component';
 import { CustomDatePipe } from './helpers/custom.datepipe';
@@ -28,9 +28,20 @@ import { AppTitleService } from './app.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SearchBarService } from './search-bar/search-bar.service';
 import { DataService } from './employees/data.service';
+import { NgxSpinnerModule } from "ngx-spinner";
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 import { environment } from 'src/environments/environment';
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import {
+  AngularFireAuthGuard,
+  AngularFireAuthGuardModule,
+  hasCustomClaim,
+  redirectUnauthorizedTo,
+  redirectLoggedInTo
+} from '@angular/fire/auth-guard';
+// import { AuthGuard } from './auth/auth.guard';
 
 const config = new AuthServiceConfig([
   {
@@ -38,6 +49,8 @@ const config = new AuthServiceConfig([
     provider: new GoogleLoginProvider('176769310679-t71a2k2il0ji1lm35srbrdieu6fnuoh5.apps.googleusercontent.com')
   }
 ]);
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
 
 export function provideConfig() {
   return config;
@@ -48,6 +61,8 @@ export function provideConfig() {
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
+    AngularFireAuthModule,
+    AngularFireAuthGuardModule,
     FormsModule,
     BrowserAnimationsModule,
     MatIconModule,
@@ -55,11 +70,17 @@ export function provideConfig() {
     ReactiveFormsModule,
     HttpClientModule,
     SocialLoginModule,
+    NgxSpinnerModule,
     RouterModule.forRoot([
-      { path: '', component: EmployeeHomeComponent, canActivate: [AuthGuard], data: { title: 'Recently Joined' } },
+      {
+        path: '',
+        component: EmployeeHomeComponent,
+        canActivate: [AngularFireAuthGuard],
+        data: { title: 'Recently Joined', authGuardPipe: redirectUnauthorizedToLogin }
+      },
       {
         path: 'employees',
-        canActivate: [AuthGuard],
+        canActivate: [AngularFireAuthGuard],
         children: [
           { path: '', redirectTo: 'all', pathMatch: 'full' },
           { path: 'all', component: EmployeeListComponent },
@@ -76,8 +97,13 @@ export function provideConfig() {
           { path: 'client/:client', component: EmployeeListComponent, data: { title: 'Client Team' } },
         ]
       },
-      { path: 'employee/:id', component: EmployeeDetailComponent, canActivate: [AuthGuard], data: { title: 'none' } },
-      { path: 'login', component: LoginComponent },
+      {
+        path: 'employee/:id',
+        component: EmployeeDetailComponent,
+        canActivate: [AngularFireAuthGuard],
+        data: { title: 'none', }
+      },
+      { path: 'login', component: LoginComponent, },
     ])
   ],
   providers: [
