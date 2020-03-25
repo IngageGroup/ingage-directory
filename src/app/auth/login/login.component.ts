@@ -11,26 +11,21 @@ import loadingMessages from './loading-messages';
 })
 export class LoginComponent implements OnInit {
 
+  public loadingMessage: string;
+
   constructor(
     public router: Router,
     public loginService: LoginService,
     private spinner: NgxSpinnerService
-  ) {
-  }
-
-  public loadingMessage: string;
+  ) { }
 
   ngOnInit() {
+    this.loadingMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
     const isAuthenticating = JSON.parse(localStorage.getItem('authenticating'));
     if (isAuthenticating === true) {
-      this.loadingMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
       this.spinner.show();
-      console.log('show spinner');
     } else {
       this.spinner.hide();
-      if (this.loginService.isLoggedIn) {
-        this.router.navigate(['/']);
-      }
     }
   }
 
