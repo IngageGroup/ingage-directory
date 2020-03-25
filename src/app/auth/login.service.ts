@@ -3,13 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase/app';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
   userData: any;
-  public isLoading = false;
 
   constructor(
 
@@ -19,7 +19,6 @@ export class LoginService {
   ) {
 
     this.firebaseAuth.authState.subscribe(user => {
-      console.log('authState.subscribe');
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
@@ -31,14 +30,12 @@ export class LoginService {
     });
 
     this.firebaseAuth.auth.getRedirectResult().then(result => {
-      console.log('getRedirectResult');
-      localStorage.setItem('authenticating', null);
       this.router.navigateByUrl('/');
+      localStorage.setItem('authenticating', null);
     });
   }
 
   signInWithGoogle(): void {
-    this.isLoading = true;
     localStorage.setItem('authenticating', JSON.stringify(true));
     const provider = new firebase.auth.GoogleAuthProvider();
     provider.setCustomParameters({
