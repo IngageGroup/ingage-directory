@@ -529,7 +529,11 @@ a:hover {
 
 .profile-details {
   border-bottom: 1px solid #e4ebf0;
-  padding: 40px 0;
+  /* padding: 40px 0; */
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .profile-line:last-child {
@@ -580,10 +584,11 @@ a:hover {
   margin: 1em 0;
 }
 
+/* 
 .profile-details {
   border-bottom: 1px solid #e4ebf0;
   padding: 40px 0;
-}
+} */
 
 .tertiary, .profile-label {
   font-size: 12px;
