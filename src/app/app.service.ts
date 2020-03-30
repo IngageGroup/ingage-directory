@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class AppTitleService {
-    private appTitleSource = new BehaviorSubject('default message');
+    private appTitleSource = new BehaviorSubject('');
     appHeaderTitle = this.appTitleSource.asObservable();
 
     constructor() { }
