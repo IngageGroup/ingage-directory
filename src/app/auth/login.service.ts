@@ -29,10 +29,15 @@ export class LoginService {
       }
     });
 
-    this.firebaseAuth.auth.getRedirectResult().then(result => {
-      this.router.navigateByUrl('/');
-      localStorage.setItem('authenticating', null);
-    });
+    this.firebaseAuth.auth.getRedirectResult()
+      .then(result => {
+        this.router.navigateByUrl('/');
+        localStorage.setItem('authenticating', null);
+      })
+      .catch(reason => {
+        localStorage.setItem('authenticating', null);
+        console.log('getRedirectResult error', reason);
+      });
   }
 
   signInWithGoogle(): void {
@@ -43,7 +48,11 @@ export class LoginService {
       access_type: 'online',
       prompt: 'select_account',
     });
-    this.firebaseAuth.auth.signInWithRedirect(provider);
+    this.firebaseAuth.auth.signInWithRedirect(provider)
+      .catch(reason => {
+        localStorage.setItem('authenticating', null);
+        console.log('signInWithRedirect error', reason);
+      });
   }
 
   get isLoggedIn(): boolean {
