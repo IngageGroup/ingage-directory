@@ -157,7 +157,12 @@
     "lookupname": "Wilson, Sam",
     "title": "Apprentice",
     "tileimageurl": "assets/test-profiles/falcon.jpg",
-    "dayssincehire": 75
+    "dayssincehire": 75,
+    "hbdiblue": 1,
+    "hbdigreen": 1,
+    "hbdired": 2,
+    "hbdiyellow": 1,
+    "hbdipreference": "green"
   },
   {
     "firstname": "James",
@@ -173,7 +178,12 @@
     "lookupname": "Howlett, James",
     "title": "Apprentice",
     "tileimageurl": "assets/test-profiles/wolverine2.jpg",
-    "dayssincehire": 25
+    "dayssincehire": 25,
+    "hbdiblue": 4,
+    "hbdigreen": 3,
+    "hbdired": 2,
+    "hbdiyellow": 1,
+    "hbdipreference": "blue"
   },
   {
     "firstname": "Wanda",

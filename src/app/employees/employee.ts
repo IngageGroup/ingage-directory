@@ -14,4 +14,9 @@ export interface Employee {
     tileimageurl?: string;
     title?: string;
     champion?: string;
+    hbdiblue?: string;
+    hbdigreen?: string;
+    hbdired?: string;
+    hbdiyellow?: string;
+    hbdipreference?: string;
 }
