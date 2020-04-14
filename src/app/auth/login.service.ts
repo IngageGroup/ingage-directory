@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase/app';
 import { Subject } from 'rxjs';
+import { AngularFireAnalytics } from '@angular/fire/analytics';
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,12 +18,14 @@ export class LoginService {
     public firebaseAuth: AngularFireAuth,
     private router: Router,
     private http: HttpClient,
+    private analytics: AngularFireAnalytics,
   ) {
 
     this.firebaseAuth.authState.subscribe(user => {
       if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
+        this.analytics.setUserId(user.uid);
         JSON.parse(localStorage.getItem('user'));
       } else {
         localStorage.setItem('user', null);
@@ -29,13 +33,19 @@ export class LoginService {
       }
     });
 
-    this.firebaseAuth.auth.getRedirectResult().then(result => {
-      this.router.navigateByUrl('/');
-      localStorage.setItem('authenticating', null);
-    });
+    this.firebaseAuth.auth.getRedirectResult()
+      .then(result => {
+        this.router.navigateByUrl('/');
+        localStorage.setItem('authenticating', null);
+      })
+      .catch(reason => {
+        localStorage.setItem('authenticating', null);
+        console.log('getRedirectResult error', reason);
+      });
   }
 
   signInWithGoogle(): void {
+    this.analytics.logEvent('signInWithGoogle');
     localStorage.setItem('authenticating', JSON.stringify(true));
     const provider = new firebase.auth.GoogleAuthProvider();
     provider.setCustomParameters({
@@ -43,7 +53,11 @@ export class LoginService {
       access_type: 'online',
       prompt: 'select_account',
     });
-    this.firebaseAuth.auth.signInWithRedirect(provider);
+    this.firebaseAuth.auth.signInWithRedirect(provider)
+      .catch(reason => {
+        localStorage.setItem('authenticating', null);
+        console.log('signInWithRedirect error', reason);
+      });
   }
 
   get isLoggedIn(): boolean {

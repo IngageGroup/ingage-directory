@@ -51,3 +51,6 @@ Thumbs.db
 # employee json file, our 'database'
 src/assets/data-files/employee.prod.json
 src/assets/data-files/employee.test.json
+
+# environment files
+/src/environments/environment*.ts
