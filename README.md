@@ -56,8 +56,8 @@ https://scotch.io/tutorials/deploying-an-angular-cli-app-to-production-with-fire
 - [ ] employee service (read from "live" data source, TBD)
 - [x] add a count of consultants at each client to left menu
 - [x] add coach to profile (from Andrea)
-- [ ] look at https://www.npmjs.com/package/@angular/fire for implementing anayltics
-- [ ] use firebase authentication
+- [x] look at https://www.npmjs.com/package/@angular/fire for implementing anayltics
+- [x] use firebase authentication
 - [ ] tighten up authentication, are there better practices?
 - [ ] if viewing yourself, show your Munoz coupon code
 - [ ] document configuration, how to build locally, how to push to firebase, etc.
