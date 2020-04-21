@@ -30,24 +30,10 @@
     padding-right: 10px;
 }
 
-.hamburger-search-wrap {
-    display: flex;
-    align-content: space-between;
-    height: 35px;
-    width: 100%;
-    /* background-color: blue; */
-}
-
 .center{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100%;
-}
-
-.tempSearch {
-    margin: 0 0 0 10px;
-    padding: 5px 0;
-    border: 1px solid black;
+    height: 51px;
 }
 
