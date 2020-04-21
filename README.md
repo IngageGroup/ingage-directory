@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 3) run command "git checkout -b development" to create development branch and avoid merge conflicts with master branch.
 
-4) Access the google drive folder and download the 3 environment files, and add them to ingage-directory/src/environments within the project directory.
+4) Access the google drive folder(_Ingage Share/F: Project SPaces/IngageDirectory/data-files) and download the 3 environment files, and add them to ingage-directory/src/environments within the project directory.
 
 5) Within the project directory, run the command "npm install"
 
