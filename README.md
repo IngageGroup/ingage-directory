@@ -2,6 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
+# Installation
+
+1) This Project requires a global installation of angular, using the command "npm install -g @angular/cli"
+
+2) Use the link from "clone with https" option on the project github page to enter the git command "git pull [html link here]".
+
+3) run command "git checkout -b development" to create development branch and avoid merge conflicts with master branch.
+
+4) Access the google drive folder and download the 3 environment files, and add them to ingage-directory/src/environments within the project directory.
+
+5)  Within the project directory, run the command "npm install"
+
+# Launching Project Locally
+
+The project should launch by running the command "ng serve" in a new terminal, but if you receive compile errors, run the commands "ng update" and "npm update" before trying again. 
+
+# Feature Creation
+When creating a new feature, to avoid merge conflicts, please run the command "git checkout  -b [feature-name-here]" to create a branch for your feature.
+
 ## Data/Environments
 
 This project uses a static json file for it's data source.  There are three environment configurations
