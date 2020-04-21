@@ -700,7 +700,9 @@ a:hover {
     display: none;
   }
   .search-bar {
-    display: none;
+    /* display: none; */
+    margin: 10px 10px 0 0;
+    min-width: 335px;
   }
   .sidebar-left {
     display: none;
@@ -739,7 +741,8 @@ a:hover {
     display: block;
   }
   .header .mob-nav {
-    display: block;
+    display: flex;
+    padding: 5px 10px 0 0;
   }
   .profile-detail-content {
     display: flex;

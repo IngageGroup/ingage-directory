@@ -42,6 +42,7 @@ export class MobileMenuComponent implements OnInit {
 
   private employees: Employee[];
   public clients: Client[];
+  public showSearchBar: true;
   showMobileMenu = false;
   showTopMenu = false;
   showPracticeMenu = false;
@@ -54,9 +55,10 @@ export class MobileMenuComponent implements OnInit {
       ).subscribe(() => {
         this.showMobileMenu = false;
       });
-
+      
     this.employees = this.dataService.getEmployees();
     this.clients = this.dataService.getClients();
+
   }
 
   toggleMobileMenu() {
