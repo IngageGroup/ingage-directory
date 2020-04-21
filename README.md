@@ -6,9 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1) This Project requires a global installation of angular, using the command "npm install -g @angular/cli"
 
-2) Use the link from "clone with https" option on the project github page to enter the git command "git clone [html link here]".
+2) Use the link from "clone with https" option on the project github page to enter the git command "git clone [html link here]". Then run "git pull".
 
-3) run command "git checkout -b development" to create development branch and avoid merge conflicts with master branch.
+3) To Ensure you are in the development branch, run command "git checkout development" 
 
 4) Access the google drive folder(_Ingage Share/F: Project SPaces/IngageDirectory/data-files) and download the 3 environment files, and add them to ingage-directory/src/environments within the project directory.
 
