@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1) This Project requires a global installation of angular, using the command "npm install -g @angular/cli"
 
-2) Use the link from "clone with https" option on the project github page to enter the git command "git pull [html link here]".
+2) Use the link from "clone with https" option on the project github page to enter the git command "git clone [html link here]".
 
 3) run command "git checkout -b development" to create development branch and avoid merge conflicts with master branch.
 
