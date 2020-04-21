@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 4) Access the google drive folder and download the 3 environment files, and add them to ingage-directory/src/environments within the project directory.
 
-5)  Within the project directory, run the command "npm install"
+5) Within the project directory, run the command "npm install"
 
 # Launching Project Locally
 
