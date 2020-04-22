@@ -6,6 +6,7 @@
   width: 410px;
   height: 436px;
   padding: 0;
+  margin: auto;
 }
 
 .card-profile-image.image-loaded .profile-image {
@@ -19,14 +20,74 @@
   .page-inner {
     padding: 0;
   }
-
   .card-profile-image {
     width: 375px;
     height: 400px;
   }
-  
   .card-profile-image.image-loaded .profile-image {
     width: 375px;
     height: 400px;
+  }
+}
+
+/* container for HBDI Scores, will probably move to it's own component */
+
+.hbdi-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* background-color: DodgerBlue; */
+  font-family: 'Roboto';
+  color: #fff;
+}
+
+.hbdi-container>div {
+  /* background-color: #f1f1f1; */
+  /* width: 100px; */
+  margin: 5px;
+  text-align: center;
+  /* line-height: 75px; */
+  /* font-size: 30px; */
+  flex-grow: 1;
+  line-height: 1.5em;
+  font-size: 20px;
+  border-radius: 5px;
+  /* background-color: coral; */
+}
+
+.hbdi-blue {
+  background-color: #00bff6;
+}
+
+.hbdi-green {
+  background-color: #00dc72;
+}
+
+.hbdi-red {
+  background-color: #ff003c;
+}
+
+.hbdi-yellow {
+  background-color: #ffd802;
+}
+
+.hbdi-preference {
+  min-height: 10px;
+}
+
+.hbdi-mobile {
+  display: none;
+}
+
+.hbdi-desktop {
+  display: block;
+}
+
+@media only screen and (max-device-width: 812px) {
+  .hbdi-mobile {
+    display: block;
+  }
+  .hbdi-desktop {
+    display: none;
   }
 }
