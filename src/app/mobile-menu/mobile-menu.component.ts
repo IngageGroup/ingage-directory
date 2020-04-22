@@ -3,7 +3,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 import { NavigationStart, Router } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 import { Employee } from '../employees/employee';
-import { AuthService } from 'angularx-social-login';
+import { LoginService } from '../auth/login.service';
 import { DataService } from '../employees/data.service';
 import { Client } from '../employees/client';
 
@@ -36,7 +36,7 @@ export class MobileMenuComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private authService: AuthService,
+    public loginService: LoginService,
     private dataService: DataService,
   ) { }
 
@@ -83,8 +83,6 @@ export class MobileMenuComponent implements OnInit {
   }
 
   logout() {
-    this.authService.signOut(true).then(data => {
-      this.router.navigate(['/login']);
-    });
+    this.loginService.signOut();
   }
 }

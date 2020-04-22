@@ -11,8 +11,6 @@ import { EmployeeDetailComponent } from './employees/employee-detail/employee-de
 import { EmployeeHomeComponent } from './employees/employee-home/employee-home.component';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { SocialLoginModule } from 'angularx-social-login';
-import { AuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
 import { LoginComponent } from './auth/login/login.component';
 import { UserToolsComponent } from './user-tools/user-tools.component';
 import { CustomDatePipe } from './helpers/custom.datepipe';
@@ -38,18 +36,8 @@ import {
   redirectLoggedInTo
 } from '@angular/fire/auth-guard';
 
-const config = new AuthServiceConfig([
-  {
-    id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider(environment.googleClientId)
-  }
-]);
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
-
-export function provideConfig() {
-  return config;
-}
 
 @NgModule({
   imports: [
@@ -65,7 +53,6 @@ export function provideConfig() {
     FilterPipeModule,
     ReactiveFormsModule,
     HttpClientModule,
-    SocialLoginModule,
     NgxSpinnerModule,
     RouterModule.forRoot([
       {
@@ -104,10 +91,6 @@ export function provideConfig() {
     ])
   ],
   providers: [
-    {
-      provide: AuthServiceConfig,
-      useFactory: provideConfig
-    },
     SideBarService,
     AppTitleService,
     SearchBarService,
