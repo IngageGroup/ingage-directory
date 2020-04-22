@@ -91,20 +91,3 @@
     display: none;
   }
 }
-
-/* .square {
-  position: relative;
-  width: 50%;
-}
-
-.square:after {
-  content: '';
-  display: block;
-  padding-bottom: 100%;
-}
-
-.square-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-} */
