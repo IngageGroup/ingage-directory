@@ -8,7 +8,7 @@ import { DataService } from '../employees/data.service';
 import { Client } from '../employees/client';
 
 @Component({
-  selector: 'app-mobile-menu',
+  selector: '-menu',
   templateUrl: './mobile-menu.component.html',
   styleUrls: ['./mobile-menu.component.css'],
   animations: [

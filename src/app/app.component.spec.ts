@@ -2,8 +2,17 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+import { LoginComponent } from './auth/login/login.component';
+import { LoginService } from './auth/login.service';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
+    //let loginObject = new LoginService();
+    //let loginCompObj = new LoginComponent();
+    
+    //spyOn(loginObject, 'isLoggedIn').and.returnValue(true);
+
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
@@ -12,6 +21,7 @@ describe('AppComponent', () => {
         AppComponent
       ],
     }).compileComponents();
+    
   }));
 
   it('should create the app', () => {
