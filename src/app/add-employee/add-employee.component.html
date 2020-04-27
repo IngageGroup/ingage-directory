@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Add Employee Form</h1>  
+    <form>
+      <div class="form-group">
+        <label for="firstname">First name</label>
+        <input type="text" class="form-control" id="firstname" required
+        [(ngModel)]="employee.firstname" name="firstname">
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last name</label>
+        <input type="text" class="form-control" id="lastname" required
+        [(ngModel)]="employee.lastname" name="lastname">
+      </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" required
+        [(ngModel)]="employee.title" name="title">>
+      </div>
+      <div class="form-group">
+        <label for="practicearea">Practice area</label>
+        <input type="text" class="form-control" id="practicearea" required
+        [(ngModel)]="employee.practicearea" name="practicearea">
+      </div>
+      <div class="form-group">
+        <label for="client">Client</label>
+        <input type="text" class="form-control" id="client"
+        [(ngModel)]="employee.client" name="client">
+      </div>
+      <div class="form-group">
+        <label for="coach">Mentor</label>
+        <input type="text" class="form-control" id="coach"
+        [(ngModel)]="employee.coach" name="coach">
+      </div>
+
+
+
+
+
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</div>
