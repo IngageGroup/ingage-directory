@@ -3,6 +3,7 @@ export interface Employee {
     birthday?: string;
     client: string;
     coach: string;
+    admin: string;
     dayssincehire: number;
     email: string;
     employeeid: number;

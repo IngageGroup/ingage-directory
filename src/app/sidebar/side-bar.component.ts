@@ -27,7 +27,6 @@ export class SideBarComponent implements OnInit {
 
     ngOnInit() {
         this.employees = this.dataService.getEmployees();
-        this.clients = this.dataService.getClients();
     }
 
     toggelPracticeMenu() {
@@ -35,6 +34,9 @@ export class SideBarComponent implements OnInit {
     }
 
     toggleClientMenu() {
+        if (this.clients == null) {
+            this.clients = this.dataService.getClients();
+        }
         this.sideBarService.toggleClientMenu();
     }
 }
