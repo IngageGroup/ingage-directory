@@ -1,5 +1,4 @@
-import { Component, ViewEncapsulation, OnInit, HostBinding } from '@angular/core';
-import { LoginService } from '../../auth/login.service';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { DataService } from 'src/app/employees/data.service';
 
 import {
@@ -39,10 +38,8 @@ import { Employee } from '../employee';
 export class EmployeeHomeComponent implements OnInit {
   public employees: Employee[];
 
-  constructor(
-    public loginService: LoginService,
-    private dataService: DataService) {
-  }
+  constructor(private dataService: DataService) { }
+
   message: boolean;
   showMobileMenu = false;
   showTopMenu = false;
@@ -50,14 +47,20 @@ export class EmployeeHomeComponent implements OnInit {
   showClientMenu = false;
 
   ngOnInit() {
-    this.employees = this.dataService
-      .getEmployees()
-      .slice()
-      .filter(x => x.dayssincehire <= 180)
-      .sort((a, b) => {
-        const x = new Date(a.anniversary);
-        const y = new Date(b.anniversary);
-        return y.getTime() - x.getTime();
+    this.dataService.fetchEmployees()
+      .subscribe((employees: Employee[]) => {
+        this.dataService.processEmployees(employees);
+        this.employees = this.dataService
+        .getEmployees()
+        .slice()
+        .filter(x => x.dayssincehire <= 180)
+        .sort((a, b) => {
+          const x = new Date(a.anniversary);
+          const y = new Date(b.anniversary);
+          return y.getTime() - x.getTime();
+        });
       });
+
   }
+
 }
