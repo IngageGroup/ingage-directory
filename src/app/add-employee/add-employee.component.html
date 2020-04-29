@@ -31,12 +31,57 @@
         <input type="text" class="form-control" id="coach"
         [(ngModel)]="employee.coach" name="coach">
       </div>
+      <div class="form-group">
+        <label for="mobilephone">Mobile</label>
+        <input type="tel" class="form-control" id="mobilephone"
+        [(ngModel)]="employee.mobilephone" name="mobilephone">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email"
+        [(ngModel)]="employee.email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="champion">Champion a Cause</label>
+        <input type="text" class="form-control" id="champion"
+        [(ngModel)]="employee.champion" name="champion">
+      </div>
+      <div class="form-group">
+        <label for="birthday">Birthday</label>
+        <input type="date" class="form-control" id="birthday"
+        [(ngModel)]="employee.birthday" name="birthday">
+      </div>
+      <div class="form-group">
+        <label for="anniversary">Ingagaversary</label>
+        <input type="date" class="form-control" id="anniversary"
+        [(ngModel)]="employee.anniversary" name="anniversary">
+      </div>
+
+
+      <div class="form-group">
+        <label for="hbdi-blue">HBDI blue</label>
+        <input type="number" class="form-control" id="hbdiblue"
+        [(ngModel)]="employee.hbdiblue" name="hbdiblue">
+      </div>
+      <div class="form-group">
+        <label for="hbdi-green">HBDI green</label>
+        <input type="number" class="form-control" id="hbdigreen"
+        [(ngModel)]="employee.hbdigreen" name="hbdigreen">
+      </div>
+      <div class="form-group">
+        <label for="hbdi-red">HBDI red</label>
+        <input type="number" class="form-control" id="hbdired"
+        [(ngModel)]="employee.hbdired" name="hbdired">
+      </div>
+      <div class="form-group">
+        <label for="hbdi-yellow">HBDI yellow</label>
+        <input type="number" class="form-control" id="hbdiyellow"
+        [(ngModel)]="employee.hbdiyellow" name="hbdiyellow">
+      </div>
 
 
 
-
-
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="text" (click)="submitForm()" class="btn btn-success">Submit</button>
 
     </form>
 </div>
