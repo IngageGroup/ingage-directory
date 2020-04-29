@@ -14,7 +14,7 @@
       <div class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" id="title" required
-        [(ngModel)]="employee.title" name="title">>
+        [(ngModel)]="employee.title" name="title">
       </div>
       <div class="form-group">
         <label for="practicearea">Practice area</label>
@@ -55,6 +55,13 @@
         <label for="anniversary">Ingagaversary</label>
         <input type="date" class="form-control" id="anniversary"
         [(ngModel)]="employee.anniversary" name="anniversary">
+      </div>
+
+      <div class="form-group">
+      <label for="profile-image">Upload a profile picture:</label>
+        <input type="file" class="form-control" id="profile-image"
+        [(ngModel)]="employee.tileimageurl" name="tileimageurl"
+        accept="image/png, image/jpeg">
       </div>
 
 
