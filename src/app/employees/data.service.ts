@@ -13,14 +13,15 @@ export class DataService {
   clients: Client[];
 
   constructor(private http: HttpClient) {
-    let dbUrl = environment.firebase.databaseURL;
-    console.log(dbUrl);
-    let employeeObj = this.http.get(dbUrl + "/Employees.json").subscribe(employees => {
-    this.fetchEmployees(employees);
-    });
   }
 
-  fetchEmployees(employees) {
+  fetchEmployees() {
+    let dbUrl = environment.firebase.databaseURL;
+    console.log(dbUrl);
+    return this.http.get(dbUrl + "/Employees.json");
+  }
+
+  processEmployees(employees: Employee[]) {
     this.employees = this.sortEmployeesByName(employees);
 
     // loop over each employee, summarize clients

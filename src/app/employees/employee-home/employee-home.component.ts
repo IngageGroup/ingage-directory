@@ -35,7 +35,7 @@ import { Employee } from '../employee';
     ]),
   ],
 })
-export class EmployeeHomeComponent implements OnInit, OnDestroy {
+export class EmployeeHomeComponent implements OnInit {
   public employees: Employee[];
 
   constructor(private dataService: DataService) { }
@@ -47,15 +47,20 @@ export class EmployeeHomeComponent implements OnInit, OnDestroy {
   showClientMenu = false;
 
   ngOnInit() {
-    this.employees = this.dataService
-      .getEmployees()
-      .slice()
-      .filter(x => x.dayssincehire <= 180)
-      .sort((a, b) => {
-        const x = new Date(a.anniversary);
-        const y = new Date(b.anniversary);
-        return y.getTime() - x.getTime();
+    this.dataService.fetchEmployees()
+      .subscribe((employees: Employee[]) => {
+        this.dataService.processEmployees(employees);
+        this.employees = this.dataService
+        .getEmployees()
+        .slice()
+        .filter(x => x.dayssincehire <= 180)
+        .sort((a, b) => {
+          const x = new Date(a.anniversary);
+          const y = new Date(b.anniversary);
+          return y.getTime() - x.getTime();
+        });
       });
+
   }
 
 }
