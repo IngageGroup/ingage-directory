@@ -20,7 +20,7 @@
     "firstname": "Ken",
     "lastname": "Stark",
     "coach": "Fury, Nick",
-    "admin": "false",
+    "admin": "true",
     "anniversary": "2015-10-12T04:00:00.000Z",
     "birthday": "2020-02-09T05:00:00.000Z",
     "email": "ken.baum@ingagepartners.com",

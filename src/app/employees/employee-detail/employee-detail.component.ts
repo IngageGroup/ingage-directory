@@ -36,7 +36,6 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     this.showChampion = (this.employee.title !== 'Apprentice');
     let user = JSON.parse(localStorage.getItem('user'));
     
-    console.log(user);
     let loggedInUserEmail = user['email'];
     this.loggedInEmployee = this.dataService.getEmployees().filter(f => f.email === loggedInUserEmail)[0];
     this.isAdmin = this.loggedInEmployee.admin === "true";
