@@ -1,0 +1,16 @@
+#mobile-cancel {
+  display: none;
+}
+
+@media only screen and (max-device-width: 812px) {
+  #mobile-cancel {
+    display: block;
+  }
+
+  input:focus + #mobile-cancel {
+    display: block;
+    height: 51px;
+    margin: 0;
+    margin-left: 2px;
+  }
+}

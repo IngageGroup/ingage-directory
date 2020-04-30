@@ -18,4 +18,9 @@ export class SearchBarService {
     setSearchText(text: string) {
         this.searchTextSource.next(text);
     }
+
+    resetSearchText() {
+        console.log("test");
+        this.searchTextSource.next("");
+    }
 }

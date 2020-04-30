@@ -1,9 +1,7 @@
 <div class="mobile-header">
-    <!-- <div class="hamburger-search-wrap"> -->
-        <div class="center">
-            <mat-icon (click)="toggleMobileMenu()">menu</mat-icon>
-        </div>
-    <!-- </div> -->
+    <div class="center">
+        <mat-icon (click)="toggleMobileMenu()">menu</mat-icon>
+    </div>
     <div class="slide-out-menu-wrap">
         <div class="slide-out-menu" *ngIf="showMobileMenu" [@slideInOut]>
             <div class="content">
