@@ -20,6 +20,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private appTitleService: AppTitleService,
     private titleService: Title,
     private dataService: DataService,
@@ -36,5 +37,9 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     const title = this.employee.firstname + ' ' + this.employee.lastname;
     this.titleService.setTitle(title);
     setTimeout(_ => this.appTitleService.setAppTitle(title));
+  }
+
+  openForm() {
+    this.router.navigate(['/editcomponent']);
   }
 }

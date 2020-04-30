@@ -22,7 +22,7 @@ export class EditButtonComponent implements OnInit {
   formdata2;
   openform = false;
 
-  constructor(private editButton: EditButtonComponent) { }
+  constructor() { }
 
   ngOnInit() {
 
