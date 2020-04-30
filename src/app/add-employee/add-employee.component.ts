@@ -23,6 +23,7 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   submitForm() {
+    
     console.log("testing submit button");
   }
 }

@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Add Employee Form</h1>  
-    <form>
+    <form (ngSubmit)="onSubmit()" #addEmployeeForm="ngForm">
       <div class="form-group">
         <label for="firstname">First name</label>
         <input type="text" class="form-control" id="firstname" required
@@ -86,7 +86,12 @@
         [(ngModel)]="employee.hbdiyellow" name="hbdiyellow">
       </div>
 
+      <!-- <button type="text" (click)="submitForm()" class="btn btn-success">Submit</button> 
+    
+    <form (ngSubmit)="onSubmit()" #addEmployeeForm="ngForm">
 
+       <button type="submit" class="btn btn-success">Submit</button>
+    -->
 
       <button type="text" (click)="submitForm()" class="btn btn-success">Submit</button>
 
