@@ -20,7 +20,6 @@ export class SearchBarService {
     }
 
     resetSearchText() {
-        console.log("test");
         this.searchTextSource.next("");
     }
 }
