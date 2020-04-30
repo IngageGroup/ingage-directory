@@ -20,7 +20,7 @@ export class EditButtonComponent implements OnInit {
   mobilenumber;
   email;
   formdata2;
-  openform = false;
+  openform = true;
 
   constructor() { }
 
@@ -60,12 +60,6 @@ export class EditButtonComponent implements OnInit {
 
   }
 
-
-  onClickOpenForm() {
-    this.openform = true;
-
-  }
-
   onClickSubmitForm(data2) {
     this.firstname = data2.firstname;
     this.lastname = data2.lastname;
@@ -76,12 +70,3 @@ export class EditButtonComponent implements OnInit {
     this.mobilenumber = data2.mobilenumber;
   }
 }
-  
-//should identify correct part of authorization data
-//  const user = JSON.parse(localStorage.getItem('user'));
-
-//should compare this data to name of current bio page
-//  const title = this.employee.firstname + ' ' + this.employee.lastname;
-
-//should have a boolean that is activated when both parts match
-//should have a show/hide reactive css button for said boolean 
