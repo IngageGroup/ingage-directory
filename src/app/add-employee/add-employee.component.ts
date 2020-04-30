@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from '../employees/employee';
 
 @Component({
   selector: 'app-add-employee',
@@ -13,6 +14,6 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   submitForm() {
-    
+    console.log("testing submit button")
   }
 }
