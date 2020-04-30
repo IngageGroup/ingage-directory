@@ -19,7 +19,7 @@ export class EditButtonComponent implements OnInit {
   mentor;
   mobilenumber;
   email;
-  formdata2;
+  data2;
   openform = true;
 
   constructor() { }
@@ -27,7 +27,7 @@ export class EditButtonComponent implements OnInit {
   ngOnInit() {
 
 
-    this.formdata2 = new FormGroup({
+    this.data2 = new FormGroup({
       email: new FormControl("", Validators.compose([
         Validators.required,
         Validators.pattern("[^ @]*@[^ @]*")
