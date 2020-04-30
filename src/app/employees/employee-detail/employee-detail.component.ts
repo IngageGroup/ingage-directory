@@ -15,6 +15,7 @@ import { Employee } from '../employee';
 export class EmployeeDetailComponent implements OnInit, AfterViewInit {
   employeeId = '';
   employee: Employee;
+  loggedInEmployee: Employee;
   public managerLabel: string;
   public showChampion = false;
   thisIsMe: boolean = false;
@@ -34,8 +35,11 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     this.managerLabel = (this.employee.title === 'Apprentice') ? 'Mentor' : 'Coach';
     this.showChampion = (this.employee.title !== 'Apprentice');
     let user = JSON.parse(localStorage.getItem('user'));
+    
+    console.log(user);
     let loggedInUserEmail = user['email'];
-    this.isAdmin = this.employee.admin === "true";
+    this.loggedInEmployee = this.dataService.getEmployees().filter(f => f.email === loggedInUserEmail)[0];
+    this.isAdmin = this.loggedInEmployee.admin === "true";
     this.thisIsMe = (loggedInUserEmail === this.employee.email) || this.isAdmin;
   }
 
