@@ -18,6 +18,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
   public managerLabel: string;
   public showChampion = false;
   thisIsMe: boolean = false;
+  isAdmin: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -34,7 +35,8 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     this.showChampion = (this.employee.title !== 'Apprentice');
     let user = JSON.parse(localStorage.getItem('user'));
     let loggedInUserEmail = user['email'];
-    this.thisIsMe = loggedInUserEmail === this.employee.email;
+    this.isAdmin = this.employee.admin === "true";
+    this.thisIsMe = (loggedInUserEmail === this.employee.email) || this.isAdmin;
   }
 
   ngAfterViewInit() {
