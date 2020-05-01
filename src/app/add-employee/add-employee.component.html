@@ -1,6 +1,6 @@
 <div class="container">
     <h1>{{ mode }} Employee Form</h1>  
-    <form (ngSubmit)="onSubmit()" #addEmployeeForm="ngForm">
+    <form (ngSubmit)="submitForm()" #addEmployeeForm="ngForm">
       <div class="form-group">
         <label for="firstname">First name</label>
         <input type="text" class="form-control" id="firstname" required
