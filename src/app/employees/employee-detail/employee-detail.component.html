@@ -1,4 +1,5 @@
 <div class="profile-detail-content">
+    
     <div class="profile-left">
         <div>
             <div class="profile-details">
@@ -61,15 +62,23 @@
                         <div>{{ (employee.birthday | monthDayOnly) || '--' }}</div>
                     </div>
                 </div>
+                
+                      
+            
                 <div class="profile-line profile-line-style-p">
                     <div class="profile-label">Ingagaversary</div>
                     <div class="profile-value profile-value-style-p">
                         <div>{{ (employee.anniversary | customDate) || '--' }}</div>
                     </div>
                 </div>
-            </div>
+                </div>
+            
+                
         </div>
-    </div>
+        
+        <app-add-employee></app-add-employee>    
+    </div>    
+   
     <div class="profile-right">
         <div class="card-profile-image image-loaded">
             <div class="loader"></div>
@@ -86,5 +95,9 @@
                 <div class="hbdi-preference" [ngClass]="hbdiPreference"></div>
             </div>
         </div>
+        
     </div>
+    
 </div>
+<div><add-employee></add-employee></div>
+    
