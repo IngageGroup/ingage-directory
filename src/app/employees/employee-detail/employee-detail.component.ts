@@ -5,6 +5,7 @@ import { Title } from '@angular/platform-browser';
 import { DataService } from '../data.service';
 import { Employee } from '../employee';
 
+
 @Component({
   encapsulation: ViewEncapsulation.Emulated,
   selector: 'app-employee-detail',
@@ -14,13 +15,17 @@ import { Employee } from '../employee';
 export class EmployeeDetailComponent implements OnInit, AfterViewInit {
   employeeId = '';
   employee: Employee;
+  loggedInEmployee: Employee;
   public managerLabel: string;
   public showChampion = false;
   public showHBDI = false;
   public hbdiPreference: string;
+  thisIsMe: boolean = false;
+  isAdmin: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private appTitleService: AppTitleService,
     private titleService: Title,
     private dataService: DataService,
@@ -33,6 +38,12 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     this.showChampion = (this.employee.title !== 'Apprentice');
     this.showHBDI = (this.employee.hbdipreference != null);
     this.hbdiPreference = this.getPreferenceCss(this.employee.hbdipreference);
+    let user = JSON.parse(localStorage.getItem('user'));
+    
+    let loggedInUserEmail = user['email'];
+    this.loggedInEmployee = this.dataService.getEmployees().filter(f => f.email === loggedInUserEmail)[0];
+    this.isAdmin = this.loggedInEmployee.admin === "true";
+    this.thisIsMe = (loggedInUserEmail === this.employee.email) || this.isAdmin;
   }
 
   ngAfterViewInit() {
@@ -65,5 +76,9 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
       }
     }
     return pref;
+  }
+
+  openForm() {
+    this.router.navigate(['/editcomponent']);
   }
 }
