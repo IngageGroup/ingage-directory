@@ -22,6 +22,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
   public hbdiPreference: string;
   thisIsMe: boolean = false;
   isAdmin: boolean = false;
+  empId: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,8 +33,8 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit() {
-    const empId = this.route.snapshot.params.id;
-    this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +empId)[0];
+    this.empId = this.route.snapshot.params.id;
+    this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +this.empId)[0];
     this.managerLabel = (this.employee.title === 'Apprentice') ? 'Mentor' : 'Coach';
     this.showChampion = (this.employee.title !== 'Apprentice');
     this.showHBDI = (this.employee.hbdipreference != null);
@@ -44,6 +45,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     this.loggedInEmployee = this.dataService.getEmployees().filter(f => f.email === loggedInUserEmail)[0];
     this.isAdmin = this.loggedInEmployee.admin === "true";
     this.thisIsMe = (loggedInUserEmail === this.employee.email) || this.isAdmin;
+    console.log(this.thisIsMe);
   }
 
   ngAfterViewInit() {
@@ -79,6 +81,6 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
   }
 
   openForm() {
-    this.router.navigate(['/editcomponent']);
+    this.router.navigate([`/editemployee/${this.empId}`]);
   }
 }

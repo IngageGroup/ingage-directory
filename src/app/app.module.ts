@@ -89,7 +89,8 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
         data: { title: 'none', }
       },
       { path: 'login', component: LoginComponent, },
-      // { path: 'editcomponent', component: EditButtonComponent },
+      { path: 'editemployee/:id', component: AddEmployeeComponent }, // edit an existing employee
+      { path: 'addemployee', component: AddEmployeeComponent }, // Add a new component
     ])
   ],
   providers: [

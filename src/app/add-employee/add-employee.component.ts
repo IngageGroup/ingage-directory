@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AddEmployeeComponent implements OnInit {
   employeeId = '';
   employee: Employee;
+  mode: string = "Add";
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService
@@ -19,6 +20,9 @@ export class AddEmployeeComponent implements OnInit {
 
   ngOnInit() {
     const empId = this.route.snapshot.params.id;
+    if (empId != null) {
+      this.mode = "Edit";
+    }
     this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +empId)[0];
   }
 

@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Add Employee Form</h1>  
+    <h1>{{ mode }} Employee Form</h1>  
     <form (ngSubmit)="onSubmit()" #addEmployeeForm="ngForm">
       <div class="form-group">
         <label for="firstname">First name</label>
@@ -57,11 +57,11 @@
         [(ngModel)]="employee.anniversary" name="anniversary">
       </div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="profile-image">Upload a profile picture:</label>
       <input type="file" class="form-control" id="profile-image" [(ngModel)]="employee.tileimageurl" name="tileimageurl"
         accept="image/png, image/jpeg">
-    </div>
+    </div> -->
 
 
     <div class="form-group">
