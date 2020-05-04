@@ -57,6 +57,12 @@
         [(ngModel)]="employee.anniversary" name="anniversary">
       </div>
 
+      <div *ngIf="mode == 'Add'"   class="form-group">
+        <label for="employeeid">Employee ID</label>
+        <input type="number" class="form-control" id="employeeid"
+        [(ngModel)]="employee.employeeid" name="employeeid">
+      </div>
+
     <!-- <div class="form-group">
       <label for="profile-image">Upload a profile picture:</label>
       <input type="file" class="form-control" id="profile-image" [(ngModel)]="employee.tileimageurl" name="tileimageurl"

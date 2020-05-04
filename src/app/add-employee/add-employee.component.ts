@@ -15,6 +15,7 @@ export class AddEmployeeComponent implements OnInit {
   employeeId = '';
   employee: Employee;
   mode: string = "Add";
+
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService
