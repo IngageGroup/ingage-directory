@@ -1,0 +1,94 @@
+<div class="container">
+    <h1>Edit Employee Form</h1>  
+    <form>
+      <div class="form-group">
+        <label for="firstname">First name</label>
+        <input type="text" class="form-control" id="firstname" required
+        [(ngModel)]="employee.firstname" name="firstname">
+      </div>   <!--
+      <div class="form-group">
+        <label for="lastname">Last name</label>
+        <input type="text" class="form-control" id="lastname" required
+        [(ngModel)]="employee.lastname" name="lastname">
+      </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" required
+        [(ngModel)]="employee.title" name="title">
+      </div>
+      <div class="form-group">
+        <label for="practicearea">Practice area</label>
+        <input type="text" class="form-control" id="practicearea" required
+        [(ngModel)]="employee.practicearea" name="practicearea">
+      </div>
+      <div class="form-group">
+        <label for="client">Client</label>
+        <input type="text" class="form-control" id="client"
+        [(ngModel)]="employee.client" name="client">
+      </div>
+      <div class="form-group">
+        <label for="coach">Mentor</label>
+        <input type="text" class="form-control" id="coach"
+        [(ngModel)]="employee.coach" name="coach">
+      </div>
+      <div class="form-group">
+        <label for="mobilephone">Mobile</label>
+        <input type="tel" class="form-control" id="mobilephone"
+        [(ngModel)]="employee.mobilephone" name="mobilephone">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email"
+        [(ngModel)]="employee.email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="champion">Champion a Cause</label>
+        <input type="text" class="form-control" id="champion"
+        [(ngModel)]="employee.champion" name="champion">
+      </div>
+      <div class="form-group">
+        <label for="birthday">Birthday</label>
+        <input type="text" class="form-control" id="birthday"
+        [(ngModel)]="employee.birthday" name="birthday">
+      </div>
+      <div class="form-group">
+        <label for="anniversary">Ingagaversary</label>
+        <input type="text" class="form-control" id="anniversary"
+        [(ngModel)]="employee.anniversary" name="anniversary">
+      </div>
+   
+      <div *ngIf="mode == 'Add'"   class="form-group">
+        <label for="employeeid">Employee ID</label>
+        <input type="number" class="form-control" id="employeeid"
+        [(ngModel)]="employee.employeeid" name="employeeid">
+      </div>
+
+     <div class="form-group">
+      <label for="profile-image">Upload a profile picture:</label>
+      <input type="file" class="form-control" id="profile-image" [(ngModel)]="employee.tileimageurl" name="tileimageurl"
+        accept="image/png, image/jpeg">
+    </div> -->
+
+         <!--
+    <div class="form-group">
+      <label for="hbdi-blue">HBDI blue</label>
+      <input type="number" class="form-control" id="hbdiblue" [(ngModel)]="employee.hbdiblue" name="hbdiblue">
+    </div>
+    <div class="form-group">
+      <label for="hbdi-green">HBDI green</label>
+      <input type="number" class="form-control" id="hbdigreen" [(ngModel)]="employee.hbdigreen" name="hbdigreen">
+    </div>
+    <div class="form-group">
+      <label for="hbdi-red">HBDI red</label>
+      <input type="number" class="form-control" id="hbdired" [(ngModel)]="employee.hbdired" name="hbdired">
+    </div>
+    <div class="form-group">
+      <label for="hbdi-yellow">HBDI yellow</label>
+      <input type="number" class="form-control" id="hbdiyellow" [(ngModel)]="employee.hbdiyellow" name="hbdiyellow">
+    </div>
+    -->
+    <button type="text" (click)="submitForm()" class="btn btn-success">Submit</button>
+
+  </form>
+
+</div>

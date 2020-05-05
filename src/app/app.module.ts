@@ -36,6 +36,7 @@ import {
   redirectLoggedInTo
 } from '@angular/fire/auth-guard';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
@@ -115,6 +116,7 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
     MobileMenuComponent,
     SearchBarComponent,
     AddEmployeeComponent,
+    EditEmployeeComponent,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
