@@ -27,7 +27,7 @@ export class AddEmployeeComponent implements OnInit {
       this.mode = "Edit";
 
       this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +empId)[0];
-    } //1. move below statment into if block. 2. add Else statment to create new employee object
+    } 
     else {
       this.employee = {
         anniversary: '',
@@ -36,7 +36,7 @@ export class AddEmployeeComponent implements OnInit {
         admin: '',
         dayssincehire: 0,
         email: '',
-        employeeid: 0,  //placeholder--need to figure out someway to assign new number
+        employeeid: 0,  
         firstname: '',
         lastname: '',
         lookupname: '',
@@ -48,5 +48,6 @@ export class AddEmployeeComponent implements OnInit {
   submitForm() {
 
     console.log("testing submit button");
+    console.log(this.employee); 
   }
 }
