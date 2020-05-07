@@ -45,9 +45,9 @@ export class AddEmployeeComponent implements OnInit {
     }
   }
 
-  submitForm() {
+    submitForm() {
 
-    console.log("testing submit button");
-    console.log(this.employee); 
-  }
+      console.log("testing submit button");
+      console.log(this.employee); 
+    }
 }
