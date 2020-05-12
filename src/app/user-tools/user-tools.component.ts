@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, OnInit, ɵCompiler_compileModuleSync__POST_R3__ } from '@angular/core';
 import { LoginService } from '../auth/login.service';
-import { AuthService, SocialUser } from 'angularx-social-login';
+// import { AuthService, SocialUser } from 'angularx-social-login';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ export class UserToolsComponent {
     showTools = false;
 
     constructor(
-        private authService: AuthService,
+        // private authService: AuthService,
         private router: Router,
         public loginService: LoginService,
     ) { }
