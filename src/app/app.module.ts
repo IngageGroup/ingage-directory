@@ -35,6 +35,7 @@ import {
   redirectUnauthorizedTo,
   redirectLoggedInTo
 } from '@angular/fire/auth-guard';
+import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
@@ -111,6 +112,7 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
     UserToolsComponent,
     MobileMenuComponent,
     SearchBarComponent,
+    ChampionACauseComponent,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
