@@ -35,15 +35,21 @@ export class EditEmployeeComponent implements OnInit {
 
   ngAfterContentInit() {
     this.profileForm = new FormGroup({
-      firstname: new FormControl(this.employee.firstname)}
-    );
+      firstname: new FormControl(this.employee.firstname),
+      lastname: new FormControl(this.employee.lastname),
+
+    });
   }
 
   acceptChanges() {
-    console.log(this.profileForm.value);
-    console.log("testing submit button");
-    console.log(this.employee.firstname);
-    this.employee.firstname = this.profileForm.value.firstname;
+    //this will iterate through the fields and update only the fields that changed
+    for (const field in this.employee) {
+      if (this.profileForm.controls[field] !== undefined &&
+        this.profileForm.controls[field].pristine === false) {
+      this.employee[field] = this.profileForm.value[field];
+      console.log('value changed for the ' + field);
+      }
+    } 
 
   }
 
