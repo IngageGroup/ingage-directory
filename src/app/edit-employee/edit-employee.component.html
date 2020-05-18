@@ -1,11 +1,10 @@
 <div class="container">
     <h1>Edit Employee Form</h1>  
-    <form [formGroup]="profileForm" (ngSubmit)="submitForm()">
+    <form [formGroup]="profileForm">
       <div class="form-group">
         <label>
-            First name
-            <input type="text" class="form-control" id="firstname" 
-            formControlName="firstname">
+          First name: 
+            <input type="text" formControlName="firstname" class="form-control">
         </label>
        
       </div>   <!--
@@ -92,7 +91,7 @@
 
 type="text"  (click)="submitForm()"
     -->
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button class="btn btn-success" (click)="acceptChanges()">Accept changes</button>
 
   </form>
 

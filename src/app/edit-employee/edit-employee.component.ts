@@ -12,10 +12,13 @@ import { ActivatedRoute } from '@angular/router';
 export class EditEmployeeComponent implements OnInit {
   employee: Employee;
   employeeId = '';
+  firstName = '';
   
-  profileForm = new FormGroup({
-      firstname: new FormControl('testing name'),
-      });
+  profileForm: FormGroup;
+  /*
+  ({
+      firstname: new FormControl('test name '),
+      });*/
   //console.log(employee.firstname);
 
   
@@ -27,23 +30,21 @@ export class EditEmployeeComponent implements OnInit {
 
   ngOnInit() {
     const empId = this.route.snapshot.params.id;
-
-    this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +empId)[0];
-
-  
-    //firstname = new FormControl(this.employee.firstname);
-    console.log(this.employee);
-    
+    this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +empId)[0];    
   }
 
-  submitForm() {
+  ngAfterContentInit() {
+    this.profileForm = new FormGroup({
+      firstname: new FormControl(this.employee.firstname)}
+    );
+  }
 
-    //this.employee.firstname = firstname;    
-    this.profileForm.setValue({
-      firstname: this.employee.firstname
-    });
+  acceptChanges() {
+    console.log(this.profileForm.value);
     console.log("testing submit button");
-    console.log(this.employee.firstname); 
+    console.log(this.employee.firstname);
+    this.employee.firstname = this.profileForm.value.firstname;
+
   }
 
 }
