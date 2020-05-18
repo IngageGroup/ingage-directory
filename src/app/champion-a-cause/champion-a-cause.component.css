@@ -1,0 +1,26 @@
+:host {
+    display: block;
+}
+
+:host p {
+font-size: 10 px;
+}
+
+:host .championTable {
+padding: 15px;
+margin: auto;
+border: 1px solid black;
+
+}
+
+:host .championCausePair {
+    margin: 2px;
+
+}
+:host .championCausePair:hover {
+background-color: dodgerblue;
+}
+
+
+/* button styling? preset?
+/* search bar styling?
