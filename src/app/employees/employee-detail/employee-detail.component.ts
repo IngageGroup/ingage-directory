@@ -79,7 +79,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     }
     return pref;
   }
-
+//  this.router.navigate([`/editemployee/${this.empId}`]);
   openForm() {
     this.router.navigate([`/editemployee/${this.empId}`]);
   }

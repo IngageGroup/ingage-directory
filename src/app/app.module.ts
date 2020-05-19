@@ -90,7 +90,7 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
         data: { title: 'none', }
       },
       { path: 'login', component: LoginComponent, },
-      { path: 'editemployee/:id', component: AddEmployeeComponent }, // edit an existing employee
+      { path: 'editemployee/:id', component: EditEmployeeComponent }, // edit an existing employee
       { path: 'addemployee', component: AddEmployeeComponent }, // Add a new component
     ])
   ],
