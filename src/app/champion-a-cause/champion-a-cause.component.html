@@ -1,16 +1,16 @@
 <h3>Champion a Cause</h3>
-<br/>
+<br />
 <p>Champion a Cause is an Ingage giving program that encourages employees to be ambassadors of a non profit organization
     of their choice.</p>
-<br/>
+<br />
 <div class="championTable">
     <input [(ngModel)]="searchText" placeholder="find a cause">
     <ul>
-        <li *ngFor="let champion of champions | filter : searchText">
-            {{champion}}
+        <li *ngFor="let champion of employees">
+            {{champion.firstname}}
         </li>
-            <div class="champion">{{champion}}{{ employee.firstname }} {{ employee.lastname}}</div>
-            <div class="cause">{{employee.champion}}</div>
-        
+        <!-- <div class="champion">{{champion}}{{ employee.firstname }} {{ employee.lastname}}</div>
+        <div class="cause">{{employee.champion}}</div> -->
+
     </ul>
 </div>
