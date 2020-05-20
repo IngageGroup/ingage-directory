@@ -80,6 +80,7 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
           { path: 'hometeam', component: EmployeeListComponent, data: { title: 'Home Team' } },
           { path: 'pa/:area', component: EmployeeListComponent, data: { title: 'Practice Area' } },
           { path: 'client/:client', component: EmployeeListComponent, data: { title: 'Client Team' } },
+          { path: 'champion-a-cause', component: ChampionACauseComponent, data: { title: 'Champion a Cause' } },
         ]
       },
       {

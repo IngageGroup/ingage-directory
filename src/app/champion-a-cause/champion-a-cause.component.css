@@ -1,5 +1,7 @@
 :host {
     display: block;
+    margin-left: 5%;
+    margin-right: 30%;
 }
 
 :host p {
@@ -9,7 +11,7 @@ font-size: 10 px;
 :host .championTable {
 padding: 15px;
 margin: auto;
-border: 1px solid black;
+border: 1px solid gray;
 
 }
 
@@ -21,6 +23,3 @@ border: 1px solid black;
 background-color: dodgerblue;
 }
 
-
-/* button styling? preset?
-/* search bar styling?

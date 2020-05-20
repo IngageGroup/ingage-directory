@@ -34,6 +34,9 @@
                 <a [routerLink]="['/employees/management']" routerLinkActive="active-link">Management Team</a>
             </li>
             <li class="item-active">
+                <a [routerLink]="['/employees/champion-a-cause']" routerLinkActive="active-link">Champion a Cause</a>
+            </li>
+            <li class="item-active">
                 <a [routerLink]="" (click)="toggelPracticeMenu()">By Practice Area</a>
                 <ul class="sub-menu" [ngClass]="isOpenPractice ? 'sub-menu-open' : ''">
                     <li>
