@@ -11,13 +11,27 @@ font-size: 10 px;
 :host .championTable {
 padding: 15px;
 margin: auto;
-border: 1px solid gray;
+border: 1px solid black;
 
+
+}
+:host .championName {
+    width: 300px;
+    padding-left: 15px;
+}
+
+:host .championCause {
+    
+    width: 300px;
 }
 
 :host .championCausePair {
-    margin: 2px;
-
+    padding: 5px;
+    margin: 1px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px grey;
 }
 :host .championCausePair:hover {
 background-color: dodgerblue;
