@@ -280,5 +280,27 @@
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/witch.jpg",
     "dayssincehire": 3049
+  },
+  {
+    "firstname": "Tony",
+    "lastname": "Maddox",
+    "coach": "Dolan, Kelly",
+    "anniversary": "2013-08-05T04:00:00.000Z",
+    "birthday": "2018-08-06T04:00:00.000Z",
+    "email": "tony.maddox@ingagepartners.com",
+    "mobilephone": "555-444-1234",
+    "practicearea": "Operations",
+    "client": "n/a",
+    "employeeid": 1010,
+    "lookupname": "Maddox, Tony",
+    "title": "Director",
+    "tileimageurl": "https://photos.smugmug.com/Portraits/Employee-Photos/n-vf4gPC/Active/i-Rk6cZWw/2/370f0cc4/M/TonyM2-M.jpg",
+    "dayssincehire": 2472,
+    "champion": "UC Women's Excellence Fund",
+    "hbdipreference": "blue",
+    "hbdiblue": "1",
+    "hbdigreen": "1",
+    "hbdired": "2",
+    "hbdiyellow": "2"
   }
 ]
