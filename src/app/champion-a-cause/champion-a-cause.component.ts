@@ -9,6 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { LoginService } from './../auth/login.service';
 import { DataService } from 'src/app/employees/data.service';
 import { Employee } from '../employees/employee';
+import { SearchBarService } from '../search-bar/search-bar.service';
 
 
 
@@ -21,15 +22,20 @@ import { Employee } from '../employees/employee';
 
 export class ChampionACauseComponent implements OnInit {
   public employees: Employee[];
+  private showSearchBar = true;
+  private searchText = 'foo';
 
   constructor(
     public loginService: LoginService,
+    private searchBarService: SearchBarService,
     private dataService: DataService) {
   }
 
 
 
   ngOnInit() {
+    this.searchBarService.showSearchBar.subscribe(toggle => this.showSearchBar = toggle);
+    this.searchBarService.searchText.subscribe(text => this.searchText = text);
     this.employees = this.dataService
     .getEmployees()
   }
