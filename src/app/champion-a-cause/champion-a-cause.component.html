@@ -4,10 +4,8 @@
 <!-- <input [(ngModel)]="searchText" placeholder="find a cause"> -->
 <div class="search-bar" *ngIf="showSearchBar">
     <input type="text" [ngModel]="searchText" #box (keyup)="onKey(box.value)" id="search-bar" placeholder="Find a cause" value="" style="border-color: rgb(16, 16, 16);">
-    <button type="button" id="mobile-cancel" (click)="clearSearchField()">CANCEL</button>
+    <button type="button" id="mobile-cancel" (click)="clearSearchField()">CANCEL</button><button id="searchChamp">Search Champions</button><button id="searchCause">Search Causes</button>
 </div>
-
-<button>Search Champions</button><button>Search Causes</button>
 
 <ul class="list">
     <li class="list-item" *ngFor="let champion of employees">

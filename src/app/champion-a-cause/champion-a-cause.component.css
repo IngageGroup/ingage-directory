@@ -21,6 +21,13 @@ h2 {
   margin-bottom: 0.4em;
 }
 
+#mobile-cancel {
+  margin-right: 40px;
+}
+
+#searchChamp {
+  margin-right: 10px;
+}
 
 /*Flex items*/
 .list {
