@@ -13,6 +13,7 @@ import { SearchBarService } from '../search-bar/search-bar.service';
 
 
 
+
 @Component({
   selector: 'app-champion-a-cause',
   templateUrl: './champion-a-cause.component.html',
@@ -40,5 +41,7 @@ export class ChampionACauseComponent implements OnInit {
     .getEmployees()
     this.employees = this.dataService.getEmployees().filter(f => f.title !== 'apprentice');
   }
+
+  
 
 }

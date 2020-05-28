@@ -29,6 +29,11 @@ h2 {
   margin-right: 10px;
 }
 
+.championSelect {
+ width: 300px;
+ 
+}
+
 /*Flex items*/
 .list {
   display: flex;
