@@ -38,6 +38,7 @@ export class ChampionACauseComponent implements OnInit {
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
     this.employees = this.dataService
     .getEmployees()
+    this.employees = this.dataService.getEmployees().filter(f => f.title !== 'apprentice');
   }
 
 }

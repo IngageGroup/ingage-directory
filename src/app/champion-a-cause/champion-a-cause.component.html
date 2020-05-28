@@ -3,7 +3,7 @@
 <br />
 
 <ul class="list">
-    <li class="list-item" *ngFor="let champion of employees | searchEmployees:'firstname,lastname,champion':searchText">
+    <li class="list-item" *ngFor="let champion of employees | searchEmployees:'firstname,lastname,champion,title':searchText">
         <div class="list-content">
             <div class="list-title">{{champion.firstname}} {{champion.lastname}}</div>
             <p>{{champion.champion}}</p>
