@@ -1,9 +1,10 @@
 <p>Champion a Cause is an Ingage giving program that encourages employees to be ambassadors of a non profit organization
     of their choice.</p>
 <br />
-<select class="championSelect" >
-    <option ng-model="selected" ng-options="f.champion for f in employees | orderObjectBy:'champion'">sort by cause</option>
-    <option ng-model="selected" ng-options="f.firstname for f in employees | orderObjectBy:'firstname'">sort by name</option>
+<label>Sort By </label>
+<select class="championSelect" change="filterChampion($event.target.value)">
+    <option value={{champion}}>Cause</option>
+    <option value={{firstname}}>Name</option>
 </select>
 
 

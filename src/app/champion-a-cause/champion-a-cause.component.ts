@@ -32,16 +32,16 @@ export class ChampionACauseComponent implements OnInit {
     private dataService: DataService) {
   }
 
-
-
   ngOnInit() {
     this.searchBarService.showSearchBar.subscribe(toggle => this.showSearchBar = toggle);
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
     this.employees = this.dataService
     .getEmployees()
-    this.employees = this.dataService.getEmployees().filter(f => f.title !== 'apprentice');
+    this.employees = this.dataService.getEmployees().filter(f => f.title.toLowerCase() !== 'apprentice');
   }
-
-  
+filterChampion(filterVal: any) {
+  console.log('HELLO FROM THE FILTER FUNCTION');
+  this.employees = this.employees.filter(f => f.champion == filterVal)
+}
 
 }
