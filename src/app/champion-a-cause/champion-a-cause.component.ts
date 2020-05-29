@@ -39,7 +39,39 @@ export class ChampionACauseComponent implements OnInit {
   }
   filterChampion(filterVal: any) {
     console.log('HELLO FROM THE FILTER FUNCTION');
-    this.employees = this.employees.filter(f => f.champion == filterVal)
+    // this.employees = this.employees.filter(f => f.champion == filterVal)
+    this.sortByName(this.employees);
+    this.sortByCause(this.employees);
+  }
+
+  private sortByName(employees) {
+    const sorted = this.employees.sort((a, b) => {
+      const nameA = a.firstname.toUpperCase() + a.lastname.toUpperCase();
+      const nameB = b.firstname.toUpperCase() + b.lastname.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+    return sorted;
+  }
+
+  private sortByCause(employees) {
+    const sorted = this.employees.sort((a, b) => {
+      const nameA = a.champion.toUpperCase();
+      const nameB = b.champion.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+    return sorted;
   }
 
 }
