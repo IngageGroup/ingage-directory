@@ -37,11 +37,16 @@ export class ChampionACauseComponent implements OnInit {
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
     this.employees = this.dataService.getEmployees().filter(f => f.title.toLowerCase() !== 'apprentice' && f.type.toLowerCase() !== '1099');
   }
-  filterChampion(filterVal: any) {
+  filterChampion(sortVal: string) {
     console.log('HELLO FROM THE FILTER FUNCTION');
-    // this.employees = this.employees.filter(f => f.champion == filterVal)
-    this.sortByName(this.employees);
-    this.sortByCause(this.employees);
+    console.log('sortVal: ' + sortVal);
+    if (sortVal === 'cause') {
+      console.log('sort by cause');
+      this.sortByCause(this.employees);
+    }
+    if (sortVal === 'name') {
+      this.sortByName(this.employees);
+    }
   }
 
   private sortByName(employees) {
