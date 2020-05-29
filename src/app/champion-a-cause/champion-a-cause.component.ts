@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { FilterPipe} from './filter.pipe';
-import { FormsModule }   from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
+import { FormsModule } from '@angular/forms';
 import { Pipe, PipeTransform } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,7 +18,7 @@ import { SearchBarService } from '../search-bar/search-bar.service';
   selector: 'app-champion-a-cause',
   templateUrl: './champion-a-cause.component.html',
   styleUrls: ['./champion-a-cause.component.css']
-  
+
 })
 
 export class ChampionACauseComponent implements OnInit {
@@ -35,13 +35,11 @@ export class ChampionACauseComponent implements OnInit {
   ngOnInit() {
     this.searchBarService.showSearchBar.subscribe(toggle => this.showSearchBar = toggle);
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
-    this.employees = this.dataService
-    .getEmployees()
-    this.employees = this.dataService.getEmployees().filter(f => f.title.toLowerCase() !== 'apprentice');
+    this.employees = this.dataService.getEmployees().filter(f => f.title.toLowerCase() !== 'apprentice' && f.type.toLowerCase() !== '1099');
   }
-filterChampion(filterVal: any) {
-  console.log('HELLO FROM THE FILTER FUNCTION');
-  this.employees = this.employees.filter(f => f.champion == filterVal)
-}
+  filterChampion(filterVal: any) {
+    console.log('HELLO FROM THE FILTER FUNCTION');
+    this.employees = this.employees.filter(f => f.champion == filterVal)
+  }
 
 }
