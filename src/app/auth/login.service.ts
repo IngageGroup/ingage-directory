@@ -3,9 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase/app';
-import { Subject } from 'rxjs';
 import { AngularFireAnalytics } from '@angular/fire/analytics';
-
 
 @Injectable({
   providedIn: 'root'
@@ -33,15 +31,7 @@ export class LoginService {
       }
     });
 
-    this.firebaseAuth.auth.getRedirectResult()
-      .then(result => {
-        this.router.navigateByUrl('/');
-        localStorage.setItem('authenticating', null);
-      })
-      .catch(reason => {
-        localStorage.setItem('authenticating', null);
-        console.log('getRedirectResult error', reason);
-      });
+
   }
 
   signInWithGoogle(): void {

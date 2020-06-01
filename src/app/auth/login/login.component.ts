@@ -27,6 +27,18 @@ export class LoginComponent implements OnInit {
     } else {
       this.spinner.hide();
     }
+    this.loginService.firebaseAuth.auth.getRedirectResult()
+      .then(result => {
+        if (result.user) {
+          let providerId = result.credential.providerId;
+          this.router.navigateByUrl('/');
+          localStorage.setItem('authenticating', null);
+        }
+      })
+      .catch(reason => {
+        localStorage.setItem('authenticating', null);
+        console.log('getRedirectResult error', reason);
+      });
   }
 
   login() {

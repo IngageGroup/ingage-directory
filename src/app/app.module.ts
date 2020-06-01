@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
@@ -29,6 +28,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+<<<<<<< HEAD
 import {
   AngularFireAuthGuard,
   AngularFireAuthGuardModule,
@@ -39,6 +39,10 @@ import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.com
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
+=======
+import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
+import { AppRoutingModule } from './app-routing.module';
+>>>>>>> aaaf91d9d3463124a96dcf87457518cd0dd3072d
 
 @NgModule({
   imports: [
@@ -55,6 +59,7 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
     ReactiveFormsModule,
     HttpClientModule,
     NgxSpinnerModule,
+<<<<<<< HEAD
     RouterModule.forRoot([
       {
         path: '',
@@ -91,6 +96,9 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
       },
       { path: 'login', component: LoginComponent, },
     ])
+=======
+    AppRoutingModule,
+>>>>>>> aaaf91d9d3463124a96dcf87457518cd0dd3072d
   ],
   providers: [
     SideBarService,
