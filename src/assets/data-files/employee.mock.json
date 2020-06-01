@@ -13,7 +13,9 @@
     "lookupname": "Romanoff, Natasha",
     "title": "Manager",
     "tileimageurl": "assets/test-profiles/blackwidow.png",
-    "dayssincehire": 973
+    "dayssincehire": 973,
+    "champion": "Project World Impact",
+    "type": "Salary"
   },
   {
     "firstname": "Tony",
@@ -29,7 +31,9 @@
     "lookupname": "Stark, Tony",
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/ironman.jpg",
-    "dayssincehire": 1618
+    "dayssincehire": 1618,
+    "champion": "The Tony Stark Foundation",
+    "type": "Salary"
   },
   {
     "firstname": "James",
@@ -45,7 +49,9 @@
     "lookupname": "Rhodes, James",
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/rhodes.png",
-    "dayssincehire": 2121
+    "dayssincehire": 2121,
+    "champion": "Honor Flight Network",
+    "type": "Salary"
   },
   {
     "firstname": "Bucky",
@@ -61,7 +67,9 @@
     "lookupname": "Barnes, Bucky",
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/bucky.jpg",
-    "dayssincehire": 951
+    "dayssincehire": 951,
+    "champion": "Lost Friends",
+    "type": "Salary"
   },
   {
     "firstname": "Bruce",
@@ -77,7 +85,9 @@
     "lookupname": "Banner, Bruce",
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/hulk.jpg",
-    "dayssincehire": 773
+    "dayssincehire": 773,
+    "champion": "Anger Management Group",
+    "type": "Salary"
   },
   {
     "firstname": "Nick",
@@ -93,7 +103,9 @@
     "lookupname": "Fury, Nick",
     "title": "CEO",
     "tileimageurl": "assets/test-profiles/fury.jpeg",
-    "dayssincehire": 1452
+    "dayssincehire": 1452,
+    "champion": "Eye To Eye",
+    "type": "Salary"
   },
   {
     "firstname": "Steve",
@@ -109,7 +121,9 @@
     "lookupname": "Rogers, Steve",
     "title": "Managing Consultant",
     "tileimageurl": "assets/test-profiles/captain.jpg",
-    "dayssincehire": 273
+    "dayssincehire": 273,
+    "champion": "World War II Veterans Committee",
+    "type": "Salary"
   },
   {
     "firstname": "Carol",
@@ -125,7 +139,9 @@
     "lookupname": "Danvers, Carol",
     "title": "Director",
     "tileimageurl": "assets/test-profiles/marvel.jpg",
-    "dayssincehire": 660
+    "dayssincehire": 660,
+    "champion": "Friends Without Borders",
+    "type": "Salary"
   },
   {
     "firstname": "Peter",
@@ -141,7 +157,9 @@
     "lookupname": "Parker, Peter",
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/spiderman.jpeg",
-    "dayssincehire": 249
+    "dayssincehire": 249,
+    "champion": "iSpace",
+    "type": "Salary"
   },
   {
     "firstname": "Sam",
@@ -162,7 +180,9 @@
     "hbdigreen": 1,
     "hbdired": 2,
     "hbdiyellow": 1,
-    "hbdipreference": "green"
+    "hbdipreference": "green",
+    "champion": "PTSD Support",
+    "type": "Salary"
   },
   {
     "firstname": "James",
@@ -183,7 +203,9 @@
     "hbdigreen": 3,
     "hbdired": 2,
     "hbdiyellow": 1,
-    "hbdipreference": "blue"
+    "hbdipreference": "blue",
+    "champion": "Save the Wolverine Foundation",
+    "type": "Salary"
   },
   {
     "firstname": "Wanda",
@@ -199,6 +221,7 @@
     "lookupname": "Maximoff, Wanda",
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/witch.jpg",
+<<<<<<< HEAD
     "dayssincehire": 3049
   },
   {
@@ -242,5 +265,10 @@
     "hbdired": 3,
     "hbdiyellow": 3,
     "hbdipreference": "green"
+=======
+    "dayssincehire": 3049,
+    "champion": "Witches Are People Too",
+    "type": "1099"
+>>>>>>> champion-a-cause
   }
 ]

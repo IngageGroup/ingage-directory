@@ -35,6 +35,7 @@ import {
   redirectUnauthorizedTo,
   redirectLoggedInTo
 } from '@angular/fire/auth-guard';
+import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
@@ -79,6 +80,7 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
           { path: 'hometeam', component: EmployeeListComponent, data: { title: 'Home Team' } },
           { path: 'pa/:area', component: EmployeeListComponent, data: { title: 'Practice Area' } },
           { path: 'client/:client', component: EmployeeListComponent, data: { title: 'Client Team' } },
+          { path: 'champion-a-cause', component: ChampionACauseComponent, data: { title: 'Champion a Cause' } },
         ]
       },
       {
@@ -111,6 +113,7 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
     UserToolsComponent,
     MobileMenuComponent,
     SearchBarComponent,
+    ChampionACauseComponent,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
