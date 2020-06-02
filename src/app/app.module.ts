@@ -28,21 +28,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-<<<<<<< HEAD
-import {
-  AngularFireAuthGuard,
-  AngularFireAuthGuardModule,
-  redirectUnauthorizedTo,
-  redirectLoggedInTo
-} from '@angular/fire/auth-guard';
-import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
-
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
-const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
-=======
 import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 import { AppRoutingModule } from './app-routing.module';
->>>>>>> aaaf91d9d3463124a96dcf87457518cd0dd3072d
+import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
 
 @NgModule({
   imports: [
@@ -59,46 +47,7 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     HttpClientModule,
     NgxSpinnerModule,
-<<<<<<< HEAD
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: EmployeeHomeComponent,
-        canActivate: [AngularFireAuthGuard],
-        data: { title: 'Recently Joined', authGuardPipe: redirectUnauthorizedToLogin }
-      },
-      {
-        path: 'employees',
-        canActivate: [AngularFireAuthGuard],
-        children: [
-          { path: '', redirectTo: 'all', pathMatch: 'full' },
-          { path: 'all', component: EmployeeListComponent },
-          {
-            path: 'leadership',
-            canActivate: [AngularFireAuthGuard],
-            component: EmployeeListComponent,
-            data: {
-              title: 'Leadership Team'
-            }
-          },
-          { path: 'management', component: EmployeeListComponent, data: { title: 'Management Team' } },
-          { path: 'hometeam', component: EmployeeListComponent, data: { title: 'Home Team' } },
-          { path: 'pa/:area', component: EmployeeListComponent, data: { title: 'Practice Area' } },
-          { path: 'client/:client', component: EmployeeListComponent, data: { title: 'Client Team' } },
-          { path: 'champion-a-cause', component: ChampionACauseComponent, data: { title: 'Champion a Cause' } },
-        ]
-      },
-      {
-        path: 'employee/:id',
-        component: EmployeeDetailComponent,
-        canActivate: [AngularFireAuthGuard],
-        data: { title: 'none', }
-      },
-      { path: 'login', component: LoginComponent, },
-    ])
-=======
     AppRoutingModule,
->>>>>>> aaaf91d9d3463124a96dcf87457518cd0dd3072d
   ],
   providers: [
     SideBarService,

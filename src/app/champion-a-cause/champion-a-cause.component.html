@@ -4,7 +4,7 @@
 <label>Sort By </label>
 <select class="championSelect" (change)="filterChampion($event.target.value)">
     <option value='cause'>Cause</option>
-    <option value='name'>Name</option>
+    <option value='name'>Employee Name</option>
 </select>
 
 
@@ -13,7 +13,7 @@
         *ngFor="let champion of employees | searchEmployees:'firstname,lastname,champion,title':searchText">
         <div class="list-content">
             <div class="list-title">{{champion.champion}}</div>
-            <div >{{champion.firstname}} {{champion.lastname}}</div>
+            <div>{{champion.firstname}} {{champion.lastname}}</div>
         </div>
     </li>
 </ul>

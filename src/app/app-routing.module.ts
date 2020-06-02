@@ -5,6 +5,7 @@ import { EmployeeDetailComponent } from './employees/employee-detail/employee-de
 import { EmployeeHomeComponent } from './employees/employee-home/employee-home.component';
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 import { LoginComponent } from './auth/login/login.component';
+import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     children: [
       { path: 'all', component: EmployeeListComponent },
       { path: 'client/:client', component: EmployeeListComponent, data: { title: 'Client Team' } },
+      { path: 'champion-a-cause', component: ChampionACauseComponent, data: { title: 'Champion a Cause' } },
       { path: 'hometeam', component: EmployeeListComponent, data: { title: 'Home Team' } },
       { path: 'leadership', component: EmployeeListComponent, data: { title: 'Leadership Team' } },
       { path: 'management', component: EmployeeListComponent, data: { title: 'Management Team' } },

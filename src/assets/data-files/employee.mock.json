@@ -221,8 +221,9 @@
     "lookupname": "Maximoff, Wanda",
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/witch.jpg",
-<<<<<<< HEAD
-    "dayssincehire": 3049
+    "dayssincehire": 3049,
+    "champion": "Witches Are People Too",
+    "type": "Salary"
   },
   {
     "firstname": "Wade",
@@ -243,7 +244,9 @@
     "hbdigreen": 2,
     "hbdired": 4,
     "hbdiyellow": 1,
-    "hbdipreference": "yellow"
+    "hbdipreference": "yellow",
+    "type": "Salary",
+    "champion": "American Cancer Foundation"
   },
   {
     "firstname": "Rebecca",
@@ -264,11 +267,7 @@
     "hbdigreen": 3,
     "hbdired": 3,
     "hbdiyellow": 3,
-    "hbdipreference": "green"
-=======
-    "dayssincehire": 3049,
-    "champion": "Witches Are People Too",
+    "hbdipreference": "green",
     "type": "1099"
->>>>>>> champion-a-cause
   }
 ]

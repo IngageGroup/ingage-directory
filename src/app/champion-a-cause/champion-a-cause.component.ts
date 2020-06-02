@@ -1,24 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
-import { FilterPipe } from './filter.pipe';
-import { FormsModule } from '@angular/forms';
-import { Pipe, PipeTransform } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
 import { LoginService } from './../auth/login.service';
 import { DataService } from 'src/app/employees/data.service';
 import { Employee } from '../employees/employee';
 import { SearchBarService } from '../search-bar/search-bar.service';
 
-
-
-
 @Component({
   selector: 'app-champion-a-cause',
   templateUrl: './champion-a-cause.component.html',
   styleUrls: ['./champion-a-cause.component.css']
-
 })
 
 export class ChampionACauseComponent implements OnInit {
@@ -36,20 +25,18 @@ export class ChampionACauseComponent implements OnInit {
     this.searchBarService.showSearchBar.subscribe(toggle => this.showSearchBar = toggle);
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
     this.employees = this.dataService.getEmployees().filter(f => f.title.toLowerCase() !== 'apprentice' && f.type.toLowerCase() !== '1099');
+    this.sortByCause();
   }
   filterChampion(sortVal: string) {
-    console.log('HELLO FROM THE FILTER FUNCTION');
-    console.log('sortVal: ' + sortVal);
     if (sortVal === 'cause') {
-      console.log('sort by cause');
-      this.sortByCause(this.employees);
+      this.sortByCause();
     }
     if (sortVal === 'name') {
-      this.sortByName(this.employees);
+      this.sortByName();
     }
   }
 
-  private sortByName(employees) {
+  private sortByName() {
     const sorted = this.employees.sort((a, b) => {
       const nameA = a.firstname.toUpperCase() + a.lastname.toUpperCase();
       const nameB = b.firstname.toUpperCase() + b.lastname.toUpperCase();
@@ -64,7 +51,7 @@ export class ChampionACauseComponent implements OnInit {
     return sorted;
   }
 
-  private sortByCause(employees) {
+  private sortByCause() {
     const sorted = this.employees.sort((a, b) => {
       const nameA = a.champion.toUpperCase();
       const nameB = b.champion.toUpperCase();
