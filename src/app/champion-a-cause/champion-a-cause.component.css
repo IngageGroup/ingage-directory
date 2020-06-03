@@ -34,6 +34,13 @@ h2 {
  
 }
 
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+  }
+
 /*Flex items*/
 .list {
   display: flex;
@@ -69,6 +76,10 @@ h2 {
 .list-content p {
 	flex: 1 0 auto;
 }
+.list-content a {
+  flex: 1 0 auto;
+}
+
 .list-title {
   font-size: 18px;
   font-weight: 800;
