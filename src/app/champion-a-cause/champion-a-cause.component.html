@@ -12,8 +12,8 @@
         *ngFor="let champion of employees | searchEmployees:'firstname,lastname,champion,title':searchText">
         <div class="list-content">
             <div class="list-title">{{champion.champion}}</div>
-            <a [routerLink]="['/employee', champion.employeeid]"> 
             <div >{{champion.firstname}} {{champion.lastname}}</div>
+            <a [routerLink]="['/employee', champion.employeeid]"> 
             </a>
         </div>
     </li>
