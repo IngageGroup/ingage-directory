@@ -28,9 +28,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireAuthGuardModule, AngularFireAuthGuard } from '@angular/fire/auth-guard';
+import { AngularFireAuthGuardModule, AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule, Routes } from '@angular/router';
 import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
 
 @NgModule({
@@ -48,26 +47,7 @@ import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.com
     ReactiveFormsModule,
     HttpClientModule,
     NgxSpinnerModule,
-    // AppRoutingModule,
-    RouterModule.forRoot([
-      { path: 'login', component: LoginComponent, },
-      {
-        path: 'employees',
-        canActivate: [AngularFireAuthGuard],
-        children: [
-          { path: 'all', component: EmployeeListComponent },
-          { path: 'client/:client', component: EmployeeListComponent, data: { title: 'Client Team' } },
-          { path: 'champion-a-cause', component: ChampionACauseComponent, data: { title: 'Champion a Cause' } },
-          { path: 'hometeam', component: EmployeeListComponent, data: { title: 'Home Team' } },
-          { path: 'leadership', component: EmployeeListComponent, data: { title: 'Leadership Team' } },
-          { path: 'management', component: EmployeeListComponent, data: { title: 'Management Team' } },
-          { path: 'pa/:area', component: EmployeeListComponent, data: { title: 'Practice Area' } },
-          { path: '', redirectTo: 'all', pathMatch: 'full' },
-        ]
-      },
-      { path: 'employee/:id', component: EmployeeDetailComponent, canActivate: [AngularFireAuthGuard], data: { title: 'none', } },
-      { path: '', component: EmployeeHomeComponent, canActivate: [AngularFireAuthGuard], data: { title: 'Recently Joined' } },
-    ])
+    AppRoutingModule,
   ],
   providers: [
     SideBarService,
