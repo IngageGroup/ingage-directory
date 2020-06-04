@@ -13,7 +13,7 @@ import { SearchBarService } from '../search-bar/search-bar.service';
 export class ChampionACauseComponent implements OnInit {
   public employees: Employee[];
   private showSearchBar = true;
-  private searchText = 'foo';
+  searchText = '';
 
   constructor(
     public loginService: LoginService,
