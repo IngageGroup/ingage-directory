@@ -4,6 +4,7 @@ import { DataService } from 'src/app/employees/data.service';
 import { Employee } from '../employees/employee';
 import { SearchBarService } from '../search-bar/search-bar.service';
 
+
 @Component({
   selector: 'app-champion-a-cause',
   templateUrl: './champion-a-cause.component.html',
