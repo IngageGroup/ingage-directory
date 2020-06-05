@@ -48,10 +48,10 @@ a:hover {
 }
 .list-item {
 	display: flex; 
-  padding: 0.5em;
+  padding: 0.2em;
   width: 100%;
   background-color: #056cb6;
-  background-color: rgba(5, 108, 182, 0.3);
+  /* background-color: rgba(5, 108, 182, 0.3); */
   margin: 5px;
 }
 @media all and (min-width: 40em) {
