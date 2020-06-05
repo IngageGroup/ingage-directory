@@ -31,6 +31,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuthGuardModule, AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { AppRoutingModule } from './app-routing.module';
 import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
@@ -48,6 +49,7 @@ import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.com
     HttpClientModule,
     NgxSpinnerModule,
     AppRoutingModule,
+    NgbModule,
   ],
   providers: [
     SideBarService,
