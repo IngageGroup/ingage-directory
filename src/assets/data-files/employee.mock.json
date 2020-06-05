@@ -13,7 +13,6 @@
     "lookupname": "Romanoff, Natasha",
     "title": "Manager",
     "tileimageurl": "assets/test-profiles/blackwidow.png",
-    "dayssincehire": 973,
     "champion": "Project World Impact",
     "type": "Salary"
   },
@@ -31,7 +30,6 @@
     "lookupname": "Stark, Tony",
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/ironman.jpg",
-    "dayssincehire": 1618,
     "champion": "The Tony Stark Foundation",
     "type": "Salary"
   },
@@ -49,7 +47,6 @@
     "lookupname": "Rhodes, James",
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/rhodes.png",
-    "dayssincehire": 2121,
     "champion": "Honor Flight Network",
     "type": "Salary"
   },
@@ -67,7 +64,6 @@
     "lookupname": "Barnes, Bucky",
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/bucky.jpg",
-    "dayssincehire": 951,
     "champion": "Lost Friends",
     "type": "Salary"
   },
@@ -85,8 +81,12 @@
     "lookupname": "Banner, Bruce",
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/hulk.jpg",
-    "dayssincehire": 773,
     "champion": "Anger Management Group",
+    "hbdipreference": "n/a",
+    "hbdiblue": "n/a",
+    "hbdigreen": "n/a",
+    "hbdired": "n/a",
+    "hbdiyellow": "n/a",
     "type": "Salary"
   },
   {
@@ -103,7 +103,6 @@
     "lookupname": "Fury, Nick",
     "title": "CEO",
     "tileimageurl": "assets/test-profiles/fury.jpeg",
-    "dayssincehire": 1452,
     "champion": "Eye To Eye",
     "type": "Salary"
   },
@@ -121,7 +120,6 @@
     "lookupname": "Rogers, Steve",
     "title": "Managing Consultant",
     "tileimageurl": "assets/test-profiles/captain.jpg",
-    "dayssincehire": 273,
     "champion": "World War II Veterans Committee",
     "type": "Salary"
   },
@@ -139,7 +137,6 @@
     "lookupname": "Danvers, Carol",
     "title": "Director",
     "tileimageurl": "assets/test-profiles/marvel.jpg",
-    "dayssincehire": 660,
     "champion": "Friends Without Borders",
     "type": "Salary"
   },
@@ -157,7 +154,6 @@
     "lookupname": "Parker, Peter",
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/spiderman.jpeg",
-    "dayssincehire": 249,
     "champion": "iSpace",
     "type": "Salary"
   },
@@ -175,7 +171,6 @@
     "lookupname": "Wilson, Sam",
     "title": "Apprentice",
     "tileimageurl": "assets/test-profiles/falcon.jpg",
-    "dayssincehire": 75,
     "hbdiblue": 1,
     "hbdigreen": 1,
     "hbdired": 2,
@@ -190,7 +185,7 @@
     "coach": "Fury, Nick",
     "anniversary": "2020-02-21T05:00:00.000Z",
     "birthday": "2020-06-17T04:00:00.000Z",
-    "email": "wolerine@ingagepartners.com",
+    "email": "wolverine@ingagepartners.com",
     "mobilephone": "513-253-1964",
     "practicearea": "Design",
     "client": "Kroger",
@@ -198,7 +193,6 @@
     "lookupname": "Howlett, James",
     "title": "Apprentice",
     "tileimageurl": "assets/test-profiles/wolverine2.jpg",
-    "dayssincehire": 25,
     "hbdiblue": 4,
     "hbdigreen": 3,
     "hbdired": 2,
@@ -221,7 +215,6 @@
     "lookupname": "Maximoff, Wanda",
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/witch.jpg",
-    "dayssincehire": 3049,
     "champion": "Witches Are People Too",
     "type": "Salary"
   },
@@ -239,7 +232,6 @@
     "lookupname": "Wilson, Wade",
     "title": "Director",
     "tileimageurl": "assets/test-profiles/deadpool.jpg",
-    "dayssincehire": 9999,
     "hbdiblue": 2,
     "hbdigreen": 2,
     "hbdired": 4,
@@ -262,7 +254,6 @@
     "lookupname": "Buckler, Rebecca",
     "title": "Apprentice",
     "tileimageurl": "assets/test-profiles/tankgirl.jpg",
-    "dayssincehire": 1,
     "hbdiblue": 3,
     "hbdigreen": 3,
     "hbdired": 3,

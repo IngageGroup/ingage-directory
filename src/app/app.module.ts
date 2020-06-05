@@ -28,7 +28,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
+import { AngularFireAuthGuardModule, AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { AppRoutingModule } from './app-routing.module';
 import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
 
