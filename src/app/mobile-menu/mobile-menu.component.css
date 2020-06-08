@@ -29,3 +29,11 @@
     content: 'home';
     padding-right: 10px;
 }
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 51px;
+}
+

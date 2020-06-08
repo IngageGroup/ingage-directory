@@ -6,6 +6,17 @@
                     <div class="profile-value profile-value-style-h2">
                         <div class="profile-name">{{ employee.firstname }} {{ employee.lastname}}</div>
                         <div class="profile-title">{{ employee.title }}</div>
+                        <div *ngIf="showHBDI" class="hbdi-mobile">
+                            <div class="hbdi-container">
+                                <div class="hbdi-blue">{{ employee.hbdiblue }}</div>
+                                <div class="hbdi-green">{{ employee.hbdigreen }}</div>
+                                <div class="hbdi-red">{{ employee.hbdired }}</div>
+                                <div class="hbdi-yellow">{{ employee.hbdiyellow }}</div>
+                            </div>
+                            <div class="hbdi-container">
+                                <div class="hbdi-preference" [ngClass]="hbdiPreference"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,6 +74,17 @@
         <div class="card-profile-image image-loaded">
             <div class="loader"></div>
             <img class="profile-image" width="960" height="1020" src="{{ employee.tileimageurl }}" alt="">
+        </div>
+        <div *ngIf="showHBDI" class="hbdi-desktop">
+            <div class="hbdi-container">
+                <div class="hbdi-blue">{{ employee.hbdiblue }}</div>
+                <div class="hbdi-green">{{ employee.hbdigreen }}</div>
+                <div class="hbdi-red">{{ employee.hbdired }}</div>
+                <div class="hbdi-yellow">{{ employee.hbdiyellow }}</div>
+            </div>
+            <div class="hbdi-container">
+                <div class="hbdi-preference" [ngClass]="hbdiPreference"></div>
+            </div>
         </div>
     </div>
 </div>

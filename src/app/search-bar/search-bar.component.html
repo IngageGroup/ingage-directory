@@ -1,3 +1,4 @@
 <div class="search-bar" *ngIf="showSearchBar">
-    <input type="text" #box (keyup)="onKey(box.value)" id="search-bar" placeholder="Search" value="" style="border-color: rgb(16, 16, 16);">
+    <input type="text" [ngModel]="searchText" #box (keyup)="onKey(box.value)" id="search-bar" placeholder="Search" value="" style="border-color: rgb(16, 16, 16);">
+    <button type="button" id="mobile-cancel" (click)="clearSearchField()">CANCEL</button>
 </div>
