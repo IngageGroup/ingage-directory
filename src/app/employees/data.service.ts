@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
-import { environment } from '../../environments/environment';
 import { Employee } from 'src/app/employees/employee';
 import { Client } from 'src/app/employees/client';
+import Employees from 'src/assets/data-files/employee.json';
 
 @Injectable({
   providedIn: 'root'
@@ -12,17 +10,8 @@ export class DataService {
   employees: Employee[];
   clients: Client[];
 
-  constructor(private http: HttpClient) {
-  }
-
-  fetchEmployees() {
-    let dbUrl = environment.firebase.databaseURL;
-    console.log(dbUrl);
-    return this.http.get(dbUrl + "/Employees.json");
-  }
-
-  processEmployees(employees: Employee[]) {
-    this.employees = this.sortEmployeesByName(employees);
+  constructor() {
+    this.employees = this.sortEmployeesByName(Employees);
 
     // loop over each employee, summarize clients
     let clients: Client[];
