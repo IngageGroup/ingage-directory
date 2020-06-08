@@ -32,6 +32,7 @@ import { AngularFireAuthGuardModule, AngularFireAuthGuard, redirectUnauthorizedT
 import { AppRoutingModule } from './app-routing.module';
 import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   imports: [
@@ -50,6 +51,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgxSpinnerModule,
     AppRoutingModule,
     NgbModule,
+    NgSelectModule
   ],
   providers: [
     SideBarService,

@@ -14,7 +14,11 @@ import { SearchBarService } from '../search-bar/search-bar.service';
 export class ChampionACauseComponent implements OnInit {
   public employees: Employee[];
   private showSearchBar = true;
-  searchText = '';
+  searchText = 'Two';
+
+  people = [];
+  selectedPersonId = '5a15b13c36e7a7f00cf0d7cb';
+
 
   constructor(
     public loginService: LoginService,
@@ -27,6 +31,7 @@ export class ChampionACauseComponent implements OnInit {
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
     this.employees = this.dataService.getEmployees().filter(f => f.title.toLowerCase() !== 'apprentice' && f.type.toLowerCase() !== '1099');
     this.sortByCause();
+    this.people = [true, 'Two', 3];
   }
   filterChampion(sortVal: string) {
     if (sortVal === 'cause') {

@@ -1,11 +1,52 @@
 <p>Champion a Cause is an Ingage giving program that encourages employees to be ambassadors of a non profit organization
     of their choice.</p>
 <br />
+<ng-select [items]="people" bindLabel="name" bindValue="id" [(ngModel)]="selectedPersonId">
+</ng-select>
 <label>Sort By </label>
 <select class="championSelect" (change)="filterChampion($event.target.value)">
     <option value='cause'>Cause</option>
     <option value='name'>Employee Name</option>
 </select>
+
+
+<div class="sort-by-price-dropdown">
+    <div class="sort-by-price-dropdown__dropdown css-hk50ua" tabindex="-1"><button aria-expanded="false"
+            aria-haspopup="listbox" aria-invalid="false" aria-label="sort by, sort by"
+            class="sort-by-price-dropdown__control css-6cfxtr" data-toggle="true" type="button">sort by</button>
+        <ul class="sort-by-price-dropdown__menu css-11uyujn" role="listbox" tabindex="-1"></ul>
+    </div>
+</div>
+
+<!-- clicked state-->
+<div class="sort-by-price-dropdown">
+    <div class="sort-by-price-dropdown__dropdown css-hk50ua" tabindex="-1"><button aria-expanded="true"
+            aria-haspopup="listbox" aria-invalid="false" aria-label="sort by, sort by"
+            class="sort-by-price-dropdown__control css-6cfxtr" data-toggle="true" type="button">sort by</button>
+        <ul class="sort-by-price-dropdown__menu css-yz7289" role="listbox" tabindex="-1"
+            aria-activedescendant="dropdown-option2">
+            <li aria-label="featured" aria-selected="false" class="sort-by-price-dropdown__option css-1fahl9z"
+                id="dropdown-option0" role="option">featured</li>
+            <li aria-label="price: low to high" aria-selected="false" class="sort-by-price-dropdown__option css-1fahl9z"
+                id="dropdown-option1" role="option">price: low to high</li>
+            <li aria-label="price: high to low" aria-selected="false"
+                class="sort-by-price-dropdown__option sort-by-price-dropdown__option--highlighted css-aogrpl"
+                id="dropdown-option2" role="option">price: high to low</li>
+        </ul>
+    </div>
+</div>
+
+<!-- selected state-->
+<div class="sort-by-price-dropdown">
+    <div class="sort-by-price-dropdown__dropdown css-hk50ua" tabindex="-1"><button aria-expanded="false"
+            aria-haspopup="listbox" aria-invalid="false" aria-label="price: low to high selected, sort by"
+            class="sort-by-price-dropdown__control css-6cfxtr" data-toggle="true" type="button">price: low to
+            high</button>
+        <ul class="sort-by-price-dropdown__menu css-11uyujn" role="listbox" tabindex="-1">
+            <li>item 1</li>
+        </ul>
+    </div>
+</div>
 
 <ul class="list">
     <li class="list-item"
