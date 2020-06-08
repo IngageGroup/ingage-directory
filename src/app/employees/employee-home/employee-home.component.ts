@@ -47,18 +47,16 @@ export class EmployeeHomeComponent implements OnInit {
   showClientMenu = false;
 
   ngOnInit() {
-    this.dataService.fetchEmployees()
-      .subscribe((employees: Employee[]) => {
-        this.dataService.processEmployees(employees);
-        this.employees = this.dataService
-        .getEmployees()
-        .slice()
-        .filter(x => x.dayssincehire <= 180)
-        .sort((a, b) => {
-          const x = new Date(a.anniversary);
-          const y = new Date(b.anniversary);
-          return y.getTime() - x.getTime();
-        });
+    var cutoffDate = new Date();
+    cutoffDate.setDate(cutoffDate.getDate() - 180);
+    this.employees = this.dataService
+      .getEmployees()
+      .slice()
+      .filter(x => new Date(x.anniversary) >= cutoffDate)
+      .sort((a, b) => {
+        const x = new Date(a.anniversary);
+        const y = new Date(b.anniversary);
+        return y.getTime() - x.getTime();
       });
 
   }

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
@@ -29,15 +28,9 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import {
-  AngularFireAuthGuard,
-  AngularFireAuthGuardModule,
-  redirectUnauthorizedTo,
-  redirectLoggedInTo
-} from '@angular/fire/auth-guard';
-
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
-const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
+import { AngularFireAuthGuardModule, AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { AppRoutingModule } from './app-routing.module';
+import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
 
 @NgModule({
   imports: [
@@ -54,41 +47,7 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
     ReactiveFormsModule,
     HttpClientModule,
     NgxSpinnerModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: EmployeeHomeComponent,
-        canActivate: [AngularFireAuthGuard],
-        data: { title: 'Recently Joined', authGuardPipe: redirectUnauthorizedToLogin }
-      },
-      {
-        path: 'employees',
-        canActivate: [AngularFireAuthGuard],
-        children: [
-          { path: '', redirectTo: 'all', pathMatch: 'full' },
-          { path: 'all', component: EmployeeListComponent },
-          {
-            path: 'leadership',
-            canActivate: [AngularFireAuthGuard],
-            component: EmployeeListComponent,
-            data: {
-              title: 'Leadership Team'
-            }
-          },
-          { path: 'management', component: EmployeeListComponent, data: { title: 'Management Team' } },
-          { path: 'hometeam', component: EmployeeListComponent, data: { title: 'Home Team' } },
-          { path: 'pa/:area', component: EmployeeListComponent, data: { title: 'Practice Area' } },
-          { path: 'client/:client', component: EmployeeListComponent, data: { title: 'Client Team' } },
-        ]
-      },
-      {
-        path: 'employee/:id',
-        component: EmployeeDetailComponent,
-        canActivate: [AngularFireAuthGuard],
-        data: { title: 'none', }
-      },
-      { path: 'login', component: LoginComponent, },
-    ])
+    AppRoutingModule,
   ],
   providers: [
     SideBarService,
@@ -111,6 +70,7 @@ const redirectLoggedInToItems = () => redirectLoggedInTo(['/']);
     UserToolsComponent,
     MobileMenuComponent,
     SearchBarComponent,
+    ChampionACauseComponent,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

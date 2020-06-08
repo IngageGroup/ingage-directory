@@ -31,7 +31,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +empId)[0];
     this.managerLabel = (this.employee.title === 'Apprentice') ? 'Mentor' : 'Coach';
     this.showChampion = (this.employee.title !== 'Apprentice');
-    this.showHBDI = (this.employee.hbdipreference != null);
+    this.showHBDI = (this.employee.hbdipreference != null && this.employee.hbdipreference.toLowerCase() != 'n/a');
     this.hbdiPreference = this.getPreferenceCss(this.employee.hbdipreference);
   }
 
@@ -43,7 +43,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
 
   private getPreferenceCss(preference): string {
     let pref = '';
-    switch (this.employee.hbdipreference) {
+    switch (this.employee.hbdipreference.toLowerCase()) {
       case 'blue': {
         pref = 'hbdi-blue';
         break;
