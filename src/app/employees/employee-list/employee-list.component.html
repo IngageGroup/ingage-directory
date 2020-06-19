@@ -6,11 +6,12 @@
 
             <a [routerLink]="['/employee', employee.employeeid]">
                 <img width="256" height="384" src='{{ employee.tileimageurl}}' />
-            </a>
+            
             <div class="profile-summary">
                 <h5>{{ employee.firstname }} {{ employee.lastname}}</h5>
                 <h6>{{ employee.title}}</h6>
             </div>
+            </a>
 
         </div>
     </div>
