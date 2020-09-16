@@ -42,17 +42,29 @@ export class EmployeeListComponent implements OnInit, AfterContentChecked {
                     this.practiceArea = 'Build: QA';
                 }
             }
-            this.employees = this.dataService.getEmployees();
-            this.filterThis();
+            // this.employees = this.dataService.getEmployees();
+            this.getEmployees();
         });
     }
 
     ngOnInit() {
         this.searchBarService.searchText.subscribe(message => this.searchText = message);
+        // this.getEmployees();
     }
 
     ngAfterContentChecked() {
         this.appTitleService.appHeaderTitle.subscribe(message => this.headerTitle = message);
+    }
+
+    getEmployees(): void {
+        // this.dataService.getEmployees()
+        //     .toPromise(employees => this.employees = employees).toPromise().then(this.filterThis());
+        debugger;
+
+        this.dataService.getEmployees()
+            .toPromise()
+            .then(x => this.employees = x)
+            .then(f => this.filterThis());
     }
 
     private filterThis() {

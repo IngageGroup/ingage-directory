@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Employee } from 'src/app/employees/employee';
 import { Client } from 'src/app/employees/client';
 import Employees from 'src/assets/data-files/employee.json';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +12,9 @@ import Employees from 'src/assets/data-files/employee.json';
 export class DataService {
   employees: Employee[];
   clients: Client[];
+  private employeesUrl = 'https://localhost:44336/api/employees';
 
-  constructor() {
+  constructor(private http: HttpClient) {
     this.employees = this.sortEmployeesByName(Employees);
 
     // loop over each employee, summarize clients
@@ -34,8 +38,19 @@ export class DataService {
     this.clients = this.sortObjectByProperty(clients, 'name');
   }
 
-  getEmployees() {
-    return this.employees;
+  // getEmployees() {
+  //   return this.employees;
+  // }
+
+  /** GET heroes from the server */
+  getEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>(this.employeesUrl);
+  }
+
+  /** GET hero by id. Will 404 if id not found */
+  getEmployee(id: number): Observable<Employee> {
+    const url = '${this.employeesUrl}/${id}';
+    return this.http.get<Employee>(url);
   }
 
   getClients() {

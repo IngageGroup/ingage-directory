@@ -25,7 +25,8 @@ export class ChampionACauseComponent implements OnInit {
   ngOnInit() {
     this.searchBarService.showSearchBar.subscribe(toggle => this.showSearchBar = toggle);
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
-    this.employees = this.dataService.getEmployees()
+    this.getEmployees();
+    this.employees
       .filter(f => f.title.toLowerCase() !== 'intern' && f.title.toLowerCase() !== 'apprentice' && f.title.toLowerCase() !== 'analyst' && f.type.toLowerCase() !== '1099');
     this.sortByCause();
   }
@@ -36,6 +37,11 @@ export class ChampionACauseComponent implements OnInit {
     if (sortVal === 'name') {
       this.sortByName();
     }
+  }
+
+  getEmployees(): void {
+    this.dataService.getEmployees()
+      .subscribe(employees => this.employees = employees);
   }
 
   private sortByName() {

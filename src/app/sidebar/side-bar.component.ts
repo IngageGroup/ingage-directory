@@ -26,8 +26,13 @@ export class SideBarComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.employees = this.dataService.getEmployees();
+        this.getEmployees();
         this.clients = this.dataService.getClients();
+    }
+
+    getEmployees(): void {
+        this.dataService.getEmployees()
+            .subscribe(employees => this.employees = employees);
     }
 
     toggelPracticeMenu() {

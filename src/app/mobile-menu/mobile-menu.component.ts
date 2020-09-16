@@ -55,10 +55,22 @@ export class MobileMenuComponent implements OnInit {
       ).subscribe(() => {
         this.showMobileMenu = false;
       });
-      
-    this.employees = this.dataService.getEmployees();
+
+    this.getEmployees();
+
+    // this.employees = this.dataService.getEmployees();
+    // this.employees = this.dataService.getEmployees()
+    //   .subscribe(employees => this.employees = employees);
+
+    //   this.employees = this.dataService.getEmployees();
+
     this.clients = this.dataService.getClients();
 
+  }
+
+  getEmployees(): void {
+    this.dataService.getEmployees()
+      .subscribe(employees => this.employees = employees);
   }
 
   toggleMobileMenu() {

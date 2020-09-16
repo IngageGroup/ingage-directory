@@ -28,7 +28,7 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     const empId = this.route.snapshot.params.id;
-    this.employee = this.dataService.getEmployees().filter(f => f.employeeid === +empId)[0];
+    this.getEmployee(empId);
     this.managerLabel = (this.employee.title === 'Apprentice') ? 'Mentor' : 'Coach';
     this.showChampion = (this.employee.title !== 'Apprentice');
     this.showHBDI = (this.employee.hbdipreference != null && this.employee.hbdipreference.toLowerCase() != 'n/a');
@@ -39,6 +39,11 @@ export class EmployeeDetailComponent implements OnInit, AfterViewInit {
     const title = this.employee.firstname + ' ' + this.employee.lastname;
     this.titleService.setTitle(title);
     setTimeout(_ => this.appTitleService.setAppTitle(title));
+  }
+
+  getEmployee(empId): void {
+    this.dataService.getEmployee(empId)
+      .subscribe(e => this.employee = e);
   }
 
   private getPreferenceCss(preference): string {

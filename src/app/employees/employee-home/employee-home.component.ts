@@ -52,8 +52,8 @@ export class EmployeeHomeComponent implements OnInit {
   ngOnInit() {
     var cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - 180);
-    this.employees = this.dataService
-      .getEmployees()
+    this.getEmployees();
+    this.employees
       .slice()
       .filter(x => new Date(x.anniversary) >= cutoffDate)
       .sort((a, b) => {
@@ -61,5 +61,10 @@ export class EmployeeHomeComponent implements OnInit {
         const y = new Date(b.anniversary);
         return y.getTime() - x.getTime();
       });
+  }
+
+  getEmployees(): void {
+    this.dataService.getEmployees()
+      .subscribe(employees => this.employees = employees);
   }
 }
