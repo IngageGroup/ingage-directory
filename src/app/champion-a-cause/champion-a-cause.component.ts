@@ -26,7 +26,7 @@ export class ChampionACauseComponent implements OnInit {
     this.searchBarService.showSearchBar.subscribe(toggle => this.showSearchBar = toggle);
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
     this.employees = this.dataService.getEmployees()
-      .filter(f => f.title.toLowerCase() !== 'intern' && f.title.toLowerCase() !== 'apprentice' && f.title.toLowerCase() !== 'analyst' && f.type.toLowerCase() !== '1099');
+      .filter(f => f.title.toLowerCase() !== 'intern' && f.title.toLowerCase() !== 'apprentice' && f.title.toLowerCase() !== 'analyst' && f.title.toLowerCase() !== 'contractor');
     this.sortByCause();
   }
   filterChampion(sortVal: string) {
