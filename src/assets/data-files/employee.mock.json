@@ -14,6 +14,7 @@
     "title": "Manager",
     "tileimageurl": "assets/test-profiles/blackwidow.png",
     "champion": "TBD",
+    "championquote": "I support TBD because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -31,6 +32,7 @@
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/ironman.jpg",
     "champion": "The Tony Stark Foundation",
+    "championquote": "I support The Tony Stark Foundation because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -48,6 +50,7 @@
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/rhodes.png",
     "champion": "Honor Flight Network",
+    "championquote": "I support Honor Flight Network because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -65,6 +68,7 @@
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/bucky.jpg",
     "champion": "Lost Friends",
+    "championquote": "I support Lost Friends because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -82,6 +86,7 @@
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/hulk.jpg",
     "champion": "Anger Management Group",
+    "championquote": "I support Anger Management Group because it really means a lot to me",
     "hbdipreference": "n/a",
     "hbdiblue": "n/a",
     "hbdigreen": "n/a",
@@ -104,6 +109,7 @@
     "title": "CEO",
     "tileimageurl": "assets/test-profiles/fury.jpeg",
     "champion": "Eye To Eye",
+    "championquote": "I support Eye To Eye because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -121,6 +127,7 @@
     "title": "Managing Consultant",
     "tileimageurl": "assets/test-profiles/captain.jpg",
     "champion": "World War II Veterans Committee",
+    "championquote": "I support World War II Veterans Committee because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -138,6 +145,7 @@
     "title": "Director",
     "tileimageurl": "assets/test-profiles/marvel.jpg",
     "champion": "Friends Without Borders",
+    "championquote": "I support Friends Without Borders because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -155,6 +163,7 @@
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/spiderman.jpeg",
     "champion": "iSpace",
+    "championquote": "I support iSpace because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -177,6 +186,7 @@
     "hbdiyellow": 1,
     "hbdipreference": "green",
     "champion": "PTSD Support",
+    "championquote": "I support PTSD Support because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -199,6 +209,7 @@
     "hbdiyellow": 1,
     "hbdipreference": "blue",
     "champion": "Save the Wolverine Foundation",
+    "championquote": "I support Save the Wolverine Foundation because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -216,6 +227,7 @@
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/witch.jpg",
     "champion": "Witches Are People Too",
+    "championquote": "I support Witches Are People Too because it really means a lot to me",
     "type": "Salary"
   },
   {
@@ -238,7 +250,8 @@
     "hbdiyellow": 1,
     "hbdipreference": "yellow",
     "type": "Salary",
-    "champion": "American Cancer Foundation"
+    "champion": "American Cancer Foundation",
+    "championquote": "I support American Cancer Foundation because it really means a lot to me"
   },
   {
     "firstname": "Rebecca",

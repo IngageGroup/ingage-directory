@@ -71,7 +71,7 @@ a:hover {
   .list-item {
     width: 33.33%;
     width: calc(14.28571% - 10px);
-    width: calc(20% - 10px);
+    width: calc(25% - 10px);
   }
 }
 
@@ -93,6 +93,11 @@ a:hover {
 
 .list-title {
   font-size: 18px;
+  font-weight: 800;
+}
+
+.list-subtitle {
+  font-size: 15px;
   font-weight: 800;
 }
 
