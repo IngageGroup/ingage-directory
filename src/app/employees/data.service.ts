@@ -1,17 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Employee } from 'src/app/employees/employee';
+import { ChampionCauses } from 'src/app/employees/championcauses';
 import { Client } from 'src/app/employees/client';
 import Employees from 'src/assets/data-files/employee.json';
+import Causes from 'src/assets/data-files/chmpioncauses.mock.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
   employees: Employee[];
+  causes: ChampionCauses[];
   clients: Client[];
 
   constructor() {
     this.employees = this.sortEmployeesByName(Employees);
+    this.causes = Causes;
 
     // loop over each employee, summarize clients
     let clients: Client[];
@@ -36,6 +40,10 @@ export class DataService {
 
   getEmployees() {
     return this.employees;
+  }
+
+  getCauses() {
+    return this.causes;
   }
 
   getClients() {

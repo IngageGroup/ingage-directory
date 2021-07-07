@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from './../auth/login.service';
 import { DataService } from 'src/app/employees/data.service';
 import { Employee } from '../employees/employee';
+import { ChampionCauses } from '../employees/championcauses';
 import { SearchBarService } from '../search-bar/search-bar.service';
 
 
@@ -13,6 +14,7 @@ import { SearchBarService } from '../search-bar/search-bar.service';
 
 export class ChampionACauseComponent implements OnInit {
   public employees: Employee[];
+  public causes: ChampionCauses[];
   private showSearchBar = true;
   searchText = '';
 
@@ -28,6 +30,7 @@ export class ChampionACauseComponent implements OnInit {
     this.employees = this.dataService.getEmployees()
       .filter(f => f.title.toLowerCase() !== 'intern' && f.title.toLowerCase() !== 'apprentice' && f.title.toLowerCase() !== 'analyst' && f.type.toLowerCase() !== '1099');
     this.sortByCause();
+    this.causes = this.dataService.getCauses();
   }
   filterChampion(sortVal: string) {
     if (sortVal === 'cause') {
