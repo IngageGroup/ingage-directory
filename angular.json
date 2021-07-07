@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/vendor/styles.css",
+              "src/vendor/styles.css"
             ],
             "scripts": [],
             "fileReplacements": [
@@ -39,6 +39,10 @@
                 {
                   "replace": "src/assets/data-files/employee.json",
                   "with": "src/assets/data-files/employee.mock.json"
+                },
+                {
+                  "replace": "src/assets/data-files/championcauses.json",
+                  "with": "src/assets/data-files/championcauses.mock.json"
                 }
               ]
             },
@@ -59,6 +63,10 @@
                 {
                   "replace": "src/assets/data-files/employee.json",
                   "with": "src/assets/data-files/employee.prod.json"
+                },
+                {
+                  "replace": "src/assets/data-files/championcauses.json",
+                  "with": "src/assets/data-files/championcauses.prod.json"
                 }
               ],
               "optimization": true,
