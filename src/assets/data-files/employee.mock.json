@@ -47,7 +47,7 @@
     "lookupname": "Rhodes, James",
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/rhodes.png",
-    "champion": "Honor Flight Network",
+    "champion": "TBD",
     "type": "Salary"
   },
   {
@@ -64,7 +64,7 @@
     "lookupname": "Barnes, Bucky",
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/bucky.jpg",
-    "champion": "Lost Friends",
+    "champion": "TBD",
     "type": "Salary"
   },
   {
@@ -252,13 +252,13 @@
     "client": "Shield",
     "employeeid": 131,
     "lookupname": "Buckler, Rebecca",
-    "title": "Apprentice",
+    "title": "Contractor",
     "tileimageurl": "assets/test-profiles/tankgirl.jpg",
     "hbdiblue": 3,
     "hbdigreen": 3,
     "hbdired": 3,
     "hbdiyellow": 3,
     "hbdipreference": "green",
-    "type": "1099"
+    "type": "Hourly"
   }
 ]
