@@ -3,7 +3,7 @@ import { Employee } from 'src/app/employees/employee';
 import { ChampionCauses } from 'src/app/employees/championcauses';
 import { Client } from 'src/app/employees/client';
 import Employees from 'src/assets/data-files/employee.json';
-import Causes from 'src/assets/data-files/championcauses.mock.json';
+import Causes from 'src/assets/data-files/championcauses.json';
 
 @Injectable({
   providedIn: 'root'
