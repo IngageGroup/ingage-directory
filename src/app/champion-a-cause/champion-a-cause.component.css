@@ -579,3 +579,19 @@ body {
   width: clamp(320px, 35%, 480px);
   padding: 24px;
 }
+
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px; 
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}

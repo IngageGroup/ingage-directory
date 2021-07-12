@@ -1,11 +1,260 @@
 <p>Champion a Cause is an Ingage giving program that encourages employees to be ambassadors of a non profit organization
     of their choice.</p>
-<br />
+<!-- <br />
 <label>Sort By </label>
+<div> Sort By <b>{{ sortValue }}</b></div>
 <select class="championSelect" (change)="filterChampion($event.target.value)">
     <option value='cause'>Cause</option>
     <option value='name'>Employee Name</option>
 </select>
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+        aria-expanded="false" (click)="filterChampion($event.target.value)">
+        Sort By <b>{{ sortValue }}</b>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" (click)="filterChampion('cause')">Cause</a></li>
+        <li><a class="dropdown-item" (click)="filterChampion('name')">Employee Name</a></li>
+    </ul>
+</div> -->
+
+
+
+
+
+<div class="container">
+
+    <div style="margin: 5px 5px 25px 5px;">
+        <div class="dropdown float-end">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false" (click)="filterChampion($event.target.value)">
+                Sort By <b>{{ sortValue }}</b>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" (click)="filterChampion('cause')">Cause</a></li>
+                <li><a class="dropdown-item" (click)="filterChampion('name')">Employee Name</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-lg-4">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../../assets/images/Champion a Cause Logos/1N5.JPG" class="img-fluid rounded-start"
+                            alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional
+                                content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../../assets/images/Champion a Cause Logos/City-Gospel-Mission.jpg"
+                            class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+
+                        <a [routerLink]="['/employee', 1144]">
+
+                            <img class="img-fluid rounded-start"
+                                src='https://photos.smugmug.com/Portraits/Employee-Photos/n-vf4gPC/Active/i-thx2nrM/0/d786d1ed/M/Phil%20LipschutzCropped-M.jpg' />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Phil proudly supports</h5>
+                            <p class="card-text">
+                                <img src="../../assets/images/Champion a Cause Logos/City-Gospel-Mission.jpg"
+                                    class="img-fluid rounded-start" alt="...">
+                            </p>
+                            <p class="card-text"><small class="text-muted">I want to support something...</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+
+                        <a [routerLink]="['/employee', 1144]">
+                            <div class="avatar" style="float: left; margin-right: 10px; margin-bottom: 5px;">
+                                <img class="avatar"
+                                    src='https://photos.smugmug.com/Portraits/Employee-Photos/n-vf4gPC/Active/i-thx2nrM/0/d786d1ed/M/Phil%20LipschutzCropped-M.jpg' />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Phil proudly supports</h5>
+                            <p class="card-text">
+                                <img src="../../assets/images/Champion a Cause Logos/City-Gospel-Mission.jpg"
+                                    class="img-fluid rounded-start" alt="...">
+                            </p>
+                            <p class="card-text"><small class="text-muted">I want to support something...</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- 
+<div class="container">
+    <div class="card-group">
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.>With
+                        supporting text below as a natural lead-in to additional content.>With supporting text below as
+                        a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col col-lg-3"
+            *ngFor="let champion of employees | searchEmployees:'firstname,lastname,champion,title':searchText">
+            <div class="card h-100" style="width: 18rem;">
+
+                <ng-container *ngIf="champion.champion === 'TBD';  then iAmDone; else iAmNotDone">
+                </ng-container>
+
+                <ng-template #iAmDone>
+                    <img src="../../assets/images/Champion a Cause Logos/comingsoon.jpg" class="card-img-top" alt="..."
+                        style="width: auto; height: 100px; display: block; margin-left: auto; margin-right: auto; margin-top: 5px;;">
+                </ng-template>
+
+                <ng-template #iAmNotDone>
+                    <img src="{{ champion.championimage }}" class="card-img-top" alt="..."
+                        style="width: auto; height: 100px; display: block; margin-left: auto; margin-right: auto; margin-top: 5px;;">
+                </ng-template>
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ champion.firstname}}</h5>
+                    <p class="card-text" style="font-style: italic;">
+
+                        {{ champion.championcaption }}
+                    </p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-lg-4"
+            *ngFor="let champion of employees | searchEmployees:'firstname,lastname,champion,title':searchText">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+
+                        <a [routerLink]="['/employee', champion.employeeid]">
+                            <img class="img-fluid rounded-start" src='{{ champion.tileimageurl}}' />
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{champion.firstname}} proudly supports</h5>
+                            <p class="card-text">
+                                <img src="{{ champion.championimage }}" class="img-fluid rounded-start" alt="...">
+                            </p>
+                            <p class="card-text"><small class="text-muted">I want to support something...</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- 
 
 <ul class="list">
     <li class="list-item"
@@ -19,11 +268,11 @@
             </div>
         </div>
     </li>
-</ul>
+</ul> -->
 
 
 <!-- Pizza Example -->
-<div class="big">
+<!-- <div class="big">
     <article class="recipe">
         <div class="pizza-box">
             <img src="https://brotokoll.com/wp-content/uploads/2019/12/xPSX_20190928_134709.jpg.pagespeed.ic.qsjw5ilFw5.jpg"
@@ -49,7 +298,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
                     <path
                         d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
-                        fill="currentColor" /></svg>
+                        fill="currentColor" />
+                </svg>
                 Save
             </button>
 
@@ -82,7 +332,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
                     <path
                         d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
-                        fill="currentColor" /></svg>
+                        fill="currentColor" />
+                </svg>
                 Save
             </button>
 
@@ -116,7 +367,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
                     <path
                         d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
-                        fill="currentColor" /></svg>
+                        fill="currentColor" />
+                </svg>
                 Save
             </button>
 
@@ -149,7 +401,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
                     <path
                         d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
-                        fill="currentColor" /></svg>
+                        fill="currentColor" />
+                </svg>
                 Save
             </button>
 
@@ -182,7 +435,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
                     <path
                         d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
-                        fill="currentColor" /></svg>
+                        fill="currentColor" />
+                </svg>
                 Save
             </button>
 
@@ -216,16 +470,17 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000">
                     <path
                         d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
-                        fill="currentColor" /></svg>
+                        fill="currentColor" />
+                </svg>
                 Save
             </button>
 
         </div>
     </article>
-</div>
+</div> -->
 
 <!-- Trying to Duplicate All Recipes using CHampion a cause -->
-<div class="component category-page-list karma-content-container category-page-body railDockSection-0"
+<!-- <div class="component category-page-list karma-content-container category-page-body railDockSection-0"
     data-tracking-zone="programmable-block-1">
 
 
@@ -263,7 +518,8 @@
                             fill="#000000">
                             <path
                                 d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
-                                fill="currentColor" /></svg>
+                                fill="currentColor" />
+                        </svg>
                         Save
                     </button>
 
@@ -298,7 +554,8 @@
                             fill="#000000">
                             <path
                                 d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
-                                fill="currentColor" /></svg>
+                                fill="currentColor" />
+                        </svg>
                         Save
                     </button>
 
@@ -383,10 +640,10 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- All recipes source  -->
-<div class="component category-page-list karma-content-container category-page-body railDockSection-0"
+<!-- <div class="component category-page-list karma-content-container category-page-body railDockSection-0"
     data-tracking-zone="programmable-block-1">
 
 
@@ -1459,4 +1716,4 @@
 
 
 
-</div>
+</div> -->

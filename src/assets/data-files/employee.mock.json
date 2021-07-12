@@ -13,7 +13,9 @@
     "lookupname": "Romanoff, Natasha",
     "title": "Manager",
     "tileimageurl": "assets/test-profiles/blackwidow.png",
-    "champion": "TBD",
+    "champion": "GO Pantry",
+    "championimage": "../../assets/images/Champion a Cause Logos/Go Pantry.jpg",
+    "championcaption": "Lorem ipsum dolor sit amet, id his nostro integre. Ea qui saperet constituto disputationi. Ius vero ceteros no, est eu laoreet accusamus dissentiet, eu explicari argumentum mea",
     "type": "Salary"
   },
   {
@@ -31,6 +33,8 @@
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/ironman.jpg",
     "champion": "The Tony Stark Foundation",
+    "championimage": "../../assets/images/Champion a Cause Logos/Cystic Fibrosis.jpg",
+    "championcaption": "Eum id quidam oblique suscipit, te vix cibo dictas aperiam",
     "type": "Salary"
   },
   {
@@ -82,6 +86,8 @@
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/hulk.jpg",
     "champion": "Anger Management Group",
+    "championimage": "../../assets/images/Champion a Cause Logos/Cincinnati Nature Center Logo.png",
+    "championcaption": "Ut eum probo ignota nostro. Eam ex ornatus dissentiet, solet oportere an has. Habeo eleifend reformidans ut ius",
     "hbdipreference": "n/a",
     "hbdiblue": "n/a",
     "hbdigreen": "n/a",
@@ -104,6 +110,8 @@
     "title": "CEO",
     "tileimageurl": "assets/test-profiles/fury.jpeg",
     "champion": "Eye To Eye",
+    "championimage": "../../assets/images/Champion a Cause Logos/childsplay_logo.jpg",
+    "championcaption": "Lorem ipsum dolor sit amet, ea has veri urbanitas, in aperiri prompta eam, vix quot ",
     "type": "Salary"
   },
   {
@@ -121,6 +129,8 @@
     "title": "Managing Consultant",
     "tileimageurl": "assets/test-profiles/captain.jpg",
     "champion": "World War II Veterans Committee",
+    "championimage": "../../assets/images/Champion a Cause Logos/Anthony Munoz Foundation.jpg",
+    "championcaption": "Integre invenire an mei, has ex dicat evertitur, eos dicam ancillae an. Vel modus reque percipitur no.",
     "type": "Salary"
   },
   {
@@ -138,6 +148,8 @@
     "title": "Director",
     "tileimageurl": "assets/test-profiles/marvel.jpg",
     "champion": "Friends Without Borders",
+    "championimage": "../../assets/images/Champion a Cause Logos/scratching post.JPG",
+    "championcaption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "type": "Salary"
   },
   {
@@ -155,6 +167,8 @@
     "title": "Sr Consultant",
     "tileimageurl": "assets/test-profiles/spiderman.jpeg",
     "champion": "iSpace",
+    "championimage": "../../assets/images/Champion a Cause Logos/warm up america.jpg",
+    "championcaption": "Amet quidam eos id. Id nobis propriae ius, vis saepe ridens et. Ex ipsum noster pri. Viris ludus parte",
     "type": "Salary"
   },
   {
@@ -177,6 +191,8 @@
     "hbdiyellow": 1,
     "hbdipreference": "green",
     "champion": "PTSD Support",
+    "championimage": "../../assets/images/Champion a Cause Logos/Parkingson Support.jpg",
+    "championcaption": "Ut pro salutatus constituam, soluta accusata mei cu, cu summo legere vis.",
     "type": "Salary"
   },
   {
@@ -199,6 +215,8 @@
     "hbdiyellow": 1,
     "hbdipreference": "blue",
     "champion": "Save the Wolverine Foundation",
+    "championimage": "../../assets/images/Champion a Cause Logos/St Vincent Ferrer School.JPG",
+    "championcaption": "",
     "type": "Salary"
   },
   {
@@ -216,6 +234,8 @@
     "title": "Consultant",
     "tileimageurl": "assets/test-profiles/witch.jpg",
     "champion": "Witches Are People Too",
+    "championimage": "../../assets/images/Champion a Cause Logos/Cincinnati Public Radio.png",
+    "championcaption": "At dico quodsi tincidunt duo, sed ei audiam expetenda. Dictas iuvaret recusabo vix ad, erat magna vix no. Ad cum debet molestie, ex sit tota impetus, usu ut duis erat equidem. Alterum omnesque quo cu.",
     "type": "Salary"
   },
   {
@@ -238,7 +258,9 @@
     "hbdiyellow": 1,
     "hbdipreference": "yellow",
     "type": "Salary",
-    "champion": "American Cancer Foundation"
+    "champion": "American Cancer Foundation",
+    "championimage": "../../assets/images/Champion a Cause Logos/1N5.JPG",
+    "championcaption": " Regione probatus inciderint vel in. Ad viris dolorum lucilius mei. Choro docendi reprimique"
   },
   {
     "firstname": "Rebecca",

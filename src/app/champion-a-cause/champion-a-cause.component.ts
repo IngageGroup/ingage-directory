@@ -15,6 +15,7 @@ export class ChampionACauseComponent implements OnInit {
   public employees: Employee[];
   private showSearchBar = true;
   searchText = '';
+  private sortValue = 'xyz';
 
   constructor(
     public loginService: LoginService,
@@ -39,6 +40,7 @@ export class ChampionACauseComponent implements OnInit {
   }
 
   private sortByName() {
+    this.sortValue = "Name";
     const sorted = this.employees.sort((a, b) => {
       const nameA = a.firstname.toUpperCase() + a.lastname.toUpperCase();
       const nameB = b.firstname.toUpperCase() + b.lastname.toUpperCase();
@@ -54,6 +56,7 @@ export class ChampionACauseComponent implements OnInit {
   }
 
   private sortByCause() {
+    this.sortValue = "Cause";
     const sorted = this.employees.sort((a, b) => {
       const nameA = a.champion.toUpperCase();
       const nameB = b.champion.toUpperCase();
