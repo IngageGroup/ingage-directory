@@ -24,13 +24,12 @@
             </div>
             <div>
                 <div class="champion-a-cause-div" *ngFor="let cause of causes | getEmployeeCause:employee.champion">
-                    <img class="champion-a-cause-img" style="text-align: center;"
-                        *ngIf="cause.causeimageurl !== ''; else elseBlock" src="{{cause.causeimageurl}}">
-                    <ng-template #elseBlock>
-                        <img class="champion-a-cause-img" style="text-align: center;"
-                            src="assets/images/Ingage_logo_no_BG.png">
+                    <div *ngIf="cause.causeimageurl !== ''; then thenBlock else elseBlock"></div>
+                    <ng-template #thenBlock><img class="champion-a-cause-img" style="text-align: center;"
+                            src="{{cause.causeimageurl}}" /></ng-template>
+                    <ng-template #elseBlock><img class="champion-a-cause-img" style="text-align: center;"
+                            src="https://photos.smugmug.com/photos/i-6gQtsGT/0/4102babb/Ti/i-6gQtsGT-Ti.png" />
                     </ng-template>
-
                 </div>
                 <div>
                     <strong>{{employee.champion}}</strong>

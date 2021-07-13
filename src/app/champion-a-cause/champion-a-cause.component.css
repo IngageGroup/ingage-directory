@@ -99,6 +99,8 @@ a:hover {
 .list-subtitle {
   font-size: 15px;
   font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /*  New Styles from allrecipes.com  */
