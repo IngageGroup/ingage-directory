@@ -39,23 +39,22 @@
                 </a>
             </div>
             <div>
-                <div class="champion-a-cause-div"
-                *ngFor="let cause of causes | getEmployeeCause:employee.champion">
-                    
-                       <img class="champion-a-cause-img" style="text-align: center;"
-                       src="{{cause.causeimageurl}}">
-                       <!--src="../../assets/images/Champion-a-Cause-Logos-DEMO/{{employee.champion}}.jpg">-->
-                     
+                <div class="champion-a-cause-div" *ngFor="let cause of causes | getEmployeeCause:employee.champion">
+                    <img class="champion-a-cause-img" style="text-align: center;"
+                        *ngIf="cause.causeimageurl !== ''; else elseBlock" src="{{cause.causeimageurl}}">
+                    <ng-template #elseBlock>
+                        <img class="champion-a-cause-img" style="text-align: center;"
+                            src="assets/images/Ingage_logo_no_BG.png">
+                    </ng-template>
+
                 </div>
                 <div>
                     <strong>{{employee.champion}}</strong>
                 </div>
                 <div style="font-style: italic;">
-                    "{{employee.championquote}}"
+                    {{employee.championquote}}
                 </div>
             </div>
         </div>
     </li>
 </ul>
-
-

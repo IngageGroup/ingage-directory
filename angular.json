@@ -30,6 +30,10 @@
               {
                 "replace": "src/assets/data-files/employee.json",
                 "with": "src/assets/data-files/employee.mock.json"
+              },
+              {
+                "replace": "src/assets/data-files/championcauses.json",
+                "with": "src/assets/data-files/championcauses.mock.json"
               }
             ]
           },
