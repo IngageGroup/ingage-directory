@@ -16,6 +16,7 @@ import { CustomDatePipe } from './helpers/custom.datepipe';
 import { MonthDayOnlyPipe } from './helpers/month-day-only.datepipe';
 import { SearchEmployeesPipe } from './helpers/employee-filter.pipe';
 import { GetEmployeesCausePipe } from './helpers/employee-champion.pipe';
+import { EligibleEmployeesPipe } from './helpers/employee-eligble-filter.pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { SideBarComponent } from './sidebar/side-bar.component';
 import { SideBarService } from './sidebar/side-bar.service';
@@ -64,6 +65,7 @@ import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.com
     MonthDayOnlyPipe,
     SearchEmployeesPipe,
     GetEmployeesCausePipe,
+    EligibleEmployeesPipe,
     EmployeeListComponent,
     EmployeeDetailComponent,
     EmployeeHomeComponent,

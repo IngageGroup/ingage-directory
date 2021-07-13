@@ -15,6 +15,7 @@ import { SearchBarService } from '../search-bar/search-bar.service';
 export class ChampionACauseComponent implements OnInit {
   public employees: Employee[];
   public causes: ChampionCauses[];
+  public eligbleFilter: Array<string>;
   private showSearchBar = true;
   searchText = '';
 
@@ -29,6 +30,8 @@ export class ChampionACauseComponent implements OnInit {
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
     this.employees = this.dataService.getEmployees()
       .filter(f => f.title.toLowerCase() !== 'intern' && f.title.toLowerCase() !== 'apprentice' && f.title.toLowerCase() !== 'analyst' && f.type.toLowerCase() !== '1099');
+    //UN-COMMENT BLOW CODE WHEN EMPLOYEE TYPE FILTERS ARE IDENTIFIED
+    //this.eligbleFilter = ['Salary','W2'];
     this.sortByCause();
     this.causes = this.dataService.getCauses();
   }
@@ -60,11 +63,19 @@ export class ChampionACauseComponent implements OnInit {
     const sorted = this.employees.sort((a, b) => {
       const nameA = a.champion.toUpperCase();
       const nameB = b.champion.toUpperCase();
-      if (nameA < nameB) {
-        return -1;
+      if (nameA == "TBD") {
+        return 1
       }
-      if (nameA > nameB) {
-        return 1;
+      else if (nameB == "TBD") {
+        return -1
+      }
+      else{
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
       }
       return 0;
     });

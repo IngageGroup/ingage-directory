@@ -7,25 +7,9 @@
     <option value='name'>Employee Name</option>
 </select>
 
-<!--
-    <ul class="list">
-    <li class="list-item"
-        *ngFor="let champion of employees | searchEmployees:'firstname,lastname,champion,title':searchText">
-        <div class="list-content">
-            <div class="list-title">{{champion.champion}}</div>
-            <div>
-                <a [routerLink]="['/employee', champion.employeeid]">
-                    {{champion.firstname}} {{champion.lastname}}
-                </a>
-            </div>
-        </div>
-    </li>
-</ul>
-
--->
 <ul class="list">
     <li class="list-item"
-        *ngFor="let employee of employees | searchEmployees:'firstname,lastname,champion,title':searchText">
+        *ngFor="let employee of (employees | eligbleEmployees:eligbleFilter) | searchEmployees:'firstname,lastname,champion,title':searchText">
         <div class="list-content">
             <div style="border-bottom: 2px solid black; margin-bottom: 5px;">
                 <a [routerLink]="['/employee', employee.employeeid]">
