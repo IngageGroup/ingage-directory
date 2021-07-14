@@ -17,9 +17,13 @@ export class DataService {
     this.employees = this.sortEmployeesByName(Employees);
     this.causes = Causes;
 
-    // loop over each employee, summarize clients
+    // loop over each employee, add meta data
     let clients: Client[];
     this.employees.forEach((element, index) => {
+      // add champ-a-cause info
+      element.championurl = this.findChampionUrl(element);
+
+      //sum clients
       const thisClient = element.client;
       if (thisClient === 'n/a') {
         return;
@@ -36,6 +40,26 @@ export class DataService {
       }
     });
     this.clients = this.sortObjectByProperty(clients, 'name');
+  }
+
+  private findChampionUrl(employee: Employee) {
+    const defaultUrl = 'https://photos.smugmug.com/photos/i-6gQtsGT/0/4102babb/Ti/i-6gQtsGT-Ti.png';
+
+    if (employee.champion === 'TBD') {
+      return defaultUrl;
+    }
+    else {
+      let cause = this.causes.find(c => c.title === employee.champion);
+      if (cause == undefined) {
+        return defaultUrl;
+      }
+      else if (cause.causeimageurl == '') {
+        return defaultUrl;
+      }
+      else {
+        return cause.causeimageurl;
+      }
+    }
   }
 
   getEmployees() {
