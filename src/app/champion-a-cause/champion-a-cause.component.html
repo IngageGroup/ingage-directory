@@ -1,11 +1,29 @@
 <p>Champion a Cause is an Ingage giving program that encourages employees to be ambassadors of a non profit organization
     of their choice.</p>
-<br />
+
+
+<div class="container">
+
+    <div style="margin: 5px 5px 25px 5px;">
+        <div class="dropdown float-end">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false" (click)="filterChampion($event.target.value)">
+                Sort By <b>{{ sortValue }}</b>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" (click)="filterChampion('cause')">Cause</a></li>
+                <li><a class="dropdown-item" (click)="filterChampion('name')">Employee Name</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!-- <br />
 <label>Sort By </label>
 <select class="championSelect" (change)="filterChampion($event.target.value)">
     <option value='cause'>Cause</option>
     <option value='name'>Employee Name</option>
-</select>
+</select> -->
 
 <ul class="list">
     <li class="list-item"
