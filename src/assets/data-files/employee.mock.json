@@ -264,13 +264,13 @@
     "client": "Shield",
     "employeeid": 131,
     "lookupname": "Buckler, Rebecca",
-    "title": "Apprentice",
+    "title": "Contractor",
     "tileimageurl": "assets/test-profiles/tankgirl.jpg",
     "hbdiblue": 3,
     "hbdigreen": 3,
     "hbdired": 3,
     "hbdiyellow": 3,
     "hbdipreference": "green",
-    "type": "1099"
+    "type": "Hourly"
   }
 ]
