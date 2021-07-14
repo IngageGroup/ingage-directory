@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from './../auth/login.service';
 import { DataService } from 'src/app/employees/data.service';
 import { Employee } from '../employees/employee';
+import { ChampionCauses } from '../employees/championcauses';
 import { SearchBarService } from '../search-bar/search-bar.service';
 
 
@@ -13,8 +14,11 @@ import { SearchBarService } from '../search-bar/search-bar.service';
 
 export class ChampionACauseComponent implements OnInit {
   public employees: Employee[];
+  public causes: ChampionCauses[];
+  public eligbleFilter: Array<string>;
   private showSearchBar = true;
   searchText = '';
+  public sortValue = 'xyz';
 
   constructor(
     public loginService: LoginService,
@@ -27,7 +31,10 @@ export class ChampionACauseComponent implements OnInit {
     this.searchBarService.searchText.subscribe(text => this.searchText = text);
     this.employees = this.dataService.getEmployees()
       .filter(f => f.title.toLowerCase() !== 'intern' && f.title.toLowerCase() !== 'apprentice' && f.title.toLowerCase() !== 'analyst' && f.title.toLowerCase() !== 'contractor');
+    //UN-COMMENT BLOW CODE WHEN EMPLOYEE TYPE FILTERS ARE IDENTIFIED
+    //this.eligbleFilter = ['Salary','W2'];
     this.sortByCause();
+    this.causes = this.dataService.getCauses();
   }
   filterChampion(sortVal: string) {
     if (sortVal === 'cause') {
@@ -39,6 +46,7 @@ export class ChampionACauseComponent implements OnInit {
   }
 
   private sortByName() {
+    this.sortValue = "Name";
     const sorted = this.employees.sort((a, b) => {
       const nameA = a.firstname.toUpperCase() + a.lastname.toUpperCase();
       const nameB = b.firstname.toUpperCase() + b.lastname.toUpperCase();
@@ -54,14 +62,23 @@ export class ChampionACauseComponent implements OnInit {
   }
 
   private sortByCause() {
+    this.sortValue = "Cause";
     const sorted = this.employees.sort((a, b) => {
       const nameA = a.champion.toUpperCase();
       const nameB = b.champion.toUpperCase();
-      if (nameA < nameB) {
-        return -1;
+      if (nameA == "TBD") {
+        return 1
       }
-      if (nameA > nameB) {
-        return 1;
+      else if (nameB == "TBD") {
+        return -1
+      }
+      else {
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
       }
       return 0;
     });

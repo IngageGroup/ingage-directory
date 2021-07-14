@@ -1,21 +1,81 @@
 <p>Champion a Cause is an Ingage giving program that encourages employees to be ambassadors of a non profit organization
     of their choice.</p>
-<br />
-<label>Sort By </label>
-<select class="championSelect" (change)="filterChampion($event.target.value)">
-    <option value='cause'>Cause</option>
-    <option value='name'>Employee Name</option>
-</select>
+
+
+<div class="container">
+
+    <div style="margin: 5px 5px 25px 5px;">
+        <div class="dropdown float-end">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false" (click)="filterChampion($event.target.value)">
+                Sort By <b>{{ sortValue }}</b>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                    <a class="dropdown-item" style="cursor: pointer;" (click)="filterChampion('cause')">Cause</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" style="cursor: pointer;" (click)="filterChampion('name')">Employee Name</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
 
 <ul class="list">
     <li class="list-item"
-        *ngFor="let champion of employees | searchEmployees:'firstname,lastname,champion,title':searchText">
+        *ngFor="let employee of (employees | eligbleEmployees:eligbleFilter) | searchEmployees:'firstname,lastname,champion,title':searchText">
         <div class="list-content">
-            <div class="list-title">{{champion.champion}}</div>
-            <div>
-                <a [routerLink]="['/employee', champion.employeeid]">
-                    {{champion.firstname}} {{champion.lastname}}
+            <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.15); margin-bottom: 5px;">
+                <a [routerLink]="['/employee', employee.employeeid]">
+                    <div class="avatar" style="float: left; margin-right: 10px; margin-bottom: 5px;">
+                        <img class="avatar" src='{{ employee.tileimageurl }}' />
+                    </div>
+                    <div style="margin-bottom: 5px;">
+                        <div class="list-title">{{ employee.firstname }} {{ employee.lastname}}</div>
+                        <div class="list-subtitle">{{ employee.title}}</div>
+                    </div>
                 </a>
+            </div>
+            <div>
+                <div class="champion-a-cause-div">
+                    <img src="{{ employee.championurl }}" class="champion-a-cause-img" style="text-align: center;" />
+                </div>
+
+                <ng-container *ngIf="employee.champion == 'TBD';  then noChamp; else showChamp">
+                </ng-container>
+                <ng-template #noChamp>
+                    &nbsp;
+                </ng-template>
+                <ng-template #showChamp>
+                    <div>
+                        <strong>{{employee.champion}}</strong>
+                    </div>
+                </ng-template>
+
+
+
+
+                <ng-container *ngIf="!employee.championquote;  then noQuote; else showQuote">
+                </ng-container>
+
+                <ng-template #noQuote>
+                    &nbsp;
+                </ng-template>
+
+                <ng-template #showQuote>
+                    <div>
+                        <q style="font-style: italic;">{{ employee.championquote }}</q>
+                    </div>
+                </ng-template>
+
+
+
+
+                <!-- <div>
+                    <q style="font-style: italic;">{{ employee.championquote }}</q>
+                </div> -->
             </div>
         </div>
     </li>
