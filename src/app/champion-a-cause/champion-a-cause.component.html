@@ -11,25 +11,23 @@
                 Sort By <b>{{ sortValue }}</b>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" (click)="filterChampion('cause')">Cause</a></li>
-                <li><a class="dropdown-item" (click)="filterChampion('name')">Employee Name</a></li>
+                <li>
+                    <a class="dropdown-item" style="cursor: pointer;" (click)="filterChampion('cause')">Cause</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" style="cursor: pointer;" (click)="filterChampion('name')">Employee Name</a>
+                </li>
             </ul>
         </div>
     </div>
 
 </div>
-<!-- <br />
-<label>Sort By </label>
-<select class="championSelect" (change)="filterChampion($event.target.value)">
-    <option value='cause'>Cause</option>
-    <option value='name'>Employee Name</option>
-</select> -->
 
 <ul class="list">
     <li class="list-item"
         *ngFor="let employee of (employees | eligbleEmployees:eligbleFilter) | searchEmployees:'firstname,lastname,champion,title':searchText">
         <div class="list-content">
-            <div style="border-bottom: 2px solid black; margin-bottom: 5px;">
+            <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.15); margin-bottom: 5px;">
                 <a [routerLink]="['/employee', employee.employeeid]">
                     <div class="avatar" style="float: left; margin-right: 10px; margin-bottom: 5px;">
                         <img class="avatar" src='{{ employee.tileimageurl }}' />
@@ -44,12 +42,40 @@
                 <div class="champion-a-cause-div">
                     <img src="{{ employee.championurl }}" class="champion-a-cause-img" style="text-align: center;" />
                 </div>
-                <div>
-                    <strong>{{employee.champion}}</strong>
-                </div>
-                <div style="font-style: italic;">
-                    {{employee.championquote}}
-                </div>
+
+                <ng-container *ngIf="employee.champion == 'TBD';  then noChamp; else showChamp">
+                </ng-container>
+                <ng-template #noChamp>
+                    &nbsp;
+                </ng-template>
+                <ng-template #showChamp>
+                    <div>
+                        <strong>{{employee.champion}}</strong>
+                    </div>
+                </ng-template>
+
+
+
+
+                <ng-container *ngIf="!employee.championquote;  then noQuote; else showQuote">
+                </ng-container>
+
+                <ng-template #noQuote>
+                    &nbsp;
+                </ng-template>
+
+                <ng-template #showQuote>
+                    <div>
+                        <q style="font-style: italic;">{{ employee.championquote }}</q>
+                    </div>
+                </ng-template>
+
+
+
+
+                <!-- <div>
+                    <q style="font-style: italic;">{{ employee.championquote }}</q>
+                </div> -->
             </div>
         </div>
     </li>
