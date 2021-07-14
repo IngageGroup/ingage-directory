@@ -19,4 +19,6 @@ export interface Employee {
     hbdiyellow: string;
     hbdipreference: string;
     type: string;
+    championquote: string;
+    championurl: string;
 }
