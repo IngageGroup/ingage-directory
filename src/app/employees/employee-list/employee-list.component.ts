@@ -5,6 +5,7 @@ import { SideBarService } from '../../sidebar/side-bar.service';
 import { AppTitleService } from 'src/app/app.service';
 import { SearchBarService } from 'src/app/search-bar/search-bar.service';
 import { DataService } from '../data.service';
+import { zip } from 'rxjs';
 
 @Component({
     encapsulation: ViewEncapsulation.Emulated,
@@ -77,11 +78,11 @@ export class EmployeeListComponent implements OnInit, AfterContentChecked {
                 break;
             }
             case 'pa': {
-                this.filtered = this.employees.filter(x => x.practicearea.toLowerCase() === this.practiceArea.toLowerCase());
+                this.filtered = this.employees.filter(x => x.hasOwnProperty('practicearea') && x.practicearea.toLowerCase() === this.practiceArea.toLowerCase());
                 break;
             }
             case 'client': {
-                this.filtered = this.employees.filter(x => x.client.toLowerCase() === this.clientName.toLowerCase());
+                this.filtered = this.employees.filter(x => x.hasOwnProperty('client') && x.client.toLowerCase() === this.clientName.toLowerCase());
                 this.sideBarService.openClientMenu(); // this may need to be another method to be "open"
                 break;
             }
