@@ -6,6 +6,16 @@
   .page-inner { padding-top: 31px; }
 }
 
+.profile-summary-link {
+  font-weight: bold;
+  color: #056cb6;
+  border-bottom: 3px solid #ee6823;
+}
+
+.tile a {
+  display: inline;
+}
+
   /* @media (max-width: 992px) {
     .container {
       display: flex;

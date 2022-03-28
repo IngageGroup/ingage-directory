@@ -10,6 +10,7 @@
             <div class="profile-summary">
                 <h5>{{ employee.firstname }} {{ employee.lastname}}</h5>
                 <h6>{{ employee.title}}</h6>
+                <a [routerLink]="['/employee', employee.employeeid]" class="profile-summary-link">More</a>
             </div>
 
         </div>
