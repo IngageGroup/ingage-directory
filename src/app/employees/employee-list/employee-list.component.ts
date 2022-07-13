@@ -77,7 +77,7 @@ export class EmployeeListComponent implements OnInit, AfterContentChecked {
                 break;
             }
             case 'pa': {
-                this.filtered = this.employees.filter(x => x.practicearea.toLowerCase() === this.practiceArea.toLowerCase());
+                this.filtered = this.employees.filter(x => x.practicearea.toLowerCase() === this.practiceArea.toLocaleLowerCase());
                 break;
             }
             case 'client': {
