@@ -33,11 +33,13 @@ The default configuation uses the `employee.mock.json` file for employee data.  
 The test configuation uses the `employee.test.json` file for employee data.  This is a subset of the production data, isn't normally updated.  The `employee.test.json` file is not part of this repo, see Tony Maddox for a copy.
 
 ### production configuration
-The production configuation uses the `employee.prod.json` file for employee data.  This file is generated regularly from a Google Sheet that is maintained by Tony Maddox.  The `employee.prod.json` file is not part of this repo.
+The production configuation uses the `employee.prod.json` file for employee data.  This file is generated regularly from a Google Sheet that is maintained by Tony Maddox.  The `employee.prod.json` file is NOT part of this repo.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`ng serve` will run with the employee.mock.json data file
+`ng serve --prod` will run with the employee.prod.json data file
 
 ## Firebase
 

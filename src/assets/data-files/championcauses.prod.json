@@ -120,6 +120,10 @@
     "causeimageurl": "https://photos.smugmug.com/photos/i-JfV8TCG/0/f6585dac/S/i-JfV8TCG-S.png"
   },
   {
+    "title": "Dress for Success",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-v3wX96P/0/026a1451/S/i-v3wX96P-S.jpg"
+  },
+  {
     "title": "Emergency Shelter of NKY",
     "causeimageurl": "https://photos.smugmug.com/photos/i-2zhVv7Z/0/02c00aba/Th/i-2zhVv7Z-Th.png"
   },
@@ -196,7 +200,7 @@
     "causeimageurl": "https://photos.smugmug.com/photos/i-WbZKDJn/0/58fcbe7c/S/i-WbZKDJn-S.jpg"
   },
   {
-    "title": "laSoupe",
+    "title": "La Soupe",
     "causeimageurl": "https://photos.smugmug.com/photos/i-5mLcmG3/0/d6fdd653/Th/i-5mLcmG3-Th.jpg"
   },
   {
@@ -372,10 +376,6 @@
     "causeimageurl": "https://photos.smugmug.com/photos/i-z4wVKgj/0/437f5dbb/S/i-z4wVKgj-S.jpg"
   },
   {
-    "title": "Thrive",
-    "causeimageurl": ""
-  },
-  {
     "title": "Tikkun Farm",
     "causeimageurl": "https://photos.smugmug.com/photos/i-gCLWcfz/0/46acc052/Ti/i-gCLWcfz-Ti.jpg"
   },
@@ -450,6 +450,18 @@
   {
     "title": "Mary Rose Mission",
     "causeimageurl": "https://photos.smugmug.com/photos/i-mbnz7Pk/0/1cb2a262/S/i-mbnz7Pk-S.jpg"
+    },
+    {
+    "title": "Santa Maria Community Services",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-vn8nf4S/0/77d2737a/S/i-vn8nf4S-S.jpg"
+  },
+  {
+    "title": "The Chip Terry Fund for First Responders",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-KL5BPz6/0/3901a16b/S/i-KL5BPz6-S.png"
+  },
+  {
+    "title": "Bethany House Services",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-RvQLwxC/0/2e1c11e8/Th/i-RvQLwxC-Th.jpg"
   },
   {
     "title": "Northern Kentucky Community Action Commission",
@@ -466,14 +478,31 @@
   {
     "title": "Santa Maria Community Services",
     "causeimageurl": "https://photos.smugmug.com/photos/i-vn8nf4S/0/77d2737a/S/i-vn8nf4S-S.jpg"
+    },
+    {
+    "title": "Lydia's House",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-L42wcTG/0/83a71361/S/i-L42wcTG-S.jpg"
+  },
+  {
+    "title": "UNICEF USA's Children in War & Conflict program",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-PrKchkP/0/945c5e23/Th/i-PrKchkP-Th.png"
+  },
+  {
+    "title": "Islamic Center of Greater Cincinnati",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-FgvMdSQ/0/5fa58750/S/i-FgvMdSQ-S.png"
   },
   {
     "title": "Sycamore Athletic Boosters",
     "causeimageurl": "https://photos.smugmug.com/photos/i-vfMR6RW/0/1c9c669c/Th/i-vfMR6RW-Th.jpg"
   },
   {
+
     "title": "The Chip Terry Fund for First Responders",
     "causeimageurl": "https://photos.smugmug.com/photos/i-KL5BPz6/0/3901a16b/S/i-KL5BPz6-S.png"
+    },
+    {
+    "title": "River of Life Church",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-xvN9c3t/0/6a4c8802/Th/i-xvN9c3t-Th.png"
   },
   {
     "title": "UC Foundation's Pfaller Scholarship Fund",
@@ -542,5 +571,25 @@
   {
     "title": "Grant Us Hope",
     "causeimageurl": "https://photos.smugmug.com/photos/i-TB6qM8g/0/beb23162/Th/i-TB6qM8g-Th.png"
+},
+{
+    "title": "Eve Center",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-NmNpLkR/0/523fba84/S/i-NmNpLkR-S.png"
+  },
+  {
+    "title": "Catholic Charities, Diocese of Covington",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-x7kmNw9/0/20891dd2/Th/i-x7kmNw9-Th.jpg"
+  },
+  {
+    "title": "Ohio Business Week",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-5nvTzMG/0/3a075d93/Th/i-5nvTzMG-Th.jpg"
+  },
+  {
+    "title": "Mary Rose Mission",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-mbnz7Pk/0/1cb2a262/S/i-mbnz7Pk-S.jpg"
+  },
+  {
+    "title": "AIM (Adventures In Movement) for the Handicapped",
+    "causeimageurl": "https://photos.smugmug.com/photos/i-R9Zngfs/0/17ceb564/S/i-R9Zngfs-S.png"
   }
 ]
