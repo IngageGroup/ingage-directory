@@ -1,0 +1,20 @@
+[
+    {
+        "practicearea": "Design",
+        "practiceareaname": "Design Practice",
+        "practicemanager": "Shannon Lewandowski",
+        "practicemanageremail": "captain.america@ingagepartners.com"
+    },
+    {
+        "practicearea": "Build",
+        "practiceareaname": "Build Practice",
+        "practicemanager": "Charlie Retzler",
+        "practicemanageremail": "bdubz@ingagepartners.com"
+    },
+    {
+        "practicearea": "Deliver",
+        "practiceareaname": "Deliver Practice",
+        "practicemanager": "Sharathbabu Maramraju",
+        "practicemanageremail": "captain.marvel@ingagepartners.com"
+    }
+]

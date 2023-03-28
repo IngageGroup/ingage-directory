@@ -27,10 +27,9 @@
                     </section>
                     <section class="mobile-home-page-nav-section" *ngIf="showPracticeMenu" [@fadeInOut]>Practice Areas
                         <div><a [routerLink]="" class="nav-back-link" (click)="resetMobileMenu()">Back</a></div>
-                        <div><a [routerLink]="['/employees/pa/Design']">Design</a></div>
-                        <div><a [routerLink]="['/employees/pa/dev']">Build/Dev</a></div>
-                        <div><a [routerLink]="['/employees/pa/qa']">Build/QA</a></div>
-                        <div><a [routerLink]="['/employees/pa/Deliver']">Deliver</a></div>
+                        <div><a [routerLink]="['/practice-area/design']">Design</a></div>
+                        <div><a [routerLink]="['/practice-area/build']">Build</a></div>
+                        <div><a [routerLink]="['/practice-area/deliver']">Deliver</a></div>
                     </section>
                     <section class="mobile-home-page-nav-section" *ngIf="showClientMenu" [@fadeInOut]>Clients
                         <div><a [routerLink]="" class="nav-expand-link" (click)="resetMobileMenu()">Back</a></div>

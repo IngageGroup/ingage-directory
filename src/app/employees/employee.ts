@@ -10,6 +10,7 @@ export interface Employee {
     lookupname: string;
     mobilephone?: string;
     practicearea: string;
+    focusarea: string;
     tileimageurl?: string;
     title?: string;
     champion: string;

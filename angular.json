@@ -34,6 +34,14 @@
               {
                 "replace": "src/assets/data-files/championcauses.json",
                 "with": "src/assets/data-files/championcauses.mock.json"
+              },
+              {
+                "replace": "src/assets/data-files/practiceareas.json",
+                "with": "src/assets/data-files/practiceareas.mock.json"
+              },
+              {
+                "replace": "src/assets/data-files/focusareas.json",
+                "with": "src/assets/data-files/focusareas.mock.json"
               }
             ]
           },
@@ -47,6 +55,14 @@
                 {
                   "replace": "src/assets/data-files/championcauses.json",
                   "with": "src/assets/data-files/championcauses.mock.json"
+                },
+                {
+                  "replace": "src/assets/data-files/practiceareas.json",
+                  "with": "src/assets/data-files/practiceareas.mock.json"
+                },
+                {
+                  "replace": "src/assets/data-files/focusareas.json",
+                  "with": "src/assets/data-files/focusareas.mock.json"
                 }
               ]
             },
@@ -71,6 +87,14 @@
                 {
                   "replace": "src/assets/data-files/championcauses.json",
                   "with": "src/assets/data-files/championcauses.prod.json"
+                },
+                {
+                  "replace": "src/assets/data-files/focusareas.json",
+                  "with": "src/assets/data-files/focusareas.prod.json"
+                },
+                {
+                  "replace": "src/assets/data-files/practiceareas.json",
+                  "with": "src/assets/data-files/practiceareas.prod.json"
                 }
               ],
               "optimization": true,

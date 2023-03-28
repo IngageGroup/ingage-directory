@@ -2,8 +2,12 @@ import { Injectable } from '@angular/core';
 import { Employee } from 'src/app/employees/employee';
 import { ChampionCauses } from 'src/app/employees/championcauses';
 import { Client } from 'src/app/employees/client';
+import { FocusArea } from '../practice-areas/focusarea';
+import { PracticeArea } from '../practice-areas/practicearea';
 import Employees from 'src/assets/data-files/employee.json';
 import Causes from 'src/assets/data-files/championcauses.json';
+import PracticeAreas from 'src/assets/data-files/practiceareas.json';
+import FocusAreas from 'src/assets/data-files/focusareas.json';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +16,14 @@ export class DataService {
   employees: Employee[];
   causes: ChampionCauses[];
   clients: Client[];
+  practiceAreas: PracticeArea[];
+  focusAreas: FocusArea[];
 
   constructor() {
     this.employees = this.sortEmployeesByName(Employees);
     this.causes = Causes;
+    this.practiceAreas = PracticeAreas;
+    this.focusAreas = FocusAreas;
 
     // loop over each employee, add meta data
     let clients: Client[];
@@ -74,14 +82,29 @@ export class DataService {
     return this.clients;
   }
 
+  getPracticeAreas() {
+    return this.practiceAreas;
+  }
+
+  getPracticeAreaByName(practiceName: string) {
+    return this.practiceAreas.filter(f => f.practicearea.toLowerCase() === practiceName.toLowerCase())[0];
+  }
+
+  getFocusAreaByPractice(practiceName: string) {
+    let focusAreas = this.focusAreas.filter(f => f.practicearea.toLowerCase() === practiceName.toLowerCase());
+    return this.sortObjectByProperty(focusAreas, 'focusarea');
+  }
+
+  getEmployeeByEmail(email: string) {
+    return this.employees.filter(f => f.email === email)[0];
+  }
+
   // list - array to be sorted
   // property - property to be sorted by
   private sortObjectByProperty(list, property) {
     const sorted = list.sort((a, b) => {
       const nameA = a[property].toUpperCase();
       const nameB = b[property].toUpperCase();
-      // const nameA = a.firstname.toUpperCase() + a.lastname.toUpperCase();
-      // const nameB = b.firstname.toUpperCase() + b.lastname.toUpperCase();
       if (nameA < nameB) {
         return -1;
       }

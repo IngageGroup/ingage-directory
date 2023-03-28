@@ -1,0 +1,50 @@
+[
+    {
+        "focusarea": "Experience Design",
+        "practicearea": "Design",
+        "practiceleademail": "black.widow@ingagepartners.com"
+    },
+    {
+        "focusarea": "Systems Design",
+        "practicearea": "Design",
+        "practiceleademail": "captain.marvel@ingagepartners.com"
+    },{
+        "focusarea": "Agility",
+        "practicearea": "Deliver",
+        "practiceleademail": "james.rhodes@ingagepartners.com"
+    },
+    {
+        "focusarea": "Systems Quality",
+        "practicearea": "Deliver",
+        "practiceleademail": "bucky.barnes@ingagepartners.com"
+    },
+    {
+        "focusarea": "Strategy",
+        "practicearea": "Deliver",
+        "practiceleademail": "nick.fury@ingagepartners.com"
+    },
+    {
+        "focusarea": "Front End",
+        "practicearea": "Build",
+        "practiceleademail": ""
+    },{
+        "focusarea": "Back End",
+        "practicearea": "Build",
+        "practiceleademail": "falcon@ingagepartners.com"
+    },
+    {
+        "focusarea": "Cloud / DevOps",
+        "practicearea": "Build",
+        "practiceleademail": "wolverine@ingagepartners.com"
+    },
+    {
+        "focusarea": "Data Engineering",
+        "practicearea": "Build",
+        "practiceleademail": "scarlet.witch@ingagepartners.com"
+    },
+    {
+        "focusarea": "Test Automation",
+        "practicearea": "Build",
+        "practiceleademail": "tankgirl@ingagepartners.com"
+    }
+]
