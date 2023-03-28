@@ -13,10 +13,10 @@ img {
   width: 100%;
 }
 
-h2 {
+/* h2 {
   margin-top: 0;
   margin-bottom: 0.4em;
-}
+} */
 
 #mobile-cancel {
   margin-right: 40px;
@@ -96,15 +96,14 @@ a:visited {
 }
 
 a {
-  color: #d54215;
-  font-weight: 500;
+  color: #ee6823;
+  font-weight: 700;
   text-decoration: none;
 }
 
 a {
   background-color: transparent;
 }
-
 
 img {
   border: 0;

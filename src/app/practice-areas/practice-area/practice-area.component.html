@@ -1,0 +1,81 @@
+<section class="category-section">
+    <div class='container-header'>{{ vm.practiceAreaName }}</div>
+    <div class="container-fluid">
+        <div class="card border-left-ingage-purple shadow h-100 py-2 mb-4">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            Practice Manager</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ vm.practiceManagerName }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-4 col-md-6 mb-4" *ngFor="let focusArea of vm.focusAreas">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">{{ focusArea.focusAreaName }}</h6>
+                    </div>
+                    <div class="card-body">
+
+                        <!-- Lead -->
+                        <ng-container *ngIf="focusArea.lead;  then showLead; else noLead">
+                        </ng-container>
+                        <ng-template #showLead>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center flex-shrink-0 me-3">
+                                    <div class="avatar avatar-xl me-3 bg-gray-200" style="overflow: hidden;">
+                                        <img class=" img-fluid" src="{{ focusArea.lead.avatarUrl }}" alt="">
+                                    </div>
+                                    <div class="d-flex flex-column fw-bold">
+                                        <a class="text-dark line-height-normal mb-1"
+                                            [routerLink]="['/employee', focusArea.lead.employeeId]">
+                                            {{ focusArea.lead.memberName}}
+                                        </a>
+                                        <div class="small text-muted line-height-normal" *ngIf="focusArea.lead.isLead">
+                                            Practice Lead
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template #noLead>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="d-flex align-items-center flex-shrink-0 me-3">
+                                    <div class="avatar avatar-xl me-3 bg-gray-200" style="overflow: hidden;">
+                                        <!-- <img class=" img-fluid" src="{{ focusArea.lead.avatarUrl }}" alt=""> -->
+                                    </div>
+                                    <div class="d-flex flex-column fw-bold">
+                                        TBD
+                                        <div class="small text-muted line-height-normal">Practice Lead</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+
+
+                        <!-- Members -->
+                        <div class="d-flex align-items-center justify-content-between mb-4"
+                            *ngFor="let member of focusArea.members">
+                            <div class="d-flex align-items-center flex-shrink-0 me-3">
+                                <div class="avatar avatar-xl me-3 bg-gray-200" style="overflow: hidden;">
+                                    <img class="img-fluid" src="{{ member.avatarUrl }}" alt="">
+                                </div>
+                                <div class="d-flex flex-column fw-bold">
+                                    <a class="text-dark line-height-normal mb-1"
+                                        [routerLink]="['/employee', member.employeeId]">
+                                        {{ member.memberName}}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

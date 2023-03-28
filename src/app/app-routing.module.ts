@@ -6,6 +6,7 @@ import { EmployeeHomeComponent } from './employees/employee-home/employee-home.c
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
+import { PracticeAreaComponent } from './practice-areas/practice-area/practice-area.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'all', pathMatch: 'full' },
     ]
   },
+  { path: 'practice-area/:practice', component: PracticeAreaComponent, canActivate: [AngularFireAuthGuard], data: { title: 'Practice Area', authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'employee/:id', component: EmployeeDetailComponent, canActivate: [AngularFireAuthGuard], data: { title: 'none', authGuardPipe: redirectUnauthorizedToLogin } },
   { path: '', component: EmployeeHomeComponent, canActivate: [AngularFireAuthGuard], data: { title: 'Recently Joined', authGuardPipe: redirectUnauthorizedToLogin } },
 ];

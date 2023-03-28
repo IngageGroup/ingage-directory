@@ -33,6 +33,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuthGuardModule, AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { AppRoutingModule } from './app-routing.module';
 import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
+import { FocusAreaComponent } from './practice-areas/focus-area/focus-area.component';
+import { PracticeAreaComponent } from './practice-areas/practice-area/practice-area.component';
 
 @NgModule({
   imports: [
@@ -75,6 +77,8 @@ import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.com
     MobileMenuComponent,
     SearchBarComponent,
     ChampionACauseComponent,
+    FocusAreaComponent,
+    PracticeAreaComponent,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

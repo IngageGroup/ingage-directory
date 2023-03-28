@@ -65,7 +65,7 @@ export class EmployeeListComponent implements OnInit, AfterContentChecked {
             }
             case 'leadership': {
                 this.filtered = this.employees
-                    .filter(x => x.title === 'Director' || x.title === 'Vice President' || x.title === 'CEO');
+                    .filter(x => x.title === 'Director' || x.title === 'Vice President' || x.title === 'CEO' || x.title === 'Strategic Advisor');
                 break;
             }
             case 'management': {
@@ -74,11 +74,11 @@ export class EmployeeListComponent implements OnInit, AfterContentChecked {
                 break;
             }
             case 'hometeam': {
-                this.filtered = this.employees.filter(x => x.practicearea === 'Operations');
+                this.filtered = this.employees.filter(x => x.practicearea === 'Operations' || x.title === 'Strategic Advisor');
                 break;
             }
             case 'pa': {
-                this.filtered = this.employees.filter(x => x.hasOwnProperty('practicearea') && x.practicearea.toLowerCase() === this.practiceArea.toLowerCase());
+                this.filtered = this.employees.filter(x => x.practicearea.toLowerCase() === this.practiceArea.toLocaleLowerCase());
                 break;
             }
             case 'client': {
