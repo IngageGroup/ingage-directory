@@ -35,6 +35,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ChampionACauseComponent } from './champion-a-cause/champion-a-cause.component';
 import { FocusAreaComponent } from './practice-areas/focus-area/focus-area.component';
 import { PracticeAreaComponent } from './practice-areas/practice-area/practice-area.component';
+import { ClientHeaderComponent } from './client-header/client-header/client-header.component';
 
 @NgModule({
   imports: [
@@ -79,6 +80,7 @@ import { PracticeAreaComponent } from './practice-areas/practice-area/practice-a
     ChampionACauseComponent,
     FocusAreaComponent,
     PracticeAreaComponent,
+    ClientHeaderComponent,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

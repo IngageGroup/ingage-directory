@@ -1,7 +1,7 @@
 export interface Employee {
     anniversary: Date;
     birthday?: string;
-    client: string;
+    client: string[];
     coach: string;
     email: string;
     employeeid: number;

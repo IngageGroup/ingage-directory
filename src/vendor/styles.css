@@ -584,7 +584,7 @@ a:hover {
   margin: 1em 0;
 }
 
-/* 
+/*
 .profile-details {
   border-bottom: 1px solid #e4ebf0;
   padding: 40px 0;
@@ -763,7 +763,7 @@ a:hover {
   }
   .profile-left {
     /* background: yellow; */
-    /* just to give it some arbitrary height; 
+    /* just to give it some arbitrary height;
       the height can be dynamic */
     /* height: 200px;  */
     order: 2;
@@ -774,7 +774,7 @@ a:hover {
   }
   .profile-right {
     /* background: cyan; */
-    /* just to give it some arbitrary height; 
+    /* just to give it some arbitrary height;
       the height can be dynamic */
     /* height: 300px;  */
     order: 1;
@@ -913,3 +913,7 @@ img {
 .title {
   font-family: Poppins;
 }
+
+.border-left-ingage-purple {
+  border-left: 0.25rem solid #714885 !important;
+  }
