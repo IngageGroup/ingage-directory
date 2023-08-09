@@ -1,1 +1,297 @@
-[]
+[
+  {
+    "clientName": "84.51",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Afidence (Jurgensen)",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "AltaFiber",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "Ameritas",
+    "accountManagerEmpId": 1163,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Bench",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Blue Manatee",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "CareSource",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 1000
+  },
+  {
+    "clientName": "CCHMC",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "CEBCOR, Inc",
+    "accountManagerEmpId": 1163,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Cincinnati USA Regional Chamber",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Claritas",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Clarke",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "Court Avenue",
+    "accountManagerEmpId": 1126,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Crossroads",
+    "accountManagerEmpId": 1019,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Earnin",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Eyemed",
+    "accountManagerEmpId": 1019,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "FHLB",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Fidelity",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Fifth Third",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "FIS (World Pay)",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "FiveStar",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 1025
+  },
+  {
+    "clientName": "FMLA",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Gaslight",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "General Electric",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "Grand Encore",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Grant Us Hope",
+    "accountManagerEmpId": 1000,
+    "businessDevelopmentContactEmpId": 1000
+  },
+  {
+    "clientName": "Great American",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Grey",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Health Carousel",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "HealthWorks",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "Integral Analytics",
+    "accountManagerEmpId": 1163,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Jewel-Craft Inc.",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Keeps",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Kicktraq",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "Klusty",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Kroger",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Luxottica",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Mal Warwick DonorDigital (MWD)",
+    "accountManagerEmpId": 1163,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Ohio’s Hospice",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "OKI",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Outlier Technologies",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "P&G",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Patient Point",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Possip",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Professional Pallets",
+    "accountManagerEmpId": 1163,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "Project SEARCH",
+    "accountManagerEmpId": 1010,
+    "businessDevelopmentContactEmpId": 1028
+  },
+  {
+    "clientName": "Schaefer",
+    "accountManagerEmpId": 1163,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Sentrilock",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Solution Center",
+    "accountManagerEmpId": 1010,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "SPINS",
+    "accountManagerEmpId": 1019,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "TalkAbroad",
+    "accountManagerEmpId": 1163,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "TQL",
+    "accountManagerEmpId": 1163,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Tutor Teen",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 1000
+  },
+  {
+    "clientName": "Vya",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Western Southern",
+    "accountManagerEmpId": 0,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Women's Fund",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 0
+  },
+  {
+    "clientName": "Workday",
+    "accountManagerEmpId": 1025,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "Workday",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 1170
+  },
+  {
+    "clientName": "WPCU",
+    "accountManagerEmpId": 1046,
+    "businessDevelopmentContactEmpId": 1028
+  }
+]

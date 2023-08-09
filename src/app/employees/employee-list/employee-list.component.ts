@@ -21,13 +21,12 @@ import { zip } from "rxjs";
 export class EmployeeListComponent implements OnInit, AfterContentChecked {
   private category: string;
   private employees: Employee[];
-  private clientName: string;
+  public clientName: string;
   private practiceArea: string;
   public filtered: Employee[];
   public headerTitle: string;
   searchText = "";
-  master = "Master123";
-  private showClientHeader: boolean;
+  public showClientHeader: boolean;
 
   constructor(
     public route: ActivatedRoute,

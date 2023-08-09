@@ -12,20 +12,24 @@ export class ClientHeaderComponent implements OnInit {
   @Input("clientName") clientName = "";
 
   private client: AccountManager;
-  private accountManager: Employee;
-  private bdContact: Employee;
+  public accountManager: Employee;
+  public bdContact: Employee;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.client = this.dataService.getAccountManagerByClient(this.clientName);
 
-    this.accountManager = this.dataService.getEmployeeById(
-      this.client.accountManagerEmpId
-    );
+    if (this.client.accountManagerEmpId != 0) {
+      this.accountManager = this.dataService.getEmployeeById(
+        this.client.accountManagerEmpId
+      );
+    }
 
-    this.bdContact = this.dataService.getEmployeeById(
-      this.client.businessDevelopmentContactEmpId
-    );
+    if (this.client.businessDevelopmentContactEmpId != 0) {
+      this.bdContact = this.dataService.getEmployeeById(
+        this.client.businessDevelopmentContactEmpId
+      );
+    }
   }
 }

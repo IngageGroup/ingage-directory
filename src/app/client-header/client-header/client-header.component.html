@@ -10,7 +10,10 @@
               Account Manager
             </div>
             <div class="h5 mb-4 font-weight-bold text-gray-800">
-              <a [routerLink]="['/employee', accountManager.employeeid]">
+              <a
+                *ngIf="accountManager"
+                [routerLink]="['/employee', accountManager.employeeid]"
+              >
                 {{ accountManager.firstname }} {{ accountManager.lastname }}
               </a>
             </div>
@@ -22,7 +25,10 @@
               BD Contact
             </div>
             <div class="h5 mb-4 font-weight-bold text-gray-800">
-              <a [routerLink]="['/employee', bdContact.employeeid]">
+              <a
+                *ngIf="bdContact"
+                [routerLink]="['/employee', bdContact.employeeid]"
+              >
                 {{ bdContact.firstname }} {{ bdContact.lastname }}
               </a>
             </div>
