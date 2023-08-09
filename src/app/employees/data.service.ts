@@ -1,29 +1,33 @@
-import { Injectable } from '@angular/core';
-import { Employee } from 'src/app/employees/employee';
-import { ChampionCauses } from 'src/app/employees/championcauses';
-import { Client } from 'src/app/employees/client';
-import { FocusArea } from '../practice-areas/focusarea';
-import { PracticeArea } from '../practice-areas/practicearea';
-import Employees from 'src/assets/data-files/employee.json';
-import Causes from 'src/assets/data-files/championcauses.json';
-import PracticeAreas from 'src/assets/data-files/practiceareas.json';
-import FocusAreas from 'src/assets/data-files/focusareas.json';
+import { Injectable } from "@angular/core";
+import { Employee } from "src/app/employees/employee";
+import { ChampionCauses } from "src/app/employees/championcauses";
+import { Client } from "src/app/employees/client";
+import { FocusArea } from "../practice-areas/focusarea";
+import { PracticeArea } from "../practice-areas/practicearea";
+import { AccountManager } from "../account-managers/accountmanager";
+import Employees from "src/assets/data-files/employee.json";
+import Causes from "src/assets/data-files/championcauses.json";
+import PracticeAreas from "src/assets/data-files/practiceareas.json";
+import FocusAreas from "src/assets/data-files/focusareas.json";
+import AccountManagers from "src/assets/data-files/clients.json";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class DataService {
   employees: Employee[];
   causes: ChampionCauses[];
-  clients: Client[];
+  clients: Client[]; // this is calculated from employee list
   practiceAreas: PracticeArea[];
   focusAreas: FocusArea[];
+  accountManagers: AccountManager[];
 
   constructor() {
     this.employees = this.sortEmployeesByName(Employees);
     this.causes = Causes;
     this.practiceAreas = PracticeAreas;
     this.focusAreas = FocusAreas;
+    this.accountManagers = AccountManagers;
 
     // loop over each employee, add meta data
     let clients: Client[];
@@ -31,40 +35,57 @@ export class DataService {
       // add champ-a-cause info
       element.championurl = this.findChampionUrl(element);
 
-      //sum clients
-      const thisClient = element.client;
-      if (thisClient === 'n/a') {
-        return;
-      }
-      const employeeClient = clients ? clients.find(e => e.name === thisClient) : { name: thisClient, consultantCount: 0 };
-      if (employeeClient) {
-        employeeClient.consultantCount = employeeClient.consultantCount + 1;
-        if (!clients) {
-          clients = [employeeClient];
+      element.client.forEach((el, ind) => {
+        const thisClient = el;
+        if (thisClient === "n/a") {
+          return;
         }
-      } else {
-        const accumulator: Client = { name: thisClient, consultantCount: 1 };
-        clients.push(accumulator);
-      }
+        const employeeClient = clients
+          ? clients.find((e) => e.name === thisClient)
+          : { name: thisClient, consultantCount: 0 };
+        if (employeeClient) {
+          employeeClient.consultantCount = employeeClient.consultantCount + 1;
+          if (!clients) {
+            clients = [employeeClient];
+          }
+        } else {
+          const accumulator: Client = { name: thisClient, consultantCount: 1 };
+          clients.push(accumulator);
+        }
+      });
+
+      //sum clients
+      // const thisClient = element.client;
+      // if (thisClient === 'n/a') {
+      //   return;
+      // }
+      // const employeeClient = clients ? clients.find(e => e.name === thisClient) : { name: thisClient, consultantCount: 0 };
+      // if (employeeClient) {
+      //   employeeClient.consultantCount = employeeClient.consultantCount + 1;
+      //   if (!clients) {
+      //     clients = [employeeClient];
+      //   }
+      // } else {
+      //   const accumulator: Client = { name: thisClient, consultantCount: 1 };
+      //   clients.push(accumulator);
+      // }
     });
-    this.clients = this.sortObjectByProperty(clients, 'name');
+    this.clients = this.sortObjectByProperty(clients, "name");
   }
 
   private findChampionUrl(employee: Employee) {
-    const defaultUrl = 'https://photos.smugmug.com/photos/i-6gQtsGT/0/4102babb/Ti/i-6gQtsGT-Ti.png';
+    const defaultUrl =
+      "https://photos.smugmug.com/photos/i-6gQtsGT/0/4102babb/Ti/i-6gQtsGT-Ti.png";
 
-    if (employee.champion === 'TBD') {
+    if (employee.champion === "TBD") {
       return defaultUrl;
-    }
-    else {
-      let cause = this.causes.find(c => c.title === employee.champion);
+    } else {
+      let cause = this.causes.find((c) => c.title === employee.champion);
       if (cause == undefined) {
         return defaultUrl;
-      }
-      else if (cause.causeimageurl == '') {
+      } else if (cause.causeimageurl == "") {
         return defaultUrl;
-      }
-      else {
+      } else {
         return cause.causeimageurl;
       }
     }
@@ -86,17 +107,31 @@ export class DataService {
     return this.practiceAreas;
   }
 
+  getAccountManagerByClient(clientName: string) {
+    return this.accountManagers.filter(
+      (a) => a.clientName.toLowerCase() === clientName.toLowerCase()
+    )[0];
+  }
+
   getPracticeAreaByName(practiceName: string) {
-    return this.practiceAreas.filter(f => f.practicearea.toLowerCase() === practiceName.toLowerCase())[0];
+    return this.practiceAreas.filter(
+      (f) => f.practicearea.toLowerCase() === practiceName.toLowerCase()
+    )[0];
   }
 
   getFocusAreaByPractice(practiceName: string) {
-    let focusAreas = this.focusAreas.filter(f => f.practicearea.toLowerCase() === practiceName.toLowerCase());
-    return this.sortObjectByProperty(focusAreas, 'focusarea');
+    let focusAreas = this.focusAreas.filter(
+      (f) => f.practicearea.toLowerCase() === practiceName.toLowerCase()
+    );
+    return this.sortObjectByProperty(focusAreas, "focusarea");
   }
 
   getEmployeeByEmail(email: string) {
-    return this.employees.filter(f => f.email === email)[0];
+    return this.employees.filter((f) => f.email === email)[0];
+  }
+
+  getEmployeeById(empId: number) {
+    return this.employees.filter((f) => f.employeeid === empId)[0];
   }
 
   // list - array to be sorted

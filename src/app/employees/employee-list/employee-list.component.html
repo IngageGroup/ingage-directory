@@ -1,6 +1,8 @@
 <section class="category-section">
     <div class='container-header'>{{ headerTitle }}</div>
+    <app-client-header *ngIf="showClientHeader" [clientName]="clientName"></app-client-header>
     <div class='container'>
+
         <div *ngFor="let employee of filtered | searchEmployees:'firstname,lastname,title':searchText"
             class='tile image-loaded'>
 

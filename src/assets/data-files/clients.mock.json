@@ -1,0 +1,32 @@
+[
+  {
+    "clientName": "Clarke",
+    "accountManagerEmpId": 126,
+    "businessDevelopmentContactEmpId": 129
+  },
+  {
+    "clientName": "Crossroads",
+    "accountManagerEmpId": 128,
+    "businessDevelopmentContactEmpId": 128
+  },
+  {
+    "clientName": "General Eletric",
+    "accountManagerEmpId": 130,
+    "businessDevelopmentContactEmpId": 126
+  },
+  {
+    "clientName": "Kroger",
+    "accountManagerEmpId": 130,
+    "businessDevelopmentContactEmpId": 118
+  },
+  {
+    "clientName": "Shield",
+    "accountManagerEmpId": 118,
+    "businessDevelopmentContactEmpId": 129
+  },
+  {
+    "clientName": "Stark Industries",
+    "accountManagerEmpId": 129,
+    "businessDevelopmentContactEmpId": 119
+  }
+]

@@ -1,0 +1,34 @@
+<section class="category-section">
+  <div class="container-fluid">
+    <div class="card border-left-ingage-purple shadow h-100 py-2 mb-4">
+      <div class="card-body mb-0 pb-0">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-6 col-12 mr-2">
+            <div
+              class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+            >
+              Account Manager
+            </div>
+            <div class="h5 mb-4 font-weight-bold text-gray-800">
+              <a [routerLink]="['/employee', accountManager.employeeid]">
+                {{ accountManager.firstname }} {{ accountManager.lastname }}
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-12 mr-2">
+            <div
+              class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+            >
+              BD Contact
+            </div>
+            <div class="h5 mb-4 font-weight-bold text-gray-800">
+              <a [routerLink]="['/employee', bdContact.employeeid]">
+                {{ bdContact.firstname }} {{ bdContact.lastname }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

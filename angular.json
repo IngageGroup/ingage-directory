@@ -19,12 +19,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "src/assets"
-            ],
-            "styles": [
-              "src/vendor/styles.css"
-            ],
+            "assets": ["src/assets"],
+            "styles": ["src/vendor/styles.css"],
             "scripts": [],
             "fileReplacements": [
               {
@@ -38,6 +34,10 @@
               {
                 "replace": "src/assets/data-files/practiceareas.json",
                 "with": "src/assets/data-files/practiceareas.mock.json"
+              },
+              {
+                "replace": "src/assets/data-files/clients.json",
+                "with": "src/assets/data-files/clients.mock.json"
               },
               {
                 "replace": "src/assets/data-files/focusareas.json",
@@ -59,6 +59,10 @@
                 {
                   "replace": "src/assets/data-files/practiceareas.json",
                   "with": "src/assets/data-files/practiceareas.mock.json"
+                },
+                {
+                  "replace": "src/assets/data-files/clients.json",
+                  "with": "src/assets/data-files/clients.mock.json"
                 },
                 {
                   "replace": "src/assets/data-files/focusareas.json",
@@ -91,6 +95,10 @@
                 {
                   "replace": "src/assets/data-files/focusareas.json",
                   "with": "src/assets/data-files/focusareas.prod.json"
+                },
+                {
+                  "replace": "src/assets/data-files/clients.json",
+                  "with": "src/assets/data-files/clients.prod.json"
                 },
                 {
                   "replace": "src/assets/data-files/practiceareas.json",
@@ -148,12 +156,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/assets"
-            ],
-            "styles": [
-              "src/vendor/styles.css"
-            ],
+            "assets": ["src/assets"],
+            "styles": ["src/vendor/styles.css"],
             "scripts": []
           }
         },
@@ -165,9 +169,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
