@@ -16,6 +16,7 @@
               >
                 {{ accountManager.firstname }} {{ accountManager.lastname }}
               </a>
+              <span *ngIf="accountManager === null">Unassigned</span>
             </div>
           </div>
           <div class="col-md-6 col-12 mr-2">
@@ -31,6 +32,7 @@
               >
                 {{ bdContact.firstname }} {{ bdContact.lastname }}
               </a>
+              <span *ngIf="bdContact === null">Unassigned</span>
             </div>
           </div>
         </div>
