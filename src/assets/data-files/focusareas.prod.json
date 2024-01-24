@@ -1,50 +1,47 @@
 [
-    {
-        "focusarea": "Experience Design",
-        "practicearea": "Design",
-        "practiceleademail": "david.mccoy@ingagepartners.com"
-    },
-    {
-        "focusarea": "Systems Design",
-        "practicearea": "Design",
-        "practiceleademail": "angela.robey@ingagepartners.com"
-    },{
-        "focusarea": "Agility",
-        "practicearea": "Deliver",
-        "practiceleademail": "sharath.maramraju@ingagepartners.com"
-    },
-    {
-        "focusarea": "Systems Quality",
-        "practicearea": "Deliver",
-        "practiceleademail": "andrea.dresmann@ingagepartners.com"
-    },
-    {
-        "focusarea": "Strategy",
-        "practicearea": "Deliver",
-        "practiceleademail": "matt.darpel@ingagepartners.com"
-    },
-    {
-        "focusarea": "Front End",
-        "practicearea": "Build",
-        "practiceleademail": "brendan.burkett@ingagepartners.com"
-    },{
-        "focusarea": "Back End",
-        "practicearea": "Build",
-        "practiceleademail": "jim.kriz@ingagepartners.com"
-    },
-    {
-        "focusarea": "Cloud / DevOps",
-        "practicearea": "Build",
-        "practiceleademail": "charles.retzler@ingagepartners.com"
-    },
-    {
-        "focusarea": "Data Engineering",
-        "practicearea": "Build",
-        "practiceleademail": "phil.lachmann@ingagepartners.com"
-    },
-    {
-        "focusarea": "Test Automation",
-        "practicearea": "Build",
-        "practiceleademail": "tony.glass@ingagepartners.com"
-    }
+  {
+    "focusarea": "Experience Design",
+    "practicearea": "Design",
+    "practiceleademail": "david.mccoy@ingagepartners.com"
+  },
+  {
+    "focusarea": "Process Design",
+    "practicearea": "Design",
+    "practiceleademail": ""
+  },
+  {
+    "focusarea": "Agility",
+    "practicearea": "Deliver",
+    "practiceleademail": "sharath.maramraju@ingagepartners.com"
+  },
+  {
+    "focusarea": "Systems Quality",
+    "practicearea": "Deliver",
+    "practiceleademail": "andrea.dresmann@ingagepartners.com"
+  },
+  {
+    "focusarea": "Strategy",
+    "practicearea": "Deliver",
+    "practiceleademail": "matt.darpel@ingagepartners.com"
+  },
+  {
+    "focusarea": "Front End",
+    "practicearea": "Build",
+    "practiceleademail": "brendan.burkett@ingagepartners.com"
+  },
+  {
+    "focusarea": "Back End",
+    "practicearea": "Build",
+    "practiceleademail": "brandon.schenz@ingagepartners.com"
+  },
+  {
+    "focusarea": "Cloud / DevOps",
+    "practicearea": "Build",
+    "practiceleademail": "charles.retzler@ingagepartners.com"
+  },
+  {
+    "focusarea": "Test Automation",
+    "practicearea": "Build",
+    "practiceleademail": "tony.glass@ingagepartners.com"
+  }
 ]
