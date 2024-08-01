@@ -78,7 +78,7 @@ export class EmployeeListComponent implements OnInit, AfterContentChecked {
         this.filtered = this.employees.filter(
           (x) =>
             x.title === "Director" ||
-            x.title === "Vice President" ||
+            x.title === "President" ||
             x.title === "CEO" ||
             x.title === "Strategic Advisor"
         );
@@ -86,7 +86,10 @@ export class EmployeeListComponent implements OnInit, AfterContentChecked {
       }
       case "management": {
         this.filtered = this.employees.filter(
-          (x) => x.title === "Manager" || x.title === "Managing Consultant"
+          (x) =>
+            x.title === "Manager" ||
+            x.title === "Managing Consultant" ||
+            x.title === "Sr Managing Consultant"
         );
         break;
       }

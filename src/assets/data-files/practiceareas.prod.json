@@ -1,20 +1,20 @@
 [
-    {
-        "practicearea": "Design",
-        "practiceareaname": "Design Practice",
-        "practicemanager": "Shannon Lewandowski",
-        "practicemanageremail": "shannon.lewandowski@ingagepartners.com"
-    },
-    {
-        "practicearea": "Build",
-        "practiceareaname": "Build Practice",
-        "practicemanager": "Charlie Retzler",
-        "practicemanageremail": "charles.retzler@ingagepartners.com"
-    },
-    {
-        "practicearea": "Deliver",
-        "practiceareaname": "Deliver Practice",
-        "practicemanager": "Sharathbabu Maramraju",
-        "practicemanageremail": "sharath.maramraju@ingagepartners.com"
-    }
+  {
+    "practicearea": "Design",
+    "practiceareaname": "Design Practice",
+    "practicemanager": "David McCoy",
+    "practicemanageremail": "david.mccoy@ingagepartners.com"
+  },
+  {
+    "practicearea": "Build",
+    "practiceareaname": "Build Practice",
+    "practicemanager": "Charlie Retzler",
+    "practicemanageremail": "charles.retzler@ingagepartners.com"
+  },
+  {
+    "practicearea": "Deliver",
+    "practiceareaname": "Deliver Practice",
+    "practicemanager": "Jamie Fike",
+    "practicemanageremail": "jamie.fike@ingagepartners.com"
+  }
 ]
